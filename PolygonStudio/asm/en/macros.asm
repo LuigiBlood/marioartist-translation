@@ -1,6 +1,44 @@
 //Mario Artist Polygon Studio
 //Common Macros
 
+//VERY NEW
+macro textASCII(size, text) {
+  variable skipSeek = origin()+{size}
+  textASCII0({text})
+  origin skipSeek
+}
+
+macro textASCII0(text) {
+  ASCIIMap()
+  db {text}
+  db 0x00
+}
+
+macro textRegular(size, text) {
+  variable skipSeek = origin()+{size}
+  textRegular0({text})
+  origin skipSeek
+}
+
+macro textRegular0(text) {
+  RegularMap()
+  db {text}
+  db 0x00
+}
+
+macro textRegularA(char, text) {
+  RegularMap()
+  db {char}, " "
+  db {text}
+  db " ", {char}
+  db 0x00
+}
+
+macro skip(size) {
+  variable skipSeek = origin()+{size}
+  origin skipSeek
+}
+
 //NEW
 macro textEntry(size, text) {
   variable skipSeek = origin()+{size}
@@ -18,11 +56,6 @@ macro textEntry2(size, text, text2) {
   dh {text}
   dh {text2}
   dh 0x0000
-  origin skipSeek
-}
-
-macro textEntrySkip(size) {
-  variable skipSeek = origin()+{size}
   origin skipSeek
 }
 
