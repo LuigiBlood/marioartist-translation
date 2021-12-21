@@ -155,7 +155,7 @@ textEntryH0("Copy")			//コピー
 
 
 //--Kind Menuing
-outputFile("./Temp/8AD9F0.17453.SaveLoad.yay1.bin")
+outputFile("../../temp/8AD9F0.17453.SaveLoad.yay1.bin")
 seekFile(0x33AE0)
 save2_1:
 //RAM 802FBDF0 - テスト
@@ -843,7 +843,7 @@ sb t4,14(t5)	//2 (0x14)
 
 //--Disk Swap Text
 //Text ID RAM 802C9900 (0x10-0x12 & 0x20-0x22)
-outputFile("./Temp/8AD9F0.17453.SaveLoad.yay1.bin")
+outputFile("../../temp/8AD9F0.17453.SaveLoad.yay1.bin")
 seekFile(0x35B20)
 save5_1:
 textEntryH0("Please eject the disk.")				//RAM 802FDE40 - ディスクを とりだしてください
@@ -891,7 +891,7 @@ seek(0x89C7DE); dh (save5_3) //dh (save5_2)
 
 
 //--Kanji Menu Text
-outputFile("./Temp/8AD9F0.17453.SaveLoad.yay1.bin")
+outputFile("../../temp/8AD9F0.17453.SaveLoad.yay1.bin")
 seekFile(0x35C70)
 save6_1:
 //～ つかいたいかんじの さいしょのもじをえらんでください ～
@@ -938,7 +938,7 @@ seek(0x89A68C+0x248)
 sb 0,0x58(t5)
 
 //Symbols Menu
-outputFile("./Temp/8AD9F0.17453.SaveLoad.yay1.bin")
+outputFile("../../temp/8AD9F0.17453.SaveLoad.yay1.bin")
 seekFile(0x3561C)	//Repoint because of space
 //Page 1
 kanji1_1:

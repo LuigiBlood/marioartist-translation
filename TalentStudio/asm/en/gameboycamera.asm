@@ -80,7 +80,7 @@ seek(0x8D6B4A); dh (gbcam_lever)
 seek(0x8D6BA6); dh (gbcam_lever)
 
 
-outputFile("./Temp/8E7E48.CCC7.GBCam.yay1.bin")
+outputFile("../../temp/8E7E48.CCC7.GBCam.yay1.bin")
 //--Selection
 seekFile(0x1F090)
 gbcam_select1:

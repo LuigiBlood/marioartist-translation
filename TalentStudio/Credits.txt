@@ -1,14 +1,18 @@
 Mario Artist Talent Studio - English Translation
 by LuigiBlood
 
-Version 2.1 - Full Interface Translation
+Version 2.2 - Full Interface Translation
 
 Extra Info:
 The Nintendo.py used for de/compression by Zoinkity can be found here: https://pastebin.com/GUHMwpjT
 Python 3 is required.
 Cartridge Port checksum calculation could be done by debugging the IPL3 bootcode.
 
-2.1 Changelog:
+Changelog:
+v2.2:
+- Port Source to latest version of ARM9 fork bass
+
+v2.1:
 - Change text in Movie Studio to be shorter to fix crashes and instability issues.
 
 Issues:

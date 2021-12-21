@@ -116,7 +116,7 @@ sb t4,2(t5)
 
 
 //--Kanji Menu Text
-outputFile("./Temp/914B78.AEEC.Kanji.yay1.bin")
+outputFile("../../temp/914B78.AEEC.Kanji.yay1.bin")
 seekFile(0x17AA0)
 writer2_1:
 //～ つかいたいかんじの さいしょのもじをえらんでください ～
@@ -166,7 +166,7 @@ sb 0,0x4C(t1)
 
 
 //Symbols Menu
-outputFile("./Temp/914B78.AEEC.Kanji.yay1.bin")
+outputFile("../../temp/914B78.AEEC.Kanji.yay1.bin")
 seekFile(0x1A130)	//Repoint because of space
 //Page 1
 wkanji1_1:
