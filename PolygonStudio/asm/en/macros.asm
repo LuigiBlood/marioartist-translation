@@ -1,6 +1,78 @@
 //Mario Artist Polygon Studio
 //Common Macros
 
+//NEW
+macro textEntry(size, text) {
+  variable skipSeek = origin()+{size}
+  RegularMap()
+  dh 0x5000
+  dh {text}
+  dh 0x0000
+  origin skipSeek
+}
+
+macro textEntry2(size, text, text2) {
+  variable skipSeek = origin()+{size}
+  RegularMap()
+  dh 0x5000
+  dh {text}
+  dh {text2}
+  dh 0x0000
+  origin skipSeek
+}
+
+macro textEntrySkip(size) {
+  variable skipSeek = origin()+{size}
+  origin skipSeek
+}
+
+macro textEntry0(text) {
+  RegularMap()
+  dh 0x5000
+  dh {text}
+  dh 0x0000
+}
+
+macro textEntryASCII(size, text) {
+  variable skipSeek = origin()+{size}
+  ASCIIMap()
+  dh 0x5000, 0xFFFF
+  db {text}
+  db 0,0,0
+  origin skipSeek
+}
+
+macro textEntryASCII0(text) {
+  ASCIIMap()
+  dh 0x5000, 0xFFFF
+  db {text}
+  db 0,0,0
+}
+
+macro textEntryH(text) {
+  RegularMap()
+  db {text}
+  db 0x00
+}
+
+macro textEntryH2(char, text) {
+  RegularMap()
+  db {char}, " "
+  db {text}
+  db " ", {char}
+  db 0x00
+}
+
+macro textEntryASCIIBox(n, text, symbol, text2) {
+  ASCIIMap()
+  seek({n})
+  db {text}
+  dh {symbol}
+  db {text2}
+  dh 0x0000
+}
+
+//OLD
 macro putText(n, text) {
   seek({n})
   putTextnoSeek({text})
@@ -179,6 +251,7 @@ inline RegularMap() {
   map 'a', $0041, 30 // Map English "Lower Case" Characters & Special Characters
   map ' ', $00BD     // Map Space Character
   map '@', $00B7    // Map Circle
+  map '\n', $00FF   // Map New Line
 }
 
 inline ShiftJISMap() {

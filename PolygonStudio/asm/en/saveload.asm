@@ -1,675 +1,1106 @@
 //Mario Artist Polygon Studio
 //Save & Load
+
+//One byte char hack
+//Render Text Function (Disk 0x1FB910 / RAM 80778610)
+seek(0x1FB9C8)
+lbu t5,0(t3)
+seek(0x1FB9C8 + 0x14)
+lbu t4,0(t6)
+seek(0x1FB9C8 + 0x3C)
+lbu t8,0(t9)
+seek(0x1FB9C8 + 0x58)
+lbu t2,0(t1)
+seek(0x1FB9C8 + 0x78)
+lbu t5,0(t3)
+seek(0x1FB9C8 + 0x98)
+lbu t7,0(t4)
+seek(0x1FB9C8 + 0xB8)
+lbu t1,0(t8)
+seek(0x1FB9C8 + 0xD8)
+lbu t3,0(t0)
+seek(0x1FB9C8 + 0xFC)
+lbu a1,0(t6)
+seek(0x1FB9C8 + 0x1A0)
+addiu t0,t3,1
+seek(0x1FB9C8 + 0x1AC)
+lbu t6,0(t5)
+
+seek(0x1FB230 + 0x18)
+lbu t6,0(a0)
+seek(0x1FB230 + 0x24)
+lbu t7,0(a0)
+seek(0x1FB230 + 0x68)
+lbu t2,0(a0)
+seek(0x1FB230 + 0x80)
+lbu t3,0(a0)
+seek(0x1FB230 + 0x9C)
+lbu t5,0(a0)
+seek(0x1FB230 + 0xB8)
+lbu t7,0(a0)
+seek(0x1FB230 + 0xD4)
+lbu t9,0(a0)
+seek(0x1FB230 + 0xF0)
+lbu t1,0(a0)
+seek(0x1FB230 + 0x10C)
+lbu t3,0(a0)
+seek(0x1FB230 + 0x124)
+lbu t6,0(a0)
+seek(0x1FB230 + 0x164)
+lbu t6,1(a0)
+seek(0x1FB230 + 0x218)
+addiu a0,a0,1
+lbu t4,0(a0)
+
 //RAM 8077DC10 - NDD 0x200F10
 seek(0x200F10)
 base 0x8077DC10
-saveload1_exit:
-putTextnoSeek("Exit")
-saveload1_save:
-putTextnoSeek("Save")
-saveload1_load:
-putTextnoSeek("Load")
-saveload1_rename:
-putTextnoSeek("Rename")
-saveload1_delete:
-putTextnoSeek("Delete")
-saveload1_copy:
-putTextnoSeek("Move/Copy")
-saveload1_create:
-putTextnoSeek("Create Container") //???
-saveload1_disk:
-putTextnoSeek("Change Disk")
-saveload1_hiragana:
-putTextnoSeek("Hiragana")
-saveload1_katakana:
-putTextnoSeek("Katakana")
-saveload1_letters:
-putTextnoSeek("AaBbCc")
-saveload1_kanji:
-putTextnoSeek("Kanji")
-saveload1_all:
-putTextnoSeek("All")
-saveload1_space:
-putTextnoSeek("Space")
-saveload1_left:
-putTextnoSeek("Left")
-saveload1_right:
-putTextnoSeek("Right")
-saveload1_erase:
-putTextnoSeek("Erase")
-saveload1_eraseall:
-putTextnoSeek("Erase All")
-saveload1_undo:
-putTextnoSeek("Undo")
-saveload1_done:
-putTextnoSeek("Done")
-saveload1_back:
-putTextnoSeek("Back")
-saveload1_nextpage:
-//putTextnoSeek("Next Page") //Unused?
+save1_1:
+textEntryH("Exit")			//でる
+save1_2:
+textEntryH("Save")			//さくひんセーブ
+save1_3:
+textEntryH("Load")			//さくひんロード
+save1_4:
+textEntryH("Rename")			//なまえへんこう
+save1_5:
+textEntryH("Delete")			//さくひんのさくじょ
+save1_6:
+textEntryH("Move/Copy")			//さくひんのいどう・コピー
+save1_7:
+textEntryH("Create Container")		//いれものさくせい
+save1_8:
+textEntryH("Change Disk")		//ディスクのいれかえ
 
-//Pointers
-seek(0x20106C)
-dw (saveload1_exit)
-seek(0x201080)
-dw (saveload1_save)
-seek(0x201094)
-dw (saveload1_load)
-seek(0x2010A8)
-dw (saveload1_create)
-seek(0x2010BC)
-dw (saveload1_rename)
-seek(0x2010D0)
-dw (saveload1_delete)
-seek(0x2010E4)
-dw (saveload1_copy)
-seek(0x2010F8)
-dw (saveload1_disk)
+save1_9:
+textEntryH("Hiragana")			//ひらがな
+save1_10:
+textEntryH("Katakana")			//カタカナ
+save1_11:
+textEntryH("AaBbCc")			//えいすう
+save1_12:
+textEntryH("Kanji/Symbols")		//かんじ/きごう
+save1_13:
+textEntryH("All")			//ひらがな/カタカナ/えいすう
+save1_14:
+textEntryH("Space")			//くうはく
+save1_15:
+textEntryH("Left")			//もどる
+save1_16:
+textEntryH("Right")			//すすむ
+save1_17:
+textEntryH("Erase")			//1 もじけす
+save1_18:
+textEntryH("Erase All")			//すべてけす
+save1_19:
+textEntryH("Undo")			//やりなおし
+save1_20:
+textEntryH("Done")			//けってい
+save1_21:
+textEntryH("Back")			//もどる
+save1_22:
+textEntryH("Next")			//ページおくり
 
-seek(0x201120)
-dw (saveload1_back)
-seek(0x201148)
-dw (saveload1_hiragana)
-seek(0x20115C)
-dw (saveload1_katakana)
-seek(0x201170)
-dw (saveload1_letters)
-seek(0x201184)
-dw (saveload1_kanji)
-seek(0x201198)
-dw (saveload1_all)
-seek(0x2011AC)
-dw (saveload1_space)
-seek(0x2011C0)
-dw (saveload1_left)
-seek(0x2011D4)
-dw (saveload1_right)
-seek(0x2011E8)
-dw (saveload1_erase)
-seek(0x2011FC)
-dw (saveload1_eraseall)
-seek(0x201210)
-dw (saveload1_undo)
-seek(0x201224)
-dw (saveload1_done)
+seek(0x20105C)
+textEntrySkip(16); dw (save1_1)
+textEntrySkip(16); dw (save1_2)
+textEntrySkip(16); dw (save1_3)
+textEntrySkip(16); dw (save1_7)
+textEntrySkip(16); dw (save1_4)
+textEntrySkip(16); dw (save1_5)
+textEntrySkip(16); dw (save1_6)
+textEntrySkip(16); dw (save1_8)
 
-putText(0x201428, "New")
+textEntrySkip(20)
+textEntrySkip(16); dw (save1_21)
+
+textEntrySkip(20)
+textEntrySkip(16); dw (save1_9)
+textEntrySkip(16); dw (save1_10)
+textEntrySkip(16); dw (save1_11)
+textEntrySkip(16); dw (save1_12)
+textEntrySkip(16); dw (save1_13)
+textEntrySkip(16); dw (save1_14)
+textEntrySkip(16); dw (save1_15)
+textEntrySkip(16); dw (save1_16)
+textEntrySkip(16); dw (save1_17)
+textEntrySkip(16); dw (save1_18)
+textEntrySkip(16); dw (save1_19)
+textEntrySkip(16); dw (save1_20)
+
+
+//--Kanji/Symbol Page Number (Disk 0x20123C / RAM 8077DF3C)
+seek(0x20123C)
+textEntryH("1/1")			//1/1ページ
+
+seek(0x1EBC68)
+sb t0,0(v0)
+seek(0x1EBC7C)
+sb t2,2(v0)
+
+
+//--New Save
+seek(0x201428)
+textEntryH("New Save")			//あたらしくセーブする
+
+
+//--Move / Copy
 seek(0x201490)
-base 0x8077E190
-putText(0x201490, "Move")
+textEntryH("Move")			//いどう
+seek(0x201498)
+textEntryH("Copy")			//コピー
 
-seek(0x201438) //Fix Eraser animation
-saveload1_copy2:
-putText(0x201438, "Copy")
-//Change pointer
-seek(0x1F3696)
-dh (saveload1_copy2)
 
-//RAM 807C2110 - NDD 0x23A030
+//--Kind Menuing (Disk 0x23A030 / RAM 807C2110)
 seek(0x23A030)
 base 0x807C2110
-//Rough translations
-//putTextnoSeek("Test")
-saveload2_leftmenu:
-putTextnoSeek("Please select from the left menu.")
-saveload2_containersave:
-putTextnoSeek("Select a container.")
-saveload2_containerfull:
-putTextnoSeek("This container is full.")
-saveload2_newsave1:
-putTextnoSeek("Do you want to save this file as new?")
-saveload2_newsave2:
-putTextnoSeek("(Select another file if you want to overwrite)")
-saveload2_overwrite1:
-putTextnoSeek("Do you want to overwrite this file?")
-saveload2_overwrite2:
-putText4noSeek("Are you sure?", $00FF, "This file will be overwritten.")
-saveload2_nosave:
-putTextnoSeek("It is not possible to save.")
-saveload2_saving:
-putTextnoSeek("Saving...")
-saveload2_compression:
-putTextnoSeek("(Compression takes a moment)")
-saveload2_namefile1:
-putTextnoSeek("Do you want to name the file?")
-saveload2_namefile2:
-putTextnoSeek("(The name at the bottom will be used if not)")
-saveload2_namesave:
-putTextnoSeek("Saving name...")
-saveload2_nocontainer:
-putTextnoSeek("There is no container.")
-//putTextnoSeek("Please select a container.")
-saveload2_selectload:
-putTextnoSeek("Select a file.")
-saveload2_loadfile1:
-putTextnoSeek("Do you want to load this file?")
-saveload2_loadfile2:
-putText4noSeek("(Re-select from the right", $00FF, "if you want a different file)")
-saveload2_nofile:
-putTextnoSeek("This container is empty.")
-saveload2_sureload:
-putTextnoSeek("Current work will be lost, are you sure?")
-saveload2_loading:
-putTextnoSeek("Loading...")
-saveload2_whatdelete:
-putTextnoSeek("What do you want to delete?")
-//saveload2_selectcontainerdelete:
-//putTextnoSeek("Select a container that you want to delete.")
-saveload2_containerdelete:
-putText4noSeek("Do you want to delete", $00FF, "the contents of this container?")
-//putTextnoSeek("Please select a container.")
-//putTextnoSeek("Select the file to delete.")
-saveload2_filedelete:
-putTextnoSeek("Do you want to delete this file?")
-saveload2_deleting:
-putTextnoSeek("Deleting...")
-saveload2_whatrename:
-putTextnoSeek("What do you want to rename?")
-//saveload2_selectcontainerrename:
-//putTextnoSeek("Select the container to rename.")
-saveload2_containerrename:
-putText4noSeek("Do you want to change", $00FF, "the name of this container?")
-//putTextnoSeek("Please select a container.")
-//putTextnoSeek("Select the file to rename.")
-saveload2_filerename:
-putTextnoSeek("Do you want to rename this file?") //RAM 0x802FC35C
-saveload2_renaming:
-putTextnoSeek("Renaming...")
-saveload2_moveorcopy:
-putTextnoSeek("What do you want to do?")
-saveload2_whatmove:
-putTextnoSeek("What do you want to move?")
-saveload2_selectcontainermove1:
-putTextnoSeek("Select the container to move from.")
-saveload2_selectcontainermove2:
-putTextnoSeek("Select the new container to move to.")
-saveload2_containermove:
-putTextnoSeek("Do you want to move everything?")
-//putTextnoSeek("Please select a container.")
-//putTextnoSeek("Select the file to move.")
-saveload2_filemove:
-putTextnoSeek("Do you want to move this file?")
-saveload2_moving:
-putTextnoSeek("Moving...")
-saveload2_whatcopy:
-putTextnoSeek("What do you want to copy?")
-saveload2_selectcontainercopy1:
-putTextnoSeek("Select the container to copy from.")
-saveload2_selectcontainercopy2:
-putTextnoSeek("Select the container to copy to.")
-saveload2_containercopy:
-putTextnoSeek("Do you want to copy everything?")
-//putTextnoSeek("Please select a container.")
-//putTextnoSeek("Select the file to copy.")
-saveload2_filecopy:
-putTextnoSeek("Do you want to copy this file?")
-saveload2_copying:
-putTextnoSeek("Copying...")
-//putTextnoSeek("Creating new container...")
-//putTextnoSeek("Do you want to put a new name in this container?")
-//putTextnoSeek("Do you want to reorder?")
-//putTextnoSeek("What do you want to sort?")
-//putTextnoSeek("Swapping two containers.")
-//putTextnoSeek("Please select the first container.")
-//putTextnoSeek("Please select the second container.")
-//putTextnoSeek("Do you want to swap both containers?")
-//putTextnoSeek("Re-reading file information...")
-saveload2_init:
-putText4noSeek("Do you really want to initialize", $00FF, "the disk? All the files will be gone.")
-//putTextnoSeek("Do you want a new container?")
-saveload2_changedisk:
-putTextnoSeek("Please change the disk.")
-saveload2_ejectdisk:
-putTextnoSeek("Please eject the disk.")
-saveload2_insertdisk:
-putTextnoSeek("Please insert the disk.")
-saveload2_accessdisk:
-putTextnoSeek("We are accessing a different disk.")
-saveload2_mode64dd:
-putText4noSeek($00BB, " 64DD ", $00BB)
-saveload2_modesave:
-putText4noSeek($00B7, " Save ", $00B7)
-saveload2_modeload:
-putText4noSeek($00B7, " Load ", $00B7)
-saveload2_moderename:
-putText4noSeek($00B7, " Rename ", $00B7)
-saveload2_modedelete:
-putText4noSeek($00B7, " Delete ", $00B7)
-saveload2_modemovecopy:
-putText4noSeek($00B7, " Move/Copy ", $00B7)
-saveload2_modediskchange:
-putText4noSeek($00B7, " Disk Change ", $00B7)
-saveload2_modemove:
-putText4noSeek($00B7, " Move ", $00B7)
-saveload2_modecopy:
-putText4noSeek($00B7, " Copy ", $00B7)
-//putText4noSeek($00B7, " Sort ", $00B7)
-//putText4noSeek($00B7, " Container Creation ", $00B7)
+save2_1:
+//RAM 807C2110 - テスト
+textEntryH("Test")
+save2_2:
+//RAM 807C2118 - ひだりから えらんでください
+textEntryH("Please choose from the left menu.")
 
-//Pointers
-seek(0x23AC48)
-dw (saveload2_leftmenu)
-seek(0x23AC54)
-dw (saveload2_mode64dd)
-seek(0x23AC60)
-dw (saveload2_modesave)
-seek(0x23AC6C)
-dw (saveload2_modeload)
-seek(0x23AC78)
-dw (saveload2_moderename)
-seek(0x23AC84)
-dw (saveload2_modedelete)
-seek(0x23AC90)
-dw (saveload2_modemovecopy)
-seek(0x23AC9C)
-dw (saveload2_modediskchange)
-seek(0x23ACA8)
-dw (saveload2_modemove)
-seek(0x23ACB4)
-dw (saveload2_modecopy)
-seek(0x23ACC0)
-dw (saveload2_containersave)
-seek(0x23ACCC)
-dw (saveload2_containerfull)
-seek(0x23ACD8)
-dw (saveload2_newsave1)
-seek(0x23ACE4)
-dw (saveload2_newsave1)
-seek(0x23ACF0)
-dw (saveload2_newsave2)
-seek(0x23ACFC)
-dw (saveload2_overwrite1)
-seek(0x23AD08)
-dw (saveload2_overwrite2)
-seek(0x23AD14)
-dw (saveload2_nosave)
-seek(0x23AD20)
-dw (saveload2_saving)
-seek(0x23AD2C)
-dw (saveload2_saving)
-seek(0x23AD38)
-dw (saveload2_compression)
-seek(0x23AD44)
-dw (saveload2_namefile1)
-seek(0x23AD50)
-dw (saveload2_namefile2)
-seek(0x23AD5C)
-dw (saveload2_namesave)
-seek(0x23AD68)
-dw (saveload2_nocontainer)
-seek(0x23AD74)
-dw (saveload2_containersave) //Load
-seek(0x23AD80)
-dw (saveload2_selectload)
-seek(0x23AD8C)
-dw (saveload2_loadfile1)
-seek(0x23AD98)
-dw (saveload2_loadfile2)
-seek(0x23ADA4)
-dw (saveload2_nofile)
-seek(0x23ADB0)
-dw (saveload2_sureload)
-seek(0x23ADBC)
-dw (saveload2_loading)
-seek(0x23ADC8)
-dw (saveload2_whatdelete)
-seek(0x23ADD4)
-dw (saveload2_containersave) //Delete
-seek(0x23ADE0)
-dw (saveload2_containerdelete)
-seek(0x23ADEC)
-dw (saveload2_containersave) //Delete
-seek(0x23ADF8)
-dw (saveload2_selectload) //Delete
-seek(0x23AE04)
-dw (saveload2_filedelete)
-seek(0x23AE10)
-dw (saveload2_deleting)
-seek(0x23AE1C)
-dw (saveload2_whatrename)
-seek(0x23AE28)
-dw (saveload2_containersave) //Rename
-seek(0x23AE34)
-dw (saveload2_containerrename)
-seek(0x23AE40)
-dw (saveload2_containersave) //Rename
-seek(0x23AE4C)
-dw (saveload2_selectload) //Rename
-seek(0x23AE58)
-dw (saveload2_filerename)
-seek(0x23AE64)
-dw (saveload2_renaming)
-seek(0x23AE70)
-dw (saveload2_moveorcopy)
-seek(0x23AE7C)
-dw (saveload2_whatmove)
-seek(0x23AE88)
-dw (saveload2_selectcontainermove1)
-seek(0x23AE94)
-dw (saveload2_selectcontainermove2)
-seek(0x23AEA0)
-dw (saveload2_containermove)
-seek(0x23AEAC)
-dw (saveload2_containersave) //Move
-seek(0x23AEB8)
-dw (saveload2_selectload) //Move
-seek(0x23AEC4)
-dw (saveload2_filemove)
-seek(0x23AED0)
-dw (saveload2_moving)
-seek(0x23AEDC)
-dw (saveload2_whatcopy)
-seek(0x23AEE8)
-dw (saveload2_selectcontainercopy1)
-seek(0x23AEF4)
-dw (saveload2_selectcontainercopy2)
-seek(0x23AF00)
-dw (saveload2_containercopy)
-seek(0x23AF0C)
-dw (saveload2_containersave) //Copy
-seek(0x23AF18)
-dw (saveload2_selectload) //Copy
-seek(0x23AF24)
-dw (saveload2_filecopy)
-seek(0x23AF30)
-dw (saveload2_copying)
-seek(0x23AF3C)
-dw (saveload2_init)
+save2_3:
+//RAM 807C2138 - このさくひんをセーブするいれものを えらんでください
+textEntryH("Please select the container to save to.")
+save2_4:
+//RAM 807C2170 - このいれものは いっぱいです
+textEntryH("This container is full.")
+save2_5:
+//RAM 807C2190 - このさくひんを あたらしく セーブしますか?
+textEntryH("Do you want to save this file as new?")
+save2_6:
+//RAM 807C21C0 - (うわがきするときは みぎから えらんでください)
+textEntryH("(Select a file on the right side to overwrite)")
+save2_7:
+//RAM 807C21F4 - ここにセーブしますか?
+textEntryH("Do you want to overwrite this file?")
+save2_8:
+//RAM 807C220C - まえのさくひんが きえますが いいですか?
+textEntryH("Are you sure?\nThis file will be overwritten.")
+save2_9:
+//RAM 807C2238 - あたらしくセーブすることは できません
+textEntryH("You cannot save a new file.")
+save2_10:
+//RAM 807C2260 - セーブしています…
+textEntryH("Saving...")
+save2_11:
+//RAM 807C2274 - (あっしゅくに じかんが かかります)
+textEntryH("(The compression will take a moment.)")
+save2_12:
+//RAM 807C229C - さくひんに なまえを つけますか?
+textEntryH("Do you want to give this file a name?")
+save2_13:
+//RAM 807C22C0 - (つけないときは したのなまえになります)
+textEntryH("(The name below will be used if not.)")
+save2_14:
+//RAM 807C22EC - なまえを つけています…
+textEntryH("Saving Name...")
 
-//RAM 807C31C0 NDD 0x23B0E0
+save2_15:
+//RAM 807C2308 - いれものが ありません
+textEntryH("There is no container.")
+save2_16:
+//RAM 807C2320 - ロードするさくひんの いれものを えらんでください
+textEntryH("Please select the container to load from.")
+save2_17:
+//RAM 807C2354 - ロードするさくひんを えらんでください
+textEntryH("Please select the file to load.")
+save2_18:
+//RAM 807C237C - このさくひんを ロードしますか?
+textEntryH("Do you want to load this file?")
+save2_19:
+//RAM 807C23A0 - (ちがうときは みぎからえらびなおしてください)
+textEntryH("(If not, select another file on the right side.)")
+save2_20:
+//RAM 807C23D4 - このいれものには さくひんが はいっていません
+textEntryH("This container is empty.")
+save2_21:
+//RAM 807C2404 - げんざいのさくひんは セーブされていませんが\nいいですか?
+textEntryH("The current creation will be lost.\nAre you sure?")
+save2_22:
+//RAM 807C2444 - ロードしています…
+textEntryH("Loading...")
+
+save2_80:
+//RAM 807C2458 - げんざいの 3Dさくひんとブロックさくひんは\nセーブされていませんが いいですか?
+textEntryH("There are no saved 3D Models or Block creations\nin containers currently, is that okay?")
+save2_23:
+//RAM 807C24AC - どちらを さくじょ しますか?
+textEntryH("What do you want to delete?")
+save2_24:
+//RAM 807C24CC - なかみを さくじょするいれものを えらんでください
+textEntryH("Please select the container\nyou want to delete the contents from.")
+save2_25:
+//RAM 807C2500 - このいれものの なかみを さくじょ しますか?
+textEntryH("Do you want to delete the contents\nof this container?")
+save2_26:
+//RAM 807C2530 - さくじょする さくひんのいれものを えらんでください
+textEntryH("Please select the container that contains\nthe file you want to delete.")
+save2_27:
+//RAM 807C2568 - さくじょする さくひんを えらんでください
+textEntryH("Please select the file you want to delete.")
+save2_28:
+//RAM 807C2594 - このさくひんを さくじょ しますか?
+textEntryH("Are you sure you want to delete this file?")
+save2_29:
+//RAM 807C25BC - さくじょ しています…
+textEntryH("Deleting...")
+
+save2_30:
+//RAM 807C25D4 - どちらのなまえを へんこう しますか?
+textEntryH("What do you want to rename?")
+save2_31:
+//RAM 807C25FC - なまえを へんこうするいれものを えらんでください
+textEntryH("Please select the container\nyou want to rename.")
+save2_32:
+//RAM 807C2630 - このいれものの なまえを へんこうしますか?
+textEntryH("Do you want to rename this container?")
+save2_33:
+//RAM 807C2660 - なまえを へんこうするさくひんの いれものを\nえらんでください
+textEntryH("Please select the container that contains\nthe file you want to rename.")
+save2_34:
+//RAM 807C26A0 - なまえを へんこうするさくひんを えらんでください
+textEntryH("Please select the file you want to rename.")
+save2_35:
+//RAM 807C26D4 - このさくひんの なまえを へんこう しますか?
+textEntryH("Do you want to rename this file?")
+save2_36:
+//RAM 807C2704 - なまえを へんこう しています…
+textEntryH("Renaming...")
+
+save2_37:
+//RAM 807C2728 - したから えらんでください
+textEntryH("What do you want to do?")
+save2_38:
+//RAM 807C2744 - どちらを いどう しますか?
+textEntryH("What do you want to move?")
+save2_39:
+//RAM 807C2764 - なかみを いどうするいれものを えらんでください
+textEntryH("Please select the container\nto move all its contents from.")
+save2_40:
+//RAM 807C2798 - いどうするさきの いれものを えらんでください
+textEntryH("Please select the destination container\nto move files to.")
+save2_41:
+//RAM 807C27C8 - さくひんを すべて いどうしても いいですか?
+textEntryH("Do you want to move all its contents?")
+save2_42:
+//RAM 807C27F8 - いどうするさくひんの いれものを えらんでください
+textEntryH("Please select the container\nto move a file from.")
+save2_43:
+//RAM 807C282C - いどうするさくひんを えらんでください
+textEntryH("Please select a file to move.")
+save2_44:
+//RAM 807C2854 - このさくひんを いどう しますか?
+textEntryH("Do you want to move this file?")
+save2_45:
+//RAM 807C2878 - いどう しています…
+textEntryH("Moving...")
+save2_46:
+//RAM 807C2890 - どちらを コピーしますか?
+textEntryH("What do you want to copy?")
+save2_47:
+//RAM 807C28AC - コピーするいれものを えらんでください
+textEntryH("Please select the container to copy from.")
+save2_48:
+//RAM 807C28D4 - コピーするさきの いれものを えらんでください
+textEntryH("Please select the destination\ncontainer to copy files to.")
+save2_49:
+//RAM 807C2904 - さくひんを すべて コピーしますか?
+textEntryH("Do you want to copy all its contents?")
+save2_50:
+//RAM 807C292C - コピーするさくひんの いれものを えらんでください
+textEntryH("Please select the container\nto copy a file from.")
+save2_51:
+//RAM 807C2960 - コピーするさくひんを えらんでください
+textEntryH("Please select a file to copy.")
+save2_52:
+//RAM 807C2988 - このさくひんを コピーしますか?
+textEntryH("Do you want to copy this file?")
+save2_53:
+//RAM 807C29AC - コピーしています…
+textEntryH("Copying...")
+
+save2_54:
+//RAM 807C29C0 - いれものをさくせいしています…
+textEntryH("Creating new container...")
+save2_55:
+//RAM 807C29E0 - このいれものにあたらしいなまえをつけますか?
+textEntryH("Do you want to name this new container?")
+save2_56:
+//RAM 807C2A10 - どちらのならびかえをしますか?
+textEntryH("What do you want to do?")
+save2_57:
+//RAM 807C2A30 - どうならびかえますか?
+textEntryH("What do you want to sort?")
+save2_58:
+//RAM 807C2A48 - 2つのいれもののばしょをいれかえます
+textEntryH("Swap the locations of 2 containers.")
+save2_59:
+//RAM 807C2A70 - 1つめのいれものをえらんでください
+textEntryH("Please select the first container.")
+save2_60:
+//RAM 807C2A94 - 2つめのいれものをえらんでください
+textEntryH("Please select the second container.")
+save2_61:
+//RAM 807C2AB8 - 2つのいれもののばしょをいれかえていいですか?
+textEntryH("Do you want to swap the location\nof these two containers?")
+save2_62:
+//RAM 807C2AE8 - ファイルじょうほうをよみなおしています…
+textEntryH("Reading the file information again...")
+save2_63:
+//RAM 807C2B14 - ディスクの データりょういきを しょきか します\nすべてのさくひんが きえてしまいますが いいですか?
+textEntryH("The contents of this disk will be gone.\nAre you sure you want to initialize the disk?")
+save2_64:
+//RAM 807C2B7C - いれものを あたらしく さくせいしますか?
+textEntryH("Do you want to create a new container?")
+
+save2_65:
+//RAM 807C2BA8 - ディスクのこうかんをおこないます
+textEntryH("Please change the disk.")
+save2_66:
+//RAM 807C2BCC - ディスクをぬいてください
+textEntryH("Please eject the disk.")
+save2_67:
+//RAM 807C2BE8 - ディスクをいれてください
+textEntryH("Please insert the disk.")
+save2_68:
+//RAM 807C2C04 - ちがうディスクがはいっています
+textEntryH("A different disk is inserted.")
+
+save2_69:
+//RAM 807C2C24 - ★ 64DD ★
+textEntryH2($00BB, "64DD")
+save2_70:
+//RAM 807C2C38 - ● セーブ ●
+textEntryH2($00B7, "Save")
+save2_71:
+//RAM 807C2C48 - ● ロード ●
+textEntryH2($00B7, "Load")
+save2_72:
+//RAM 807C2C58 - ● なまえへんこう ●
+textEntryH2($00B7, "Rename")
+save2_73:
+//RAM 807C2C70 - ● さくじょ ●
+textEntryH2($00B7, "Delete")
+save2_74:
+//RAM 807C2C84 - ● そのたのメニュー ●
+textEntryH2($00B7, "Menu")
+save2_75:
+//RAM 807C2CA0 - ● ディスクの いれかえ ●
+textEntryH2($00B7, "Disk Change")
+save2_76:
+//RAM 807C2CC0 - ● いどう ●
+textEntryH2($00B7, "Move")
+save2_77:
+//RAM 807C2CD0 - ● コピー ●
+textEntryH2($00B7, "Copy")
+save2_78:
+//RAM 807C2CE0 - ● ならべかえ モード ●
+textEntryH2($00B7, "Sort")
+save2_79:
+//RAM 807C2CFC - ● いれものさくせい モード ●
+textEntryH2($00B7, "Create Container")
+
+seek(0x23AC40)
+textEntrySkip(8); dw (save2_2)
+textEntrySkip(8); dw (save2_69)
+textEntrySkip(8); dw (save2_70)
+textEntrySkip(8); dw (save2_71)
+textEntrySkip(8); dw (save2_72)
+textEntrySkip(8); dw (save2_73)
+textEntrySkip(8); dw (save2_74)
+textEntrySkip(8); dw (save2_75)
+textEntrySkip(8); dw (save2_76)
+textEntrySkip(8); dw (save2_77)
+textEntrySkip(8); dw (save2_3)
+textEntrySkip(8); dw (save2_4)
+textEntrySkip(8); dw (save2_5)
+textEntrySkip(8); dw (save2_5)
+textEntrySkip(8); dw (save2_6)
+textEntrySkip(8); dw (save2_7)
+textEntrySkip(8); dw (save2_8)
+textEntrySkip(8); dw (save2_9)
+textEntrySkip(8); dw (save2_10)
+textEntrySkip(8); dw (save2_10)
+textEntrySkip(8); dw (save2_11)
+textEntrySkip(8); dw (save2_12)
+textEntrySkip(8); dw (save2_13)
+textEntrySkip(8); dw (save2_14)
+textEntrySkip(8); dw (save2_15)
+textEntrySkip(8); dw (save2_16)
+textEntrySkip(8); dw (save2_17)
+textEntrySkip(8); dw (save2_18)
+textEntrySkip(8); dw (save2_19)
+textEntrySkip(8); dw (save2_20)
+textEntrySkip(8); dw (save2_21)
+textEntrySkip(8); dw (save2_22)
+textEntrySkip(8); dw (save2_23)
+textEntrySkip(8); dw (save2_24)
+textEntrySkip(8); dw (save2_25)
+textEntrySkip(8); dw (save2_26)
+textEntrySkip(8); dw (save2_27)
+textEntrySkip(8); dw (save2_28)
+textEntrySkip(8); dw (save2_29)
+textEntrySkip(8); dw (save2_30)
+textEntrySkip(8); dw (save2_31)
+textEntrySkip(8); dw (save2_32)
+textEntrySkip(8); dw (save2_33)
+textEntrySkip(8); dw (save2_34)
+textEntrySkip(8); dw (save2_35)
+textEntrySkip(8); dw (save2_36)
+textEntrySkip(8); dw (save2_37)
+textEntrySkip(8); dw (save2_38)
+textEntrySkip(8); dw (save2_39)
+textEntrySkip(8); dw (save2_40)
+textEntrySkip(8); dw (save2_41)
+textEntrySkip(8); dw (save2_42)
+textEntrySkip(8); dw (save2_43)
+textEntrySkip(8); dw (save2_44)
+textEntrySkip(8); dw (save2_45)
+textEntrySkip(8); dw (save2_46)
+textEntrySkip(8); dw (save2_47)
+textEntrySkip(8); dw (save2_48)
+textEntrySkip(8); dw (save2_49)
+textEntrySkip(8); dw (save2_50)
+textEntrySkip(8); dw (save2_51)
+textEntrySkip(8); dw (save2_52)
+textEntrySkip(8); dw (save2_53)
+textEntrySkip(8); dw (save2_63)
+textEntrySkip(8); dw (save2_80)
+
+
+//--Bottom Window Text (Disk 0x23B0E0 / RAM 807C31C0)
+//Text ID RAM 8077B0EC
 seek(0x23B0E0)
 base 0x807C31C0
-saveload3_donoteject:
-putTextnoSeek("Do not eject the disk.")
-saveload3_prepsave:
-putTextnoSeek("Prepared Save")
-saveload3_unreadfiles:
-putTextnoSeek("Unreadable Files")
+save3_1:
+textEntryH("Please do not eject the disk.")	//ディスクを ぬかないでください
+save3_2:
+textEntryH("Preparing to save...")		//セーブのじゅんびをしています
+save3_3:
+textEntryH("Some files cannot be used here.")	//ここであつかえないファイルがふくまれますも
+
 seek(0x23B150)
-dw (saveload3_donoteject), (saveload3_prepsave), (saveload3_unreadfiles)
+dw (save3_1),(save3_2),(save3_3)
 
-//RAM 807C3240 - NDD 0x23B160
+
+//--UI and Error Text (Disk 0x23B160 / RAM 807C3240)
+//UI ID / RAM 8077B134 (byte)
+//Error ID / RAM 8077B140
 seek(0x23B160)
-base 0x807C3240
-saveload4_usedspace:
-putTextnoSeek("Used Space: 0.0MB")
-saveload4_currentwork1:
-//putTextnoSeek("Current work")
-saveload4_currentwork2:
-putTextnoSeek("")
-saveload4_fromdisk:
-putTextnoSeek("From Disk")
-saveload4_from64gb:
-//putTextnoSeek("From Transfer Pak")
-saveload4_readfile:
-//putTextnoSeek("Read File")
-saveload4_file: //RAM 807C32D0
-putTextnoSeek("File")
-saveload4_notloaded: //RAM 807C32DC
-putTextnoSeek("is not loaded")
-saveload4_makingfile:
-//putTextnoSeek("Making File")
-saveload4_takenphotos:
-putTextnoSeek("Current Work")
-saveload4_auxpaper:
-//putTextnoSeek("Auxiliary Paper")
-saveload4_image:
-putTextnoSeek("")
-//putTextnoSeek("Image")
+save4_1:
+//RAM 807C3240 - しようりょう: 222 Mバイト
+textEntryH("Used Space: 222 MB")
+save4_2:
+//RAM 807C3244 - さくせいがめんに ひょうじ
+textEntryH("Current creation")
+save4_3:
+//RAM 807C3280 - されている さくひん
+textEntryH(" ")
+save4_4:
+//RAM 807C3298 - ディスクから
+textEntryH("from Disk")
+save4_5:
+//RAM 807C32A8 - 64GBパックから
+textEntryH("from Transfer Pak")
+save4_6:
+//RAM 807C32BC - よみこんださくひん
+textEntryH("Creation loaded")
+save4_7:
+//RAM 807C32D0 - さくひんは
+textEntryH("File is")
+save4_8:
+//RAM 807C32DC - ロードされていません
+textEntryH("not loaded")
+save4_9:
+//RAM 807C32F4 - さくせいちゅうのさくひん
+textEntryH("Current creation")
+save4_10:
+//RAM 807C3310 - さつえいしたしゃしん
+textEntryH("Photo Taken")
+save4_11:
+//RAM 807C3328 - ほじょヨウシに ひょうじ
+textEntryH("Current creation on")
+save4_12:
+//RAM 807C3344 - されている がぞう
+textEntryH("alternate canvas")
 
-saveload4_selectcontainer:
-putTextnoSeek("Container")
-saveload4_selectfile:
-putTextnoSeek("   File")
-saveload4_selectcontainerall1:
-putTextnoSeek("All files of")
-saveload4_selectcontainerall2:
-putTextnoSeek("  a container")
+save4_13:
+//RAM 807C3358 - いれもの
+textEntryH("Container")
+save4_14:
+//RAM 807C3364 - さくひん
+textEntryH("File")
+save4_15:
+//RAM 807C3370 - いれものの
+textEntryH("All contents of")
+save4_16:
+//RAM 807C337C - なかみすべて
+textEntryH("a container.")
 
-saveload4_containerfull:
-putTextnoSeek("This container is full.")
-saveload4_diskactionsuspended:
-putText4noSeek("Disk is ejected.", $00FF, "Access suspended.")
-saveload4_cantwritecontainer:
-putTextnoSeek("Cannot write in this container.")
-saveload4_cantwritefile:
-putTextnoSeek("Cannot write file.")
-saveload4_enterdisk:
-putTextnoSeek("The disk is full.")
-saveload4_filecantdelete:
-putTextnoSeek("Cannot delete file.")
-saveload4_containercantdelete:
-putTextnoSeek("Cannot delete container.")
-saveload4_filecantmove:
-putTextnoSeek("Cannot move file.")
-saveload4_namealreadyexists:
-putTextnoSeek("Name already exists.")
-saveload4_cantmakecontainer:
-putTextnoSeek("Cannot create container.")
-saveload4_diskerror:
-putTextnoSeek("Disk Error")
-saveload4_reread:
-putText4noSeek("Reread because the disk", $00FF, "has been replaced.")
-saveload4_namenotchanged:
-putTextnoSeek("Name was not changed.")
-saveload4_filenamenotchanged:
-putTextnoSeek("Cannot change filename.")
-saveload4_containernamenotchanged:
-putTextnoSeek("Cannot change container name.")
-saveload4_filecantdeletewrite:
-putTextnoSeek("Cannot write/delete file.")
-saveload4_diskcantdeletewrite:
-putTextnoSeek("Cannot write/delete on this disk.")
-saveload4_cannotmovesamecontainer:
-putTextnoSeek("Cannot move in the same container.")
-saveload4_disknotinserted:
-putText4noSeek("Disk is ejected.", $00FF, "Insert disk.")
-saveload4_cantusedisk:
-putText4noSeek("Disk cannot be used here.", $00FF, "Insert correct disk.")
-saveload4_insertdisk2:
-dh 0x00FF
-saveload4_insertdisk:
-putTextnoSeek("Insert disk.")
-saveload4_cantusename:
-putTextnoSeek("Cannot use name.")
-saveload4_diskcorrupted:
-putText4noSeek("Corrupted disk.", $00FF, "Replace disk.")
-saveload4_diskfault:
-putText4noSeek("Disk fault.", $00FF, "Reinsert disk.")
-saveload4_correctdisk:
-putTextnoSeek("Insert correct disk.")
-saveload4_nocontainer:
-putTextnoSeek("No container.")
-saveload4_no2container:
-putTextnoSeek("No 2 or more containers.")
-saveload4_cantmovecontent:
-putText4noSeek("Cannot move files", ".", $00FF)
-saveload4_container70files:
-putText4noSeek("A single container can only", $00FF, "contain up to 70 files.")
-saveload4_nofile:
-putTextnoSeek("Container is empty.")
-saveload4_cantremovecontent:
-putTextnoSeek("Cannot delete files.")
-saveload4_filelargeload:
-putText4noSeek("Cannot load file", $00FF, "Too large")
-saveload4_filetypeload:
-putText4noSeek("Cannot load file", $00FF, "Type is different.")
-saveload4_filetypeoverwrite:
-putText4noSeek("Cannot overwrite file", $00FF, "Type is different.")
-saveload4_containercantdeletewrite:
-putText4noSeek("Cannot delete/write", $00FF, "in this container.")
-saveload4_containercantdeletefiles:
-putTextnoSeek("Cannot delete some files.")
-saveload4_error49:
-putText4noSeek("Error 49", $00FF, "Do not eject disk while in access.")
-saveload4_error2:
-putText4noSeek("Error 2", $00FF, "Reinsert disk.")
-saveload4_readonly:
-putText4noSeek("Read-only disk.", $00FF, "Cannot be used.")
-saveload4_movefull:
-//putText4noSeek("Move container destination", $00FF, "is full.")
-saveload4_copyfull:
-putText4noSeek("Container destination", $00FF, "is full.")
-//putText4noSeek("Copy container destination", $00FF, "is full.")
-saveload4_diskmatch:
-putText4noSeek("Disk does not match.", $00FF, "Insert original disk.")
-saveload4_cantinitdisk:
-putTextnoSeek("Cannot initialize disk.")
-saveload4_allfiles:
-putTextnoSeek("All files could not be moved.")
-saveload4_allfilesmoved:
-putTextnoSeek("Every file has been moved.")
-saveload4_cantsavefile:
-putTextnoSeek("Cannot save file.")
-saveload4_namenotgiven:
-putTextnoSeek("Name was not given.")
-saveload4_another:
-putTextnoSeek("Not on a seperate disk.")
-saveload4_contentcantcopy:
-putTextnoSeek("Cannot copy.")
-saveload4_entercontainer:
-putTextnoSeek("Cannot save anymore on this container.")
-saveload4_containerdeleted:
-putText4noSeek("Every file of this container", $00FF, "has been deleted.")
-saveload4_diskejectsaving:
-putText4noSeek("Disk has been ejected.", $00FF, "Do not eject the disk while saving.")
-saveload4_errornumber:
-putTextnoSeek("Error  ")
-saveload4_readmanual:
-putText4noSeek("For more details, please", $00FF, "read the instruction manual.")
-saveload4_thisdiskerror:
-putTextnoSeek("This is a disk error.")
+save4_e1:
+//RAM 807C3390 - いれものが いっぱいです。\n
+textEntryH("The container is full.\n")
+save4_e2:
+//RAM 807C33B0 - ディスクが さしこまれていません。\n\nさぎょうを ちゅうだんします。
+textEntryH("The disk has been ejected.\n\nAccess suspended.")
+save4_e3:
+//RAM 807C33F8 - このいれものには かきこめません。
+textEntryH("You cannot write to\nthis container.")
+save4_e4:
+//RAM 807C341C - このさくひんには かきこめません。
+textEntryH("You cannot write this file.")
+save4_e5:
+//RAM 807C3440 - このディスクには これいじょう さくひんが\nはいりません。
+textEntryH("There is no more space to fit\nmore files on this disk.")
+save4_e6:
+//RAM 807C347C - このさくひんを けすことは できません。
+textEntryH("You cannot delete this file.")
+save4_e7:
+//RAM 807C34A8 - このいれものを けすことは できません。
+textEntryH("You cannot delete\nthis container.")
+save4_e8:
+//RAM 807C34D4 - このさくひんは いどうできません。
+textEntryH("You cannot move this file.")
+save4_e9:
+//RAM 807C34F8 - おなじなまえが すでにあります。
+textEntryH("This name already exists.")
+save4_e10:
+//RAM 807C351C - これいじょう いれものを つくれません。
+textEntryH("You cannot create a container.")
+save4_e11:
+//RAM 807C3548 - ディスクのエラーです。
+textEntryH("Disk Error")
+save4_e12:
+//RAM 807C3560 - ディスクが いれかえられたので\nよみなおします。
+textEntryH("The disk has been read again\nbecause it has been replaced.")
+save4_e13:
+//RAM 807C3594 - なまえは へんこう されませんでした。
+textEntryH("The name was not changed.")
+save4_e14:
+//RAM 807C35BC - このさくひんの なまえは へんこう\nできません。
+textEntryH("You cannot rename this file.")
+save4_e15:
+//RAM 807C35F0 - このいれものの なまえは へんこう\nできません。
+textEntryH("You cannot rename\nthis container.")
+save4_e16:
+//RAM 807C3624 - このさくひんは かいたり けしたり\nできません。
+textEntryH("You cannot write\nor delete this file.")
+save4_e17:
+//RAM 807C3658 - このディスクには かいたり けしたり\nできません。
+textEntryH("You cannot write\nor delete on this disk.")
+save4_e18:
+//RAM 807C368C - おなじいれものにいどうはできません。
+textEntryH("You cannot move\nin the same container.")
+save4_e19:
+//RAM 807C36B4 - ディスクが はいっていません。\n\nディスクを さしこんで ください。
+textEntryH("The disk has been ejected.\n\nPlease insert disk.")
+save4_e20:
+//RAM 807C36FC - このディスクは ここでは つかうことが\nできません。\n\nただしいディスクに いれかえて ください。
+textEntryH("This disk cannot be used.\n\nPlease insert the correct disk.")
+save4_e21:
+//RAM 807C3760 -  \n
+db $FF
+save4_e22:
+//RAM 807C3764 - ディスクを さしこんで  ください。
+textEntryH("Please insert disk.")
+save4_e23:
+//RAM 807C378C - そのなまえは つかえません。
+textEntryH("You cannot use this name.")
+save4_e24:
+//RAM 807C37AC - このディスクは データが こわれています。\n\nただしいディスクに いれかえて ください。
+textEntryH("The contents of this disk\nhas been wiped.")
+save4_e25:
+//RAM 807C3804 - まちがったディスクが さしこまれている\nかのうせいが あります。\n
+textEntryH("The wrong disk\nmay have been inserted.\n")
+save4_e26:
+//RAM 807C3848 - ただしいディスクに いれかえて ください。
+textEntryH("Please insert the correct disk.")
+save4_e27:
+//RAM 807C3874 - いれものが ありません。
+textEntryH("There are no containers.")
+save4_e28:
+//RAM 807C3890 - 2ついじょうのいれものが ありません。
+textEntryH("There are no more\nthan 2 containers.")
+save4_e29:
+//RAM 807C38B8 - なかみを すべて いどうすることが\nできません。\n
+textEntryH("You cannot move all the files.\n")
+save4_e30:
+//RAM 807C38EC - 1 つのいれものには 70こまでしか\nさくひんが はいりません。
+textEntryH("A container can contain\nup to 70 files.")
+save4_e31:
+//RAM 807C3930 - このいれものには さくひんが ありません。
+textEntryH("This container is empty.")
+save4_e32:
+//RAM 807C395C - なかみを すべて さくじょ することが\nできません。
+textEntryH("You cannot delete all the files.")
+save4_e33:
+//RAM 807C3994 - このさくひんは サイズが おおきいので\nここでは ロードできません。
+textEntryH("The file could not be loaded\nbecause it is too big.")
+save4_e34:
+//RAM 807C39DC - このさくひんは しゅるいが ちがうので\nここでは ロードできません。
+textEntryH("The file could not be loaded\nbecause it is of a different type.")
+save4_e35:
+//RAM 807C3A24 - このさくひんは しゅるいが ちがうので\nうわがきセーブは できません。
+textEntryH("The file cannot be overwritten\nbecause it is of a different type.")
+save4_e36:
+//RAM 807C3A6C - このいれものには かいたり けしたり\nできません。
+textEntryH("You cannot write\nor delete this container.")
+save4_e37:
+//RAM 807C3AA0 - このいれものの なかには\nさくじょできない さくひんが あります。
+textEntryH("You cannot delete some of\nthe files in this container.")
+save4_e38:
+//RAM 807C3AE4 - エラーばんごう49\nちゅうい:\nアクセスランプ てんめつちゅうに\nディスクを ぬかないでください。
+textEntryH("Error 49\n\nPlease do not eject the disk\nwhile the access lamp is blinking.")
+save4_e39:
+//RAM 807C3B50 - エラーばんごう2\n\nディスクを さしこみなおして ください。
+textEntryH("Error 2\n\nPlease reinsert the disk.")
+save4_e40:
+//RAM 807C3B98 - よみこみ せんよう ディスクです。\nここでは つかうことが できません。\n
+textEntryH("This is a read-only disk.\nIt cannot be used.\n")
+save4_e41:
+//RAM 807C3BE4 - いどうさきの いれものが いっぱいに\nなりました。\n
+save4_e42:
+//RAM 807C3C1C - コピーさきの いれものが いっぱいに\nなりました。\n
+textEntryH("The destination container\nis full.\n")
+save4_e43:
+//RAM 807C3C54 - ディスクが ちがいます。\n\nぬいたときのディスクに いれかえて\nください。
+textEntryH("This is a different disk.\n\nPlease insert the original disk.")
+save4_e44:
+//RAM 807C3CA0 - このディスクは しょきか できません。
+textEntryH("This disk cannot be initialized.")
+save4_e45:
+//RAM 807C3CC8 - すべてのさくひんを いどうすることが\nできませんでした。
+textEntryH("Could not move all of the files.")
+save4_e46:
+//RAM 807C3D04 - このいれものの すべてのさくひんを\nいどうしました。
+textEntryH("All files of the container\nhave been moved.")
+save4_e47:
+//RAM 807C3D3C - このさくひんは セーブできません。
+textEntryH("This file could not be saved.")
+save4_e48:
+//RAM 807C3D74 - なまえが つけられませんでした。
+textEntryH("This file could not be renamed.")
+save4_e49:
+//RAM 807C3D98 - べつのディスクではありません。
+textEntryH("This is not a different disk.")
+save4_e50:
+//RAM 807C3DB8 - なかみを すべてコピーすることが\nできません。\n
+textEntryH("Could not copy all of the files.\n")
+save4_e51:
+//RAM 807C3DEC - このいれものには これいじょう さくひんが\nはいりません。
+textEntryH("There is no more space to fit\nmore files in this container.")
+save4_e52:
+//RAM 807C3E28 - このいれものの すべてのさくひんを\nさくじょ しました。
+textEntryH("All files of the container\nhave been deleted.")
+save4_e53:
+//RAM 807C3E64 - ディスクが ぬかれました。\nセーブしょりちゅうに\nディスクを ぬかないでください。
+textEntryH("The disk has been ejected.\nPlease do not eject\nthe disk while saving.")
+save4_e54:
+//RAM 807C3EB8 - エラーばんごう
+textEntryH("Error ")
+save4_e55:
+//RAM 807C3ECC - くわしくは とりあつかいせつめいしょを\nおよみください。
+textEntryH("For additional details, please\nread the instruction booklet.")
+save4_e56:
+//RAM 807C3F08 - ディスクエラーです。
+textEntryH("This is a disk error.")
 
-//Pointers
-//Change pointers
 seek(0x23BE40)
-dw (saveload4_containerfull),(saveload4_container70files),0,(saveload4_diskactionsuspended)
-dw 0,(saveload4_cantwritecontainer),0,(saveload4_cantwritefile)
-dw 0,(saveload4_enterdisk),0,(saveload4_filecantdelete)
-dw 0,(saveload4_containercantdelete),0,(saveload4_filecantmove)
-dw 0,(saveload4_namealreadyexists),0,(saveload4_cantmakecontainer)
-dw 0,(saveload4_diskerror),0,(saveload4_reread)
-dw 0,(saveload4_namenotchanged),0,(saveload4_filenamenotchanged)
-dw 0,(saveload4_containernamenotchanged),0,(saveload4_filecantdeletewrite)
-dw 0,(saveload4_diskcantdeletewrite),0,(saveload4_cannotmovesamecontainer)
-dw 0,(saveload4_disknotinserted),0,(saveload4_cantusedisk)
-dw 0,(saveload4_insertdisk),0,(saveload4_cantusename)
-dw 0,(saveload4_diskcorrupted),0,(saveload4_diskfault)
-dw (saveload4_correctdisk),0,(saveload4_nocontainer),0
-dw (saveload4_no2container),0,(saveload4_cantmovecontent),(saveload4_container70files)
-dw 0,(saveload4_nofile),0,(saveload4_cantremovecontent)
-dw 0,(saveload4_filetypeload),0,(saveload4_filetypeoverwrite)
-dw 0,(saveload4_containercantdeletewrite),0,(saveload4_containercantdeletefiles)
-dw 0,(saveload4_error49),(saveload4_readmanual),(saveload4_insertdisk2)
-dw 0,(saveload4_error2),0,(saveload4_readonly)
-dw (saveload4_correctdisk),0,(saveload4_cantusedisk),0
-dw (saveload4_movefull),(saveload4_container70files),0,(saveload4_copyfull)
-dw (saveload4_container70files),0,(saveload4_filelargeload),0
-dw (saveload4_diskmatch),0,(saveload4_cantinitdisk),0
-dw (saveload4_allfiles),0,(saveload4_allfilesmoved),0
-dw (saveload4_cantsavefile),0,(saveload4_namenotgiven),0
-dw (saveload4_another),0,(saveload4_contentcantcopy),(saveload4_container70files)
-dw 0,(saveload4_entercontainer),0,(saveload4_containerdeleted)
-dw 0,(saveload4_error49),(saveload4_readmanual),0
-dw (saveload4_diskejectsaving),0,0,0
+dw (save4_e1),(save4_e30),0
+dw (save4_e2),0
+dw (save4_e3),0
+dw (save4_e4),0
+dw (save4_e5),0
+dw (save4_e6),0
+dw (save4_e7),0
+dw (save4_e8),0
+dw (save4_e9),0
+dw (save4_e10),0
+dw (save4_e11),0
+dw (save4_e12),0
+dw (save4_e13),0
+dw (save4_e14),0
+dw (save4_e15),0
+dw (save4_e16),0
+dw (save4_e17),0
+dw (save4_e18),0
+dw (save4_e19),0
+dw (save4_e20),0
+dw (save4_e22),0
+dw (save4_e23),0
+dw (save4_e24),0
+dw (save4_e25),(save4_e26),0
+dw (save4_e27),0
+dw (save4_e28),0
+dw (save4_e29),(save4_e30),0
+dw (save4_e31),0
+dw (save4_e32),0
+dw (save4_e34),0
+dw (save4_e35),0
+dw (save4_e36),0
+dw (save4_e37),0
+dw (save4_e38),(save4_e55),(save4_e21),0
+dw (save4_e39),0
+dw (save4_e40),(save4_e26),0
+dw (save4_e20),0
+dw (save4_e41),(save4_e30),0
+dw (save4_e42),(save4_e30),0
+dw (save4_e33),0
+dw (save4_e43),0
+dw (save4_e44),0
+dw (save4_e45),0
+dw (save4_e46),0
+dw (save4_e47),0
+dw (save4_e48),0
+dw (save4_e49),0
+dw (save4_e50),(save4_e30),0
+dw (save4_e51),0
+dw (save4_e52),0
+dw (save4_e38),(save4_e55),0
+dw (save4_e53),0
+
 
 seek(0x1EC32E)
-dh (saveload4_usedspace)
+dh (save4_1)
+
+//Current creation
 seek(0x1ECD7A)
-dh (saveload4_currentwork1)
+dh (save4_2)
+seek(0x1ECD7A+0x8)
+//dh $0091	//X Pos
+seek(0x1ECD7A+0x10)
+dh $004B	//Y Pos
 seek(0x1ECD92)
-dh (saveload4_currentwork2)
+dh (save4_3)
+seek(0x1ECD92+0x8)
+//dh $0091	//X Pos
+seek(0x1ECD92+0x10)
+//dh $0050	//Y Pos
+
+//Creation loaded from Disk
 seek(0x1ECDB2)
-dh (saveload4_fromdisk)
+//dh (save4_4)
+dh (save4_6)
+seek(0x1ECDB2+0x8)
+//dh $0091	//X Pos
+seek(0x1ECDB2+0x10)
+//dh $0046	//Y Pos
 seek(0x1ECDCA)
-dh (saveload4_readfile)
+//dh (save4_6)
+dh (save4_4)
+seek(0x1ECDCA+0x8)
+//dh $0091	//X Pos
+seek(0x1ECDCA+0x10)
+//dh $0050	//Y Pos
+
+//Creation loaded from Transfer Pak
 seek(0x1ECDEA)
-dh (saveload4_from64gb)
+//dh (save4_5)
+dh (save4_6)
+seek(0x1ECDEA+0x8)
+//dh $0091	//X Pos
+seek(0x1ECDEA+0x10)
+//dh $0046	//Y Pos
 seek(0x1ECE02)
-dh (saveload4_readfile)
+//dh (save4_6)
+dh (save4_5)
+seek(0x1ECE02+0x8)
+//dh $0091	//X Pos
+seek(0x1ECE02+0x10)
+//dh $0050	//Y Pos
+
+//Current creation on alternate canvas
 seek(0x1ECE22)
-dh (saveload4_auxpaper)
+dh (save4_11)
+seek(0x1ECE22+0x8)
+//dh $0091	//X Pos
+seek(0x1ECE22+0x10)
+//dh $0046	//Y Pos
 seek(0x1ECE3A)
-dh (saveload4_image)
+dh (save4_12)
+seek(0x1ECE3A+0x8)
+//dh $0091	//X Pos
+seek(0x1ECE3A+0x10)
+//dh $0050	//Y Pos
+
 seek(0x1ECE5A)
-dh (saveload4_makingfile)
+dh (save4_9)
+seek(0x1ECE5A+0x8)
+//dh $0091	//X Pos
+seek(0x1ECE5A+0x10)
+//dh $004B	//Y Pos
+
 seek(0x1ECE7A)
-dh (saveload4_takenphotos)
+dh (save4_10)
+seek(0x1ECE7A+0x8)
+//dh $0091	//X Pos
+seek(0x1ECE7A+0x10)
+//dh $004B	//Y Pos
+
 seek(0x1ECE9A)
-dh (saveload4_file)
+dh (save4_7)
+seek(0x1ECE9A+0x8)
+//dh $0091	//X Pos
+seek(0x1ECE9A+0x10)
+//dh $0046	//Y Pos
 seek(0x1ECEB2)
-dh (saveload4_notloaded)
+dh (save4_8)
+seek(0x1ECEB2+0x8)
+//dh $0091	//X Pos
+seek(0x1ECEB2+0x10)
+//dh $0050	//Y Pos
+
 seek(0x1EDB8E)
-dh (saveload4_selectcontainer)
+dh (save4_13)
+seek(0x1EDB8E+0x8)
+dh $005F	//X Pos
+seek(0x1EDB8E+0x10)
+//dh $0064	//Y Pos
 seek(0x1EDBAE)
-dh (saveload4_selectcontainerall1)
+dh (save4_15)
+seek(0x1EDBAE+0x8)
+//dh $0064	//Y Pos
+seek(0x1EDB86)
+dh $0054	//X Pos
 seek(0x1EDBBE)
-dh (saveload4_selectcontainerall2)
+dh (save4_16)
+seek(0x1EDBBE+0x8)
+//dh $005B	//X Pos
+seek(0x1EDBBE+0x10)
+//dh $006D	//Y Pos
 seek(0x1EDBD6)
-dh (saveload4_selectfile)
+dh (save4_14)
+seek(0x1EDBD6+0x8)
+dh $00C4	//X Pos
+seek(0x1EDBD6+0x10)
+//dh $0064	//Y Pos
+
 seek(0x1EE252)
-dh (saveload4_thisdiskerror)
+dh (save4_e56)
 seek(0x1EE292)
-dh (saveload4_thisdiskerror)
+dh (save4_e56)
 seek(0x1EE2CA)
-dh (saveload4_errornumber)
+dh (save4_e54)
+seek(0x1EE2F6)
+dh (save4_e55)
+seek(0x1EE34E)
+dh (save4_e55)
 
-//Move Used Space number 1.2
-seek(0x1D2BEE)
-dh (saveload4_usedspace + 26) //.
-seek(0x1D2C26)
-dh (saveload4_usedspace + 24) //1
-seek(0x1D2C76)
-dh (saveload4_usedspace + 28) //2
+//Move Used Space number 1.2 / Function RAM 80289958
+seek(0x1D2BEC)
+sb t7,save4_1+13(at)	//. (0x12)
+seek(0x1D2C24)
+sb t9,save4_1+12(at)	//1 (0x10)
+seek(0x1D2C74)
+sb t2,save4_1+14(at)	//2 (0x14)
+
+seek(0x1D2C90)
+sb t3,save4_1+12(at)	//space (0x10)
+seek(0x1D2CE8)
+sb t5,save4_1+13(at)	//1 (0x12)
+seek(0x1D2CF8)
+sb t7,save4_1+14(at)	//2 (0x14)
 
 
+//--Disk Swap Text (Disk 0x23C0F0 / RAM 807C41D0)
+//Text ID RAM 80783C30 (0x10-0x12 & 0x20-0x22)
 seek(0x23C0F0)
 base 0x807C41D0
-saveload5_eject: //41D0
-putTextnoSeek("Eject the disk.")
-saveload5_insert: //41F0
-putTextnoSeek("Insert disk.")
-saveload5_insertboot: //420C
-putTextnoSeek("Insert the original game disk.")
-saveload5_wrong: //422C
-putTextnoSeek("Wrong disk.")
-saveload5_replace: //4250
-//putTextnoSeek("Change Disk")
-saveload5_replaceoriginal: //4270
-putTextnoSeek("Change Disk")
-saveload5_anotherread: //4290
-putTextnoSeek("Different Disk")
-saveload5_originalread: //42BC
-putTextnoSeek("Polygon Studio Disk")
-saveload5_bootdiskrequired: //42DC
-putTextnoSeek("Polygon Studio Disk is required.")
-saveload5_kanji: //4320
-putTextnoSeek("* Pick the first kana of the kanji *")
+save5_1:
+textEntryH("Please eject the disk.")				//RAM 807C41D0 - ディスクを とりだしてください
+save5_2:
+textEntryH("Please insert a disk.")				//RAM 807C41F0 - ディスクを いれてください
+save5_3:
+textEntryH("Please insert the original disk.")			//RAM 807C420C - きどうディスクをいれてください
+save5_4:
+textEntryH("The wrong disk has been inserted.")			//RAM 807C422C - まちがったディスクがはいっています
+save5_5:
+textEntryH("Loading content from a different disk.")		//RAM 807C4250 - べつのディスクといれかえます
+save5_6:
+textEntryH("Change to the original Polygon Studio disk.")		//RAM 807C4270 - もとのディスクと いれかえます
+save5_7:
+textEntryH("Loading content from a different disk.")		//RAM 807C4290 - べつのディスクの さくひんをよみこみます
+save5_8:
+textEntryH("Change to the original Polygon Studio disk.")		//RAM 807C42BC - もとのディスクをよみこみます
+save5_9:
+textEntryH("The original Polygon Studio disk\nis required to continue.")	//RAM 807C42DC - ゲームをつづけるためには\nきどうディスクがひつようです
 
-//Change pointers
+//0x10 - Eject disk for a different disk
+seek(0x1F86C2+8)
+dh (save5_5)
 seek(0x1F86C2)
-dh (saveload5_eject)
+dh (save5_1)
+//0x11 - Eject disk because it is the wrong disk
+seek(0x1F86E6+4)
+dh (save5_4)
 seek(0x1F86E6)
-dh (saveload5_eject)
+dh (save5_1)
+//0x12 - Eject disk for the original disk
+seek(0x1F8706+4)
+dh (save5_6)
 seek(0x1F8706)
-dh (saveload5_eject)
+dh (save5_1)
+//0x20 - Insert different disk
+seek(0x1F8726+4)
+dh (save5_7)
 seek(0x1F8726)
-dh (saveload5_insert)
-seek(0x1F8766)
-dh (saveload5_insert)
+dh (save5_2)
+//0x21 - Insert original disk (after wrong disk)
+seek(0x1F8746+4)
+dh (save5_9)
 seek(0x1F8746)
-dh (saveload5_insertboot)
-seek(0x1F86EA)
-dh (saveload5_wrong)
-seek(0x1F86CA)
-dh (saveload5_replace)
-seek(0x1F870A)
-dh (saveload5_replaceoriginal)
-seek(0x1F872A)
-dh (saveload5_anotherread)
-seek(0x1F876A)
-dh (saveload5_originalread)
-seek(0x1F874A)
-dh (saveload5_bootdiskrequired)
+dh (save5_3)
+//0x22 - Insert original disk
+seek(0x1F8766+4)
+dh (save5_8)
+seek(0x1F8766)
+//dh (save5_2)
+dh (save5_3)
+
+
+//--Kanji Menu Text (Disk 0x23C240 / RAM 807C4320)
+seek(0x23C240)
+base 0x807C4320
+save6_1:
+//RAM 807C4320 - ～ つかいたいかんじの さいしょのもじをえらんでください ～
+textEntryH("* Please select the beginning of the kanji *")
+
 seek(0x1F6DF2)
-dh (saveload5_kanji)
+dh (save6_1)
+seek(0x1F6DF2+0x8)
+dh 0x003E	//X Pos
+
+
+//Function Text + Kanji Font Rendering (Disk 0x1F7060 / RAM 80773D60)
+//Test these: き せ み and last (symbols)
+
+seek(0x1F7060+0xC4)
+addiu a1,0,7		//Amount of Chars per line
+addiu v1,sp,0x90	//unchanged (for rendering)
+addiu a3,0,0x0D		//Hyphen Char (Original 0x011E)
+
+seek(0x1F7060+0xF4)		//New Line
+sb a0,0(v1)
+addiu v1,v1,1
+
+seek(0x1F7060+0x110)	//Char
+sb t1,0(v1)
+addiu s2,s2,1
+addiu v1,v1,1
+
+seek(0x1F7060+0x12C)	//Hyphen
+sb a3,0(v1)
+addiu s2,s2,1
+addiu v1,v1,1
+
+seek(0x1F7060+0x148)	//New Line
+sb a0,0(v1)
+or s2,0,0
+addiu s0,s0,1
+addiu v1,v1,1
+
+seek(0x1F7060+0x160)	//Char
+sb v0,0(v1)
+addiu v1,v1,1
+
+seek(0x1F7060+0x174)	//End
+sb 0,0(v1)
+
+
+//Symbols Menu (Disk 0x23E418 / RAM 807C64F8)
+seek(0x23E418)	//Repoint because of space
+base 0x807C64F8
+//Page 1
+kanji1_1:
+textEntryH("Special")		//とくしゅもじ
+db $FE,$81,$58,$01,$FE,$81,$57,$01,$FE,$83,$95,$02,$FE,$81,$59,$01,$FE,$81,$54,$02,$FB
+db $FE,$82,$EC,$01,$FE,$82,$EE,$02,$FE,$83,$8E,$01,$FE,$83,$90,$02,$FE,$88,$6A,$04,$FF
+kanji1_2:
+textEntryH("Digits")		//ぜんかくすうじ
+db $FE,$82,$50,$09,$FE,$82,$4F,$01,$FF
+kanji1_3:
+textEntryH("Circled")		//まる\nすうじ
+db $FE,$85,$40,$0A,$FB,$0A,$FF
+kanji1_4:
+textEntryH("Roman")		//ローマ\nすうじ
+db $FE,$85,$9F,$0D,$FF
+kanji1_5:
+textEntryH("Arrow")		//やじるし
+db $FE,$81,$A8,$04,$FE,$86,$D3,$04,$FF
+
+//Page 2
+kanji2_1:
+textEntryH("Symbol")		//きごう
+db $FE,$81,$97,$01,$FE,$81,$A6,$02,$FE,$86,$9B,$01,$FE,$86,$9D,$02,$FE,$81,$94,$01,$FE,$81,$96,$01,$FE,$81,$4F,$01,$FE,$81,$95,$01,$FE,$81,$89,$02,$FE,$87,$9E,$01,$FB
+db $FE,$81,$75,$02,$FE,$81,$69,$02,$FE,$81,$6D,$02,$FE,$81,$71,$04,$FE,$81,$79,$02,$FB
+db $FE,$86,$9F,$04,$FE,$81,$9B,$01,$FE,$81,$A0,$01,$FE,$81,$A2,$01,$FE,$81,$A4,$01,$FE,$81,$99,$01,$FE,$81,$F3,$01,$FE,$81,$9D,$01,$FE,$86,$B3,$02,$FB
+db $FE,$81,$41,$07,$FE,$81,$65,$04,$FE,$81,$4A,$02,$FB
+db $FE,$81,$63,$02,$FE,$81,$88,$01,$FE,$81,$E6,$01,$FE,$81,$51,$01,$FE,$81,$5E,$02,$FE,$81,$60,$01,$FE,$81,$5B,$01,$FE,$84,$A0,$01,$FE,$84,$9F,$01,$FE,$81,$49,$01,$FE,$81,$48,$01,$FB
+db $FE,$81,$7B,$04,$FE,$81,$80,$03,$FE,$81,$E0,$01,$FE,$81,$85,$03,$FE,$81,$E4,$02,$FB
+db $FE,$81,$E3,$01,$FE,$81,$B8,$08,$FE,$81,$C8,$02,$FE,$81,$DC,$01,$FE,$81,$98,$01,$FB
+db $FE,$81,$93,$01,$FE,$81,$8E,$05,$FE,$81,$CD,$02,$FE,$81,$DB,$01,$FE,$81,$DD,$03,$FE,$81,$E7,$01,$FF
+
+//Page 3
+kanji3_1:
+textEntryH("Capital")//\nLetters")	//ぜんかくABC
+db $FE,$82,$60,$1A,$FF
+kanji3_2:
+textEntryH("Small")//\nLetters")	//ぜんかくabc
+db $FE,$82,$81,$1A,$FF
+kanji3_3:
+textEntryH("Greek")//\nLetters")	//ギリシヤもじ
+db $FE,$83,$9F,$18,$FB,$FE,$83,$BF,$18,$FF
+
+//Pointers
+seek(0x23E5A8)
+dw (kanji1_1),(kanji1_2),(kanji1_3),(kanji1_4),(kanji1_5),0
+dw (kanji2_1),0
+dw (kanji3_1),(kanji3_2),(kanji3_3),0
+
+//Change Symbols Kanji
+seek(0x23E8AC)
+//dh 0xFFFF
+dh 0x8197
+
+
+//--Disk Usage Percentage Function (Disk 0x1FCA4C / RAM 8077974C)
+seek(0x1FCA4C+0x88)
+sb t7,0(t8)
+seek(0x1FCA4C+0xE8)
+addiu t9,t8,-1
+seek(0x1FCA4C+0x120)
+sb t4,0(t5)
+
+seek(0x2036EC)
+db $40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$00,$00,$00
+db $40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$00,$00,$00
+
+
+//--Date & Time Text Generation - RAM 800B31C0
+//Function (Disk 0x1F2AF0 / RAM 8076F7F0)
+seek(0x1F2AF0+0xA0)
+addiu v1,sp,0x41	//Next char
+
+seek(0x1F2AF0+0xAC)
+sb t0,0x40(sp)		//First char
+
+seek(0x1F2AF0+0xD8)
+sb t8,3(v1)
+sb t6,2(v1)
+sb t4,1(v1)
+sb t2,0(v1)
+
+seek(0x1F2AF0+0xEC)
+addiu v1,v1,4
+
+seek(0x1F2AF0+0x100)
+sb v0,0x42(sp)		//Slash
+sb t9,0x48(sp)		//Space
+sb v1,0x4B(sp)		//:
+sb 0,0x51(sp)		//end
+sw t0,0x10(sp)	//unchanged
+sb v1,0x4E(sp)		//:
+sb v0,0x45(sp)		//Slash
