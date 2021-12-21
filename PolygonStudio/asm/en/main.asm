@@ -20,6 +20,14 @@ if {defined CART} {
   inline seek(n) {
     origin {n} - 0x727D8
   }
+} else if {defined D64} {
+  output "../../Mario Artist - Polygon Studio.d64", create
+  origin 0x000000; insert "../../roms/UDMGJ0.011" // Include Japanese Mario Artist - Polygon Studio N64 DD ROM
+
+  //macros
+  inline seek(n) {
+    origin {n} - 0x736C0
+  }
 } else {
   output "../../Mario Artist - Polygon Studio.ndd", create
   origin 0x000000; insert "../../roms/NUD-DMGJ-JPN.ndd" // Include Japanese Mario Artist - Polygon Studio N64 DD ROM
