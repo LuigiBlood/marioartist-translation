@@ -1,0 +1,18 @@
+# Extensions
+*.n64
+*.ndd
+*.ram
+*.d64
+*.003
+*.005
+*.011
+*.zip
+*.lnk
+
+# Folders
+arch
+Temp
+__pycache__
+
+# Files
+bass.exe
