@@ -2,19 +2,19 @@
 
 //NEW
 macro textEntry(size, text) {
-  variable skipSeek(origin()+{size})
+  variable skipSeek = origin()+{size}
   putText2noSeek({text})
   origin skipSeek
 }
 
 macro textEntry2(size, text, text2) {
-  variable skipSeek(origin()+{size})
+  variable skipSeek = origin()+{size}
   putText3noSeek({text}, {text2})
   origin skipSeek
 }
 
 macro textEntrySkip(size) {
-  variable skipSeek(origin()+{size})
+  variable skipSeek = origin()+{size}
   origin skipSeek
 }
 
@@ -171,14 +171,14 @@ macro putTextASCIIBox(n, text, symbol, text2) {
 }
 
 // Character Table
-macro RegularMap() {
+inline RegularMap() {
   map '!', $0001, 32 // Map Special Characters & Numbers
   map 'A', $0021, 31 // Map English "Upper Case" Characters & Special Characters
   map 'a', $0041, 30 // Map English "Lower Case" Characters & Special Characters
   map ' ', $00BD     // Map Space Character
 }
 
-macro ShiftJISMap() {
+inline ShiftJISMap() {
   map '0', $824F, 10
   map 'A', $8260, 26
   map 'a', $8281, 26
@@ -194,6 +194,6 @@ macro ShiftJISMap() {
   map '&', $8195
 }
 
-macro ASCIIMap() {
+inline ASCIIMap() {
   map ' ', $20, $60
 }
