@@ -51,14 +51,26 @@ dw 0xCE,0x17,0x9,0x9,0x7,0x7,0x9,0x9,0xF,0xF
 dw 0xCE,0x16,0x9,0x9,0x9,0x7,0x8,0x9,0x8,0xF
 
 //Options
-putTextByte(0x2668AC, "Mono")
-putTextByte(0x2668C0, "Stereo")
-putTextByte(0x2668D4, "Headphones")
-putTextByte(0x2668E8, "Slow")
-putTextByte(0x2668FC, "Medium")
-putTextByte(0x266910, "Fast")
-putTextByte(0x266924, "Same as A Button")
-putTextByte(0x266938, "Slow Down Cursor")
-putTextByte(0x26694C, "Show")
-putTextByte(0x266960, "Don't Show")
-putTextByte(0x266974, "Save Options")
+seek(0x2668AC)
+//モノラル
+textRegular(20, "Mono")
+//ステレオ
+textRegular(20, "Stereo")
+//ヘッドホン
+textRegular(20, "Headphones")
+//おそい
+textRegular(20, "Slow")
+//ふつう
+textRegular(20, "Medium")
+//はやい
+textRegular(20, "Fast")
+//Aボタンとおなじ
+textRegular(20, "Same as A Button")
+//カーソルがおそく
+textRegular(20, "Slow Down Cursor")
+//ひょうじする
+textRegular(20, "Show")
+//ひょうじしない
+textRegular(20, "Don't Show")
+//けってい(セーブ)
+textRegular(20, "Save Options")
