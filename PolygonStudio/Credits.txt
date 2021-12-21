@@ -1,0 +1,21 @@
+Mario Artist Polygon Studio - English Translation
+by LuigiBlood
+
+Version 2.1
+
+Changelog:
+v2.1:
+- Port Source to latest version of ARM9 fork bass
+
+v2.0
+- Forgotten Polygon Counter graphics now in English
+
+
+Credits:
+LuigiBlood - Project Leader, Translation, Hacking, Graphic Design
+Cauterize - Logo Design
+krom - Initial Translation Work
+
+Special Thanks:
+Popcorn, Matti Virkkunen, and SilverShroud for translation help/proof-read
+Covarr - For design help
