@@ -13,6 +13,13 @@ if {defined CART} {
   inline seek(n) {
     origin {n} - 0x727D8
   }
+} else if {defined D64} {
+  output "../../Mario Artist - Talent Studio.d64"
+
+  //Unique Macros
+  inline seek(n) {
+    origin {n} - 0x736C0
+  }
 } else {
   output "../../Mario Artist - Talent Studio.ndd"
 

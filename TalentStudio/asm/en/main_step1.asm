@@ -18,6 +18,20 @@ if {defined CART} {
   origin 0x10; dw 0x54C8AD15, 0xE04E8676
 
   constant seek_diff = 0x727D8
+} else if {defined D64} {
+  print "Mario Artist Talent Studio - English translation (D64) v2.2\n"
+
+  inline outputGame() {
+    output "../../Mario Artist - Talent Studio.d64"
+    origin 0
+    base 0
+  }
+
+  output "../../Mario Artist - Talent Studio.d64", create
+  // Include Japanese Mario Artist - Talent Studio N64 DD ROM
+  origin 0x000000; insert "../../roms/UDMTJ0.005"
+
+  constant seek_diff = 0x736C0
 } else {
   print "Mario Artist Talent Studio - English translation (Disk) v2.2\n"
 
