@@ -1,4 +1,4 @@
-Mario Artist Paint Studio - English Translation v2.1
+Mario Artist Paint Studio - English Translation v2.2
 
 Credits:
 LuigiBlood - Project Leader, Translator, Hacking, Graphic Design
@@ -11,6 +11,9 @@ Higsby - Translation help
 kaialone - Translation help
 
 Changelog:
+v2.2:
+- Port Source to latest version of ARM9 fork bass
+
 v2.1:
 - Change "Cartridge" to "GB Game Pak" in Game Boy Camera menu.
 - Fix Disk Error repointing
