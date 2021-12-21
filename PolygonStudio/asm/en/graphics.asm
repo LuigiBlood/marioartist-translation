@@ -185,6 +185,11 @@ insert "../../gfx/en/conv/LOADSELECT.ci8.bin"
 seek(0x234360) //Save Color
 insert "../../gfx/en/conv/SAVESELECT.ci8.bin"
 
+//Kanji Back Button
+seek(0x22C230)
+insert "../../gfx/en/conv/SAVELOAD_KANJIBACK.ci8.bin"
+
+
 
 //Minigame Pause Menus
 //Exit
