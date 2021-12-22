@@ -2,375 +2,573 @@
 //Paint
 
 print "  - Paint Text\n"
-putTextByte(0x11F680, "Selected Color")
+seek(0x11F680); base 0x800AC1C0
+//えらばれているいろ
+textRegular0("Selected Color")
 
+seek(0x953E18); base 0x8049BEE0
 //Brushes
-putTextByte(0x953E18, "Felt Tip Pen")
-putTextByte(0x953E28, "Spray")
-putTextByte(0x953E34, "Oil Brush")
-putTextByte(0x953E44, "Surface Fill")
-putTextByte(0x953E58, "Paint Eater")
+paint_pen:
+//RAM 8049BEE0 - フェルトペン
+  textRegular0("Felt Tip Pen")
+paint_spray:
+//RAM 8049BEF0 - スプレー
+  textRegular0("Spray")
+paint_oil:
+//RAM 8049BEFC - すいさいブラシ
+  textRegular0("Oil Brush")
+paint_surface:
+//RAM 8049BF0C - めんのぬりつぶし
+  textRegular0("Surface Fill")
+paint_eater:
+//RAM 8049BF20 - いろをたべる
+  textRegular0("Paint Eater")
 
 //Size
-putTextByte(0x953E68, "Thin")
-putTextByte(0x953E70, "Medium")
-putTextByte(0x953E78, "Thick")
+paint_thin:
+//RAM 8049BF30 - ほそい
+  textRegular0("Thin")
+paint_med:
+//RAM 8049BF38 - ふつう
+  textRegular0("Medium")
+paint_thick:
+//RAM 8049BF40 - ふとい
+  textRegular0("Thick")
 
 //Menu
-putTextByte(0x953E80, "Stamps")
-putTextByte(0x953E8C, "Color") //Unused? Can't find it.
-putTextByte(0x953E98, "Monochrome") //Unused? Can't find it.
-putTextByte(0x953EA4, "Fill")
-putTextByte(0x953EB0, "Paint Over")
-putTextByte(0x953EC0, "Picker")
-putTextByte(0x953ECC, "Eraser")
-putTextByte(0x953ED8, "Load Picture as Stamp")
-putTextByte(0x953EFC, "Custom Stamp")
-putTextByte(0x953F10, "Clear All")
-putTextByte(0x953F20, "Flip")
-putTextByte(0x953F2C, "Rotate")
-putTextByte(0x953F38, "Preshade")
-putTextByte(0x953F48, "Picker")
-putTextByte(0x953F54, "Masking")
+paint_stamp:
+//RAM 8049BF48 - スタンプ
+  textRegular0("Stamps")
+paint_color:
+//RAM 8049BF54 - いろがえ
+  textRegular0("Color") //Unused
+paint_mono:
+//RAM 8049BF60 - モノクロ
+  textRegular0("Monochrome") //Unused
+paint_fill:
+//RAM 8049BF6C - ぬりつぶし
+  textRegular0("Fill")
+paint_over:
+//RAM 8049BF78 - いろをかさねる
+  textRegular0("Paint Over")
+paint_picker:
+//RAM 8049BF88 - スポイト
+  textRegular0("Picker")  //Unused
+paint_eraser:
+//RAM 8049BF94 - けしゴム
+  textRegular0("Eraser")
+paint_import:
+//RAM 8049BFA0 - スタンプに[2Dさくひん]のロード
+  textRegular0("Load Picture as Stamp")
+paint_customstamp:
+//RAM 8049BFC4 - カスタムスタンプ
+  textRegular0("Custom Stamp")  //Unused
+paint_clear:
+//RAM 8049BFD8 - ぜんたいをけす
+  textRegular0("Clear All")
+paint_flip:
+//RAM 8049BFE8 - はんてん
+  textRegular0("Flip")
+paint_rotate:
+//RAM 8049BFF4 - かいてん
+  textRegular0("Rotate")
+paint_preshade:
+//RAM 8049C000 - プリシェード
+  textRegular0("Preshade")  //Unused
+paint_picker2:
+//RAM 8049C010 - スポイト
+  textRegular0("Picker")
+paint_mask:
+//RAM 8049C01C - マスキング
+  textRegular0("Masking")
 
 //Stamps
-seek(0x953F60)
-base 0x8049C028
+//seek(0x953F60); base 0x8049C028
 //Page 1
 stamp001:
-  putTextBytenoSeek("Eye 1")
+//め・リアル1
+  textRegular0("Eye 1")
 stamp002:
-  putTextBytenoSeek("Eye 2")
+//め・リアル2
+  textRegular0("Eye 2")
 stamp003:
-  putTextBytenoSeek("Eye 3")
+//め・リアル3
+  textRegular0("Eye 3")
 stamp004:
-  putTextBytenoSeek("Eye 4")
+//め・リアル4
+  textRegular0("Eye 4")
 stamp005:
-  putTextBytenoSeek("Eye 5")
+//め・リアル5
+  textRegular0("Eye 5")
 stamp006:
-  putTextBytenoSeek("Eye 6")
+//め・リアル6
+  textRegular0("Eye 6")
 stamp007:
-  putTextBytenoSeek("Eye 7")
+//め・リアル7
+  textRegular0("Eye 7")
 
 //Page 2
 stamp008:
-  putTextBytenoSeek("Comic Eye 1")
+//め・まんが1
+  textRegular0("Comic Eye 1")
 stamp009:
-  putTextBytenoSeek("Comic Eye 2")
+//め・まんが2
+  textRegular0("Comic Eye 2")
 stamp010:
-  putTextBytenoSeek("Comic Eye 3")
+//め・まんが3
+  textRegular0("Comic Eye 3")
 stamp011:
-  putTextBytenoSeek("Comic Eye 4")
+//め・まんが4
+  textRegular0("Comic Eye 4")
 stamp012:
-  putTextBytenoSeek("Comic Eye 5")
+//め・まんが5
+  textRegular0("Comic Eye 5")
 stamp013:
-  putTextBytenoSeek("Comic Eye 6")
+//め・まんが6
+  textRegular0("Comic Eye 6")
 stamp014:
-  putTextBytenoSeek("Comic Eye 7")
+//め・まんが7
+  textRegular0("Comic Eye 7")
 
 //Page 3
 stamp015:
-  putTextBytenoSeek("Comic Eye 8")
+//め・まんが8
+  textRegular0("Comic Eye 8")
 stamp016:
-  putTextBytenoSeek("Comic Eye 9")
+//め・まんが9
+  textRegular0("Comic Eye 9")
 stamp017:
-  putTextBytenoSeek("Comic Eye 10")
+//め・まんが10
+  textRegular0("Comic Eye 10")
 stamp018:
-  putTextBytenoSeek("Comic Eye 11")
+//め・まんが11
+  textRegular0("Comic Eye 11")
 stamp019:
-  putTextBytenoSeek("Comic Eye 12")
+//め・まんが12
+  textRegular0("Comic Eye 12")
 stamp020:
-  putTextBytenoSeek("Comic Eye 13")
+//め・まんが13
+  textRegular0("Comic Eye 13")
 stamp021:
-  putTextBytenoSeek("Comic Eye 14")
+//め・まんが14
+  textRegular0("Comic Eye 14")
 
 //Page 4
 stamp022:
-  putTextBytenoSeek("Comic Eye 15")
+//め・まんが15
+  textRegular0("Comic Eye 15")
 stamp023:
-  putTextBytenoSeek("Comic Eye 16")
+//め・まんが16
+  textRegular0("Comic Eye 16")
 stamp024:
-  putTextBytenoSeek("Comic Eye 17")
+//め・まんが17
+  textRegular0("Comic Eye 17")
 stamp025:
-  putTextBytenoSeek("Comic Eye 18")
+//め・まんが18
+  textRegular0("Comic Eye 18")
 stamp026:
-  putTextBytenoSeek("Comic Eye 19")
+//め・まんが19
+  textRegular0("Comic Eye 19")
 stamp027:
-  putTextBytenoSeek("Comic Eye 20")
+//め・まんが20
+  textRegular0("Comic Eye 20")
 stamp028:
-  putTextBytenoSeek("Comic Eye 21")
+//め・まんが21
+  textRegular0("Comic Eye 21")
 
 //Page 5
 stamp029:
-  putTextBytenoSeek("Comic Eye 22")
+//め・まんが22
+  textRegular0("Comic Eye 22")
 stamp030:
-  putTextBytenoSeek("Comic Eye 23")
+//め・まんが23
+  textRegular0("Comic Eye 23")
 stamp031:
-  putTextBytenoSeek("Comic Eye 24")
+//め・まんが24
+  textRegular0("Comic Eye 24")
 stamp032:
-  putTextBytenoSeek("Comic Eye 25")
+//め・まんが25
+  textRegular0("Comic Eye 25")
 stamp033:
-  putTextBytenoSeek("Comic Eye 26")
+//め・まんが26
+  textRegular0("Comic Eye 26")
 stamp034:
-  putTextBytenoSeek("Comic Eye 27")
+//め・まんが27
+  textRegular0("Comic Eye 27")
 stamp035:
-  putTextBytenoSeek("Comic Eye 28")
+//め・まんが28
+  textRegular0("Comic Eye 28")
 
 //Page 6
 stamp036:
-  putTextBytenoSeek("Mouth 1")
+//くち・リアル1
+  textRegular0("Mouth 1")
 stamp037:
-  putTextBytenoSeek("Mouth 2")
+//くち・リアル2
+  textRegular0("Mouth 2")
 stamp038:
-  putTextBytenoSeek("Mouth 3")
+//くち・リアル3
+  textRegular0("Mouth 3")
 stamp039:
-  putTextBytenoSeek("Mouth 4")
+//くち・リアル4
+  textRegular0("Mouth 4")
 stamp040:
-  putTextBytenoSeek("Mouth 5")
+//くち・リアル5
+  textRegular0("Mouth 5")
 stamp041:
-  putTextBytenoSeek("Mouth 6")
+//くち・リアル6
+  textRegular0("Mouth 6")
 stamp042:
-  putTextBytenoSeek("Mouth 7")
+//くち・リアル7
+  textRegular0("Mouth 7")
 
 //Page 7
 stamp043:
-  putTextBytenoSeek("Mouth 8")
+//くち・リアル8
+  textRegular0("Mouth 8")
 stamp044:
-  putTextBytenoSeek("Mouth 9")
+//くち・リアル9
+  textRegular0("Mouth 9")
 stamp045:
-  putTextBytenoSeek("Mouth 10")
+//くち・リアル10
+  textRegular0("Mouth 10")
 stamp046:
-  putTextBytenoSeek("Mouth 11")
+//くち・リアル11
+  textRegular0("Mouth 11")
 stamp047:
-  putTextBytenoSeek("Mouth 12")
+//くち・リアル12
+  textRegular0("Mouth 12")
 stamp048:
-  putTextBytenoSeek("Mouth 13")
+//くち・リアル13
+  textRegular0("Mouth 13")
 stamp049:
-  putTextBytenoSeek("Mouth 14")
+//くち・リアル14
+  textRegular0("Mouth 14")
 
 //Page 8
 stamp050:
-  putTextBytenoSeek("Comic Mouth 1")
+//くち・まんが1
+  textRegular0("Comic Mouth 1")
 stamp051:
-  putTextBytenoSeek("Comic Mouth 2")
+//くち・まんが2
+  textRegular0("Comic Mouth 2")
 stamp052:
-  putTextBytenoSeek("Comic Mouth 3")
+//くち・まんが3
+  textRegular0("Comic Mouth 3")
 stamp053:
-  putTextBytenoSeek("Comic Mouth 4")
+//くち・まんが4
+  textRegular0("Comic Mouth 4")
 stamp054:
-  putTextBytenoSeek("Comic Mouth 5")
+//くち・まんが5
+  textRegular0("Comic Mouth 5")
 stamp055:
-  putTextBytenoSeek("Comic Mouth 6")
+//くち・まんが6
+  textRegular0("Comic Mouth 6")
 stamp056:
-  putTextBytenoSeek("Comic Mouth 7")
+//くち・まんが7
+  textRegular0("Comic Mouth 7")
 
 //Page 9
 stamp057:
-  putTextBytenoSeek("Sticker 1")
+//シール1
+  textRegular0("Sticker 1")
 stamp058:
-  putTextBytenoSeek("Sticker 2")
+//シール2
+  textRegular0("Sticker 2")
 stamp059:
-  putTextBytenoSeek("Sticker 3")
+//シール3
+  textRegular0("Sticker 3")
 stamp060:
-  putTextBytenoSeek("Sticker 4")
+//シール4
+  textRegular0("Sticker 4")
 stamp061:
-  putTextBytenoSeek("Sticker 5")
+//シール5
+  textRegular0("Sticker 5")
 stamp062:
-  putTextBytenoSeek("Sticker 6")
+//シール6
+  textRegular0("Sticker 6")
 stamp063:
-  putTextBytenoSeek("Sticker 7")
+//シール7
+  textRegular0("Sticker 7")
 
 //Page 10
 stamp064:
-  putTextBytenoSeek("Sticker 8")
+//シール8
+  textRegular0("Sticker 8")
 stamp065:
-  putTextBytenoSeek("Sticker 9")
+//シール9
+  textRegular0("Sticker 9")
 stamp066:
-  putTextBytenoSeek("Sticker 10")
+//シール10
+  textRegular0("Sticker 10")
 stamp067:
-  putTextBytenoSeek("Sticker 11")
+//シール11
+  textRegular0("Sticker 11")
 stamp068:
-  putTextBytenoSeek("Sticker 12")
+//シール12
+  textRegular0("Sticker 12")
 stamp069:
-  putTextBytenoSeek("Sticker 13")
+//シール13
+  textRegular0("Sticker 13")
 stamp070:
-  putTextBytenoSeek("Sticker 14")
+//シール14
+  textRegular0("Sticker 14")
 
 //Page 11
 stamp071:
-  putTextBytenoSeek("Sticker 15")
+//シール15
+  textRegular0("Sticker 15")
 stamp072:
-  putTextBytenoSeek("Sticker 16")
+//シール16
+  textRegular0("Sticker 16")
 stamp073:
-  putTextBytenoSeek("Sticker 17")
+//シール17
+  textRegular0("Sticker 17")
 stamp074:
-  putTextBytenoSeek("Sticker 18")
+//シール18
+  textRegular0("Sticker 18")
 stamp075:
-  putTextBytenoSeek("Sticker 19")
+//シール19
+  textRegular0("Sticker 19")
 stamp076:
-  putTextBytenoSeek("Sticker 20")
+//シール20
+  textRegular0("Sticker 20")
 stamp077:
-  putTextBytenoSeek("Sticker 21")
+//シール21
+  textRegular0("Sticker 21")
 
 //Page 12
 stamp078:
-  putTextBytenoSeek("Sticker 22")
+//シール22
+  textRegular0("Sticker 22")
 stamp079:
-  putTextBytenoSeek("Sticker 23")
+//シール23
+  textRegular0("Sticker 23")
 stamp080:
-  putTextBytenoSeek("Sticker 24")
+//シール24
+  textRegular0("Sticker 24")
 stamp081:
-  putTextBytenoSeek("Sticker 25")
+//シール25
+  textRegular0("Sticker 25")
 stamp082:
-  putTextBytenoSeek("Sticker 26")
+//シール26
+  textRegular0("Sticker 26")
 stamp083:
-  putTextBytenoSeek("Sticker 27")
+//シール27
+  textRegular0("Sticker 27")
 stamp084:
-  putTextBytenoSeek("Sticker 28")
+//シール28
+  textRegular0("Sticker 28")
 
 //Page 13
 stamp085:
-  putTextBytenoSeek("Sticker 29")
+//シール29
+  textRegular0("Sticker 29")
 stamp086:
-  putTextBytenoSeek("Sticker 30")
+//シール30
+  textRegular0("Sticker 30")
 stamp087:
-  putTextBytenoSeek("Sticker 31")
+//シール31
+  textRegular0("Sticker 31")
 stamp088:
-  putTextBytenoSeek("Sticker 32")
+//シール32
+  textRegular0("Sticker 32")
 stamp089:
-  putTextBytenoSeek("Sticker 33")
+//シール33
+  textRegular0("Sticker 33")
 stamp090:
-  putTextBytenoSeek("Sticker 34")
+//シール34
+  textRegular0("Sticker 34")
 stamp091:
-  putTextBytenoSeek("Sticker 35")
+//シール35
+  textRegular0("Sticker 35")
 
 //Page 14
 stamp092:
-  putTextBytenoSeek("Sticker 36")
+//シール36
+  textRegular0("Sticker 36")
 stamp093:
-  putTextBytenoSeek("Sticker 37")
+//シール37
+  textRegular0("Sticker 37")
 stamp094:
-  putTextBytenoSeek("Sticker 38")
+//シール38
+  textRegular0("Sticker 38")
 stamp095:
-  putTextBytenoSeek("Sticker 39")
+//シール39
+  textRegular0("Sticker 39")
 stamp096:
-  putTextBytenoSeek("Sticker 40")
+//シール40
+  textRegular0("Sticker 40")
 stamp097:
-  putTextBytenoSeek("Sticker 41")
+//シール41
+  textRegular0("Sticker 41")
 stamp098:
-  putTextBytenoSeek("Sticker 42")
+//シール42
+  textRegular0("Sticker 42")
 
 //Page 15
 stamp099:
-  putTextBytenoSeek("Sticker 43")
+//シール43
+  textRegular0("Sticker 43")
 stamp100:
-  putTextBytenoSeek("Sticker 44")
+//シール44
+  textRegular0("Sticker 44")
 stamp101:
-  putTextBytenoSeek("Sticker 45")
+//シール45
+  textRegular0("Sticker 45")
 stamp102:
-  putTextBytenoSeek("Sticker 46")
+//シール46
+  textRegular0("Sticker 46")
 stamp103:
-  putTextBytenoSeek("Sticker 47")
+//シール47
+  textRegular0("Sticker 47")
 stamp104:
-  putTextBytenoSeek("Sticker 48")
+//シール48
+  textRegular0("Sticker 48")
 stamp105:
-  putTextBytenoSeek("Sticker 49")
+//シール49
+  textRegular0("Sticker 49")
 
 //Page 16
 stamp106:
-  putTextBytenoSeek("Pattern 1")
+//もよう1
+  textRegular0("Pattern 1")
 stamp107:
-  putTextBytenoSeek("Pattern 2")
+//もよう2
+  textRegular0("Pattern 2")
 stamp108:
-  putTextBytenoSeek("Pattern 3")
+//もよう3
+  textRegular0("Pattern 3")
 stamp109:
-  putTextBytenoSeek("Pattern 4")
+//もよう4
+  textRegular0("Pattern 4")
 stamp110:
-  putTextBytenoSeek("Pattern 5")
+//もよう5
+  textRegular0("Pattern 5")
 stamp111:
-  putTextBytenoSeek("Pattern 6")
+//もよう6
+  textRegular0("Pattern 6")
 stamp112:
-  putTextBytenoSeek("Pattern 7")
+//もよう7
+  textRegular0("Pattern 7")
 
 //Page 17
 stamp113:
-  putTextBytenoSeek("Pattern 8")
+//もよう8
+  textRegular0("Pattern 8")
 stamp114:
-  putTextBytenoSeek("Pattern 9")
+//もよう9
+  textRegular0("Pattern 9")
 stamp115:
-  putTextBytenoSeek("Pattern 10")
+//もよう10
+  textRegular0("Pattern 10")
 stamp116:
-  putTextBytenoSeek("Pattern 11")
+//もよう11
+  textRegular0("Pattern 11")
 stamp117:
-  putTextBytenoSeek("Pattern 12")
+//もよう12
+  textRegular0("Pattern 12")
 stamp118:
-  putTextBytenoSeek("Pattern 13")
+//もよう13
+  textRegular0("Pattern 13")
 stamp119:
-  putTextBytenoSeek("Pattern 14")
+//もよう14
+  textRegular0("Pattern 14")
 
 //Page 18
 stamp120:
-  putTextBytenoSeek("Pattern 15")
+//もよう15
+  textRegular0("Pattern 15")
 stamp121:
-  putTextBytenoSeek("Pattern 16")
+//もよう16
+  textRegular0("Pattern 16")
 stamp122:
-  putTextBytenoSeek("Pattern 17")
+//もよう17
+  textRegular0("Pattern 17")
 stamp123:
-  putTextBytenoSeek("Pattern 18")
+//もよう18
+  textRegular0("Pattern 18")
 stamp124:
-  putTextBytenoSeek("Pattern 19")
+//もよう19
+  textRegular0("Pattern 19")
 stamp125:
-  putTextBytenoSeek("Pattern 20")
+//もよう20
+  textRegular0("Pattern 20")
 stamp126:
-  putTextBytenoSeek("Pattern 21")
+//もよう21
+  textRegular0("Pattern 21")
 
 //Page 19
 stamp127:
-  putTextBytenoSeek("Pattern 22")
+//もよう22
+  textRegular0("Pattern 22")
 stamp128:
-  putTextBytenoSeek("Pattern 23")
+//もよう23
+  textRegular0("Pattern 23")
 stamp129:
-  putTextBytenoSeek("Pattern 24")
+//もよう24
+  textRegular0("Pattern 24")
 stamp130:
-  putTextBytenoSeek("Pattern 25")
+//もよう25
+  textRegular0("Pattern 25")
 stamp131:
-  putTextBytenoSeek("Pattern 26")
+//もよう26
+  textRegular0("Pattern 26")
 stamp132:
-  putTextBytenoSeek("Pattern 27")
+//もよう27
+  textRegular0("Pattern 27")
 stamp133:
-  putTextBytenoSeek("Pattern 28")
+//もよう28
+  textRegular0("Pattern 28")
 
 //Page 20
 stamp134:
-  putTextBytenoSeek("Pattern 29")
+//もよう29
+  textRegular0("Pattern 29")
 stamp135:
-  putTextBytenoSeek("Pattern 30")
+//もよう30
+  textRegular0("Pattern 30")
 stamp136:
-  putTextBytenoSeek("Pattern 31")
+//もよう31
+  textRegular0("Pattern 31")
 stamp137:
-  putTextBytenoSeek("Pattern 32")
+//もよう32
+  textRegular0("Pattern 32")
 stamp138:
-  putTextBytenoSeek("Pattern 33")
+//もよう33
+  textRegular0("Pattern 33")
 stamp139:
-  putTextBytenoSeek("Pattern 34")
+//もよう34
+  textRegular0("Pattern 34")
 stamp140:
-  putTextBytenoSeek("Pattern 35")
+//もよう35
+  textRegular0("Pattern 35")
 
 //Page 21
 stamp141:
-  putTextBytenoSeek("Pattern 36")
+//もよう36
+  textRegular0("Pattern 36")
 stamp142:
-  putTextBytenoSeek("Pattern 37")
+//もよう37
+  textRegular0("Pattern 37")
 stamp143:
-  putTextBytenoSeek("Pattern 38")
+//もよう38
+  textRegular0("Pattern 38")
 stamp144:
-  putTextBytenoSeek("Pattern 39")
+//もよう39
+  textRegular0("Pattern 39")
 stamp145:
-  putTextBytenoSeek("Pattern 40")
+//もよう40
+  textRegular0("Pattern 40")
 stamp146:
-  putTextBytenoSeek("Pattern 41")
+//もよう41
+  textRegular0("Pattern 41")
 stamp147:
-  putTextBytenoSeek("Pattern 42")
+//もよう42
+  textRegular0("Pattern 42")
+stamp148:   //Unused?
+//2Dロードさくひん
+  textRegular0("Picture")
 
 //Pointers
 seek(0x95474C)
@@ -395,3 +593,25 @@ dw stamp120, stamp121, stamp122, stamp123, stamp124, stamp125, stamp126
 dw stamp127, stamp128, stamp129, stamp130, stamp131, stamp132, stamp133
 dw stamp134, stamp135, stamp136, stamp137, stamp138, stamp139, stamp140
 dw stamp141, stamp142, stamp143, stamp144, stamp145, stamp146, stamp147
+
+seek(0x8FDB72); dh paint_pen
+seek(0x8FE0E2); dh paint_spray
+seek(0x8FE652); dh paint_oil
+seek(0x8FEBC2); dh paint_eater
+seek(0x8FF132); dh paint_surface
+seek(0x8FF64E); dh paint_thin
+seek(0x8FFB72); dh paint_med
+seek(0x900096); dh paint_thick
+seek(0x90060A); dh paint_thin
+seek(0x900B86); dh paint_med
+seek(0x901102); dh paint_thick
+seek(0x901666); dh paint_clear
+seek(0x901BDA); dh paint_fill
+seek(0x90214E); dh paint_over
+seek(0x9026C2); dh paint_stamp
+seek(0x902C36); dh paint_eraser
+seek(0x9031BA); dh paint_import
+seek(0x90375E); dh paint_flip
+seek(0x903CE6); dh paint_rotate
+seek(0x905CDA); dh paint_picker2
+seek(0x906256); dh paint_mask
