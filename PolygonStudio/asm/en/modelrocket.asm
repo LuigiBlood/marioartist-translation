@@ -4,276 +4,389 @@
 print "  - Modeler Rocket Text\n"
 
 //Menu Specific
+seek(0x7FBC80); base 0x803EBCF8
 model_tutorial:
-  putTextByte(0x7FBC80, "Tutorials")
+//RAM 803EBCF8 - つくりかたムービー
+  textRegular0("Tutorials")
 model_wireframe:
-  putTextByte(0x7FBC94, "Wireframe")
+//RAM 803EBD0C - ほねぐみひょうじ
+  textRegular0("Wireframe")
 model_craft:
-  putTextByte(0x7FBCA8, "Craft Mode")
+//RAM 803EBD20 - クラフト
+  textRegular0("Craft Mode")
 
-model_tutorial01:
-  putTextByte(0x61036C, "Chair")
-model_tutorial02:
-  putTextByte(0x610380, "Toilet")
-model_tutorial03:
-  putTextByte(0x610394, "House")
-model_tutorial04:
-  putTextByte(0x6103A8, "Sprinkler")
+//Pointers
+seek(0x7D05D2); dh model_tutorial
+seek(0x7D0F5E); dh model_craft
+seek(0x7D14B6); dh model_wireframe
+seek(0x7D189A); dh model_wireframe
+seek(0x7D1CA2); dh model_wireframe
 
-model_tutorial05:
-  putTextByte(0x6103BC, "Dog")
-model_tutorial06:
-  putTextByte(0x6103D0, "Bird")
-model_tutorial07:
-  putTextByte(0x6103E4, "Stag Beetle")
-model_tutorial08:
-  putTextByte(0x6103F8, "Helmet")
+//Tutorial Names
+seek(0x61036C); base 0x807E2F4C
+textRegular(20, "Chair")                //いす
+textRegular(20, "Toilet")               //トイレ
+textRegular(20, "House")                //いえ
+textRegular(20, "Sprinkler")            //じょうろ
 
-model_tutorial09:
-  putTextByte(0x61040C, "Dolphin")
-model_tutorial10:
-  putTextByte(0x610420, "Boat")
-model_tutorial11:
-  putTextByte(0x610434, "Submarine")
-model_tutorial12:
-  putTextByte(0x610448, "Propeller Plane")
+textRegular(20, "Dog")                  //イヌ
+textRegular(20, "Bird")                 //トリ
+textRegular(20, "Stag Beetle")          //クワガタ
+textRegular(20, "Helmet")               //ヘルメット
+
+textRegular(20, "Dolphin")              //イルカ
+textRegular(20, "Boat")                 //ふね
+textRegular(20, "Submarine")            //せんすいかん
+textRegular(20, "Propeller Plane")      //プロペラき
+//Unused portion
+textRegular(20, "Dolphin")              //イルカ
+textRegular(20, "Boat")                 //ふね
+textRegular(20, "Submarine")            //せんすいかん
+textRegular(20, "Biplane")              //ふくようき
+
+textRegular(12, "Exit")                 //でる
 
 seek(0x896200)
 base 0x8060EE40
 //Basic Models
 //Page 1
 model_basic01:
-  putTextBytenoSeek("Pyramid")
+//さんかくすい
+  textRegular0("Pyramid")
 model_basic02:
-  putTextBytenoSeek("Cube")
+//りっぽうたい
+  textRegular0("Cube")
 model_basic03:
-  putTextBytenoSeek("Cuboid")
+//ちょくほうたい
+  textRegular0("Cuboid")
 model_basic04:
-  putTextBytenoSeek("Octahedron")
+//8めんたい
+  textRegular0("Octahedron")
 model_basic05:
-  putTextBytenoSeek("Dodecahedron")
+//12めんたい
+  textRegular0("Dodecahedron")
 model_basic06:
-  putTextBytenoSeek("Icosahedron")
+//20めんたい
+  textRegular0("Icosahedron")
 model_basic07:
-  putTextBytenoSeek("Spheroid")
+//だえんきゅう
+  textRegular0("Spheroid")
 //Page 2
 model_basic08:
-  putTextBytenoSeek("Sphere")
+//きゅう
+  textRegular0("Sphere")
 model_basic09:
-  putTextBytenoSeek("Cone")
+//えんすい
+  textRegular0("Cone")
 model_basic10:
-  putTextBytenoSeek("Cylinder")
+//えんちゅう
+  textRegular0("Cylinder")
 model_basic11:
-  putTextBytenoSeek("Ring 1")
+//リング1
+  textRegular0("Ring 1")
 model_basic12:
-  putTextBytenoSeek("Ring 2")
+//リング2
+  textRegular0("Ring 2")
 model_basic13:
-  putTextBytenoSeek("Tunnel")
+//トンネル
+  textRegular0("Tunnel")
 model_basic14:
-  putTextBytenoSeek("Tile")
+//タイル
+  textRegular0("Tile")
 
 //Character Models
 //Page 1
 model_chara01:
-  putTextBytenoSeek("Face")
+//かおシンプル
+  textRegular0("Face")
 model_chara02:
-  putTextBytenoSeek("Complex Face")
+//かおリアル
+  textRegular0("Complex Face")
 model_chara03:
-  putTextBytenoSeek("Human")
+//ひとシンプル
+  textRegular0("Human")
 model_chara04:
-  putTextBytenoSeek("Male")
+//だんせい
+  textRegular0("Male")
 model_chara05:
-  putTextBytenoSeek("Female")
+//じょせい
+  textRegular0("Female")
 model_chara06:
-  putTextBytenoSeek("Alien 1")
+//エイリアン1
+  textRegular0("Alien 1")
 model_chara07:
-  putTextBytenoSeek("Alien 2")
+//エイリアン2
+  textRegular0("Alien 2")
 //Page 2
 model_chara08:
-  putTextBytenoSeek("Flower Man")
+//フラワーマン
+  textRegular0("Flower Man")
 model_chara09:
-  putTextBytenoSeek("Bipedal Robot")
+//2そくほこうロボ
+  textRegular0("Bipedal Robot")
 model_chara10:
-  putTextBytenoSeek("Tripedal Robot")
+//3そくほこうロボ
+  textRegular0("Tripedal Robot")
 model_chara11:
-  putTextBytenoSeek("Simple Robot")
+//シンプルロボ
+  textRegular0("Simple Robot")
 model_chara12:
-  putTextBytenoSeek("Robot Armor Type 1")
+//よろいタイプロボ1
+  textRegular0("Robot Armor Type 1")
 model_chara13:
-  putTextBytenoSeek("Robot Armor Type 2")
+//よろいタイプロボ2
+  textRegular0("Robot Armor Type 2")
 model_chara14:
-  putTextBytenoSeek("Robot Armor Type 3")
+//よろいタイプロボ3
+  textRegular0("Robot Armor Type 3")
 //Page 3
 model_chara15:
-  putTextBytenoSeek("Mario")
+//マリオ
+  textRegular0("Mario")
 model_chara16:
-  putTextBytenoSeek("Koopa Troopa")
+//ノコノコ
+  textRegular0("Koopa Troopa")
 model_chara17:
-  putTextBytenoSeek("Yoshi")
+//ヨッシー
+  textRegular0("Yoshi")
 model_chara18:
-  putTextBytenoSeek("Penguin")
+//ペンギン
+  textRegular0("Penguin")
 model_chara19:
-  putTextBytenoSeek("Ghost")
+//おばけ
+  textRegular0("Ghost")
 model_chara20:
-  putTextBytenoSeek("Hydra")
+//おろち
+  textRegular0("Hydra")
 model_chara21:
-  putTextBytenoSeek("Dragon")
+//ドラゴン
+  textRegular0("Dragon")
 
 //Animal Models
 //Page 1
 model_animal01:
-  putTextBytenoSeek("Mouse")
+//ネズミ
+  textRegular0("Mouse")
 model_animal02:
-  putTextBytenoSeek("Giraffe")
+//キリン
+  textRegular0("Giraffe")
 model_animal03:
-  putTextBytenoSeek("Horse")
+//ウマ
+  textRegular0("Horse")
 model_animal04:
-  putTextBytenoSeek("Pig")
+//ブタ
+  textRegular0("Pig")
 model_animal05:
-  putTextBytenoSeek("Bull")
+//バッファロー
+  textRegular0("Bull")
 model_animal06:
-  putTextBytenoSeek("Elephant")
+//ゾウ
+  textRegular0("Elephant")
 model_animal07:
-  putTextBytenoSeek("Dog")
+//イヌ
+  textRegular0("Dog")
 //Page 2
 model_animal08:
-  putTextBytenoSeek("Gull")
+//カモメ
+  textRegular0("Seagull")
 model_animal09:
-  putTextBytenoSeek("Dodo")
+//ドードー
+  textRegular0("Dodo")
 model_animal10:
-  putTextBytenoSeek("Turtle")
+//カメ
+  textRegular0("Turtle")
 model_animal11:
-  putTextBytenoSeek("Lizard")
+//トカゲ
+  textRegular0("Lizard")
 model_animal12:
-  putTextBytenoSeek("Snake")
+//ヘビ
+  textRegular0("Snake")
 model_animal13:
-  putTextBytenoSeek("Stegosaurus")
+//ステゴサウルス
+  textRegular0("Stegosaurus")
 model_animal14:
-  putTextBytenoSeek("Snail")
+//カタツムリ
+  textRegular0("Snail")
 //Page 3
 model_animal15:
-  putTextBytenoSeek("Ant")
+//アリ
+  textRegular0("Ant")
 model_animal16:
-  putTextBytenoSeek("Centipede")
+//ムカデ
+  textRegular0("Centipede")
 model_animal17:
-  putTextBytenoSeek("Scorpion")
+//サソリ
+  textRegular0("Scorpion")
 model_animal18:
-  putTextBytenoSeek("Butterfly")
+//チョウ
+  textRegular0("Butterfly")
 model_animal19:
-  putTextBytenoSeek("Dragonfly")
+//トンボ
+  textRegular0("Dragonfly")
 model_animal20:
-  putTextBytenoSeek("Stag Beetle")
+//クワガタ
+  textRegular0("Stag Beetle")
 model_animal21:
-  putTextBytenoSeek("Beetle")
+//カブトムシ
+  textRegular0("Beetle")
 //Page 4
 model_animal22:
-  putTextBytenoSeek("Goldfish")
+//キンギョ
+  textRegular0("Goldfish")
 model_animal23:
-  putTextBytenoSeek("Squid")
+//イカ
+  textRegular0("Squid")
 model_animal24:
-  putTextBytenoSeek("Shark")
+//サメ
+  textRegular0("Shark")
 model_animal25:
-  putTextBytenoSeek("Sea Horse")
+//タツノオトシゴ
+  textRegular0("Seahorse")
 model_animal26:
-  putTextBytenoSeek("Swordfish")
+//カジキ
+  textRegular0("Swordfish")
 model_animal27:
-  putTextBytenoSeek("Shrimp")
+//エビ
+  textRegular0("Shrimp")
 model_animal28:
-  putTextBytenoSeek("Carp")
+//コイ
+  textRegular0("Carp")
 
 //Vehicle Models
 //Page 1
 model_vehicle01:
-  putTextBytenoSeek("Open Top")
+//オープンカー
+  textRegular0("Open Car")
 model_vehicle02:
-  putTextBytenoSeek("4WD")
+//4WD
+  textRegular0("4WD")
 model_vehicle03:
-  putTextBytenoSeek("Truck")
+//トレーラー
+  textRegular0("Trailer")
 model_vehicle04:
-  putTextBytenoSeek("Pickup")
+//ピックアップ
+  textRegular0("Pickup")
 model_vehicle05:
-  putTextBytenoSeek("Sedan")
+//セダン
+  textRegular0("Sedan")
 model_vehicle06:
-  putTextBytenoSeek("Vintage Car")
+//クラシックカー
+  textRegular0("Vintage Car")
 model_vehicle07:
-  putTextBytenoSeek("F1 Car")
+//F1カー
+  textRegular0("F1 Car")
 //Page 2
 model_vehicle08:
-  putTextBytenoSeek("Bus")
+//バス
+  textRegular0("Bus")
 model_vehicle09:
-  putTextBytenoSeek("Bulldozer")
+//ブルドーザー
+  textRegular0("Bulldozer")
 model_vehicle10:
-  putTextBytenoSeek("Tank")
+//せんしゃ
+  textRegular0("Tank")
 model_vehicle11:
-  putTextBytenoSeek("Train")
+//とっきゅうれっしゃ
+  textRegular0("Express Train")
 model_vehicle12:
-  putTextBytenoSeek("Quad")
+//バギー
+  textRegular0("Quad")
 model_vehicle13:
-  putTextBytenoSeek("Motorcycle")
+//オートバイ
+  textRegular0("Motorcycle")
 model_vehicle14:
-  putTextBytenoSeek("Bicycle")
+//じてんしゃ
+  textRegular0("Bicycle")
 //Page 3
 model_vehicle15:
-  putTextBytenoSeek("Sailboat")
+//ヨット
+  textRegular0("Sailboat")
 model_vehicle16:
-  putTextBytenoSeek("Tanker")
+//タンカー
+  textRegular0("Tanker")
 model_vehicle17:
-  putTextBytenoSeek("Helicopter")
+//ヘリコプター
+  textRegular0("Helicopter")
 model_vehicle18:
-  putTextBytenoSeek("Plane")
+//2まいプロペラき
+  textRegular0("Plane")
 model_vehicle19:
-  putTextBytenoSeek("Glider")
+//グライダー
+  textRegular0("Glider")
 model_vehicle20:
-  putTextBytenoSeek("Jet Plane")
+//ジェットせんとうき
+  textRegular0("Jet Fighter")
 model_vehicle21:
-  putTextBytenoSeek("Air Bus")
+//ジャンボジェットき
+  textRegular0("Jumbo Jet")
 
 //Other Models
 //Page 1
 model_other01:
-  putTextBytenoSeek("House")
+//いえ
+  textRegular0("House")
 model_other02:
-  putTextBytenoSeek("Mansion")
+//おやしき
+  textRegular0("Mansion")
 model_other03:
-  putTextBytenoSeek("Building")
+//ビル
+  textRegular0("Building")
 model_other04:
-  putTextBytenoSeek("TV Set")
+//テレビ
+  textRegular0("TV Set")
 model_other05:
-  putTextBytenoSeek("Boom Box")
+//ラジカセ
+  textRegular0("Boom Box")
 model_other06:
-  putTextBytenoSeek("Mobile Phone")
+//ケイタイでんわ
+  textRegular0("Mobile Phone")
 model_other07:
-  putTextBytenoSeek("N64 Controller")
+//64コントローラ
+  textRegular0("N64 Controller")
 //Page 2
 model_other08:
-  putTextBytenoSeek("Star")
+//ほし
+  textRegular0("Star")
 model_other09:
-  putTextBytenoSeek("Toy Train")
+//つみきのきしゃ
+  textRegular0("Toy Train")
 model_other10:
-  putTextBytenoSeek("Teddy Bear")
+//くまのぬいぐるみ
+  textRegular0("Teddy Bear")
 model_other11:
-  putTextBytenoSeek("Alarm Clock")
+//めざましどけい
+  textRegular0("Alarm Clock")
 model_other12:
-  putTextBytenoSeek("Lamp")
+//ランプ
+  textRegular0("Lamp")
 model_other13:
-  putTextBytenoSeek("Sunflower")
+//ひまわり
+  textRegular0("Sunflower")
 model_other14:
-  putTextBytenoSeek("Tree")
+//き
+  textRegular0("Tree")
 //Page 3
 model_other15:
-  putTextBytenoSeek("Couch")
+//ソファー
+  textRegular0("Couch")
 model_other16:
-  putTextBytenoSeek("Shades")
+//サングラス
+  textRegular0("Shades")
 model_other17:
-  putTextBytenoSeek("Watch")
+//うでどけい
+  textRegular0("Watch")
 model_other18:
-  putTextBytenoSeek("Helmet")
+//ヘルメット
+  textRegular0("Helmet")
 model_other19:
-  putTextBytenoSeek("Pistol")
+//ピストル
+  textRegular0("Pistol")
 model_other20:
-  putTextBytenoSeek("Bottle")
+//びん
+  textRegular0("Bottle")
 model_other21:
-  putTextBytenoSeek("Milk Carton")
+//ぎゅうにゅうパック
+  textRegular0("Milk Carton")
 
 //Pointer Model Names
 seek(0x8968B4)
@@ -298,95 +411,236 @@ dw model_other08, model_other09, model_other10, model_other11, model_other12, mo
 dw model_other15, model_other16, model_other17, model_other18, model_other19, model_other20, model_other21
 
 //Interface
+seek(0x897510); base 0x80610150
 interface_nextpage:
-  putTextByte(0x897510, "1/1")
+//RAM 80610150 - つぎのページ
+  textRegular0("1/1"); db 0,0
 interface_move:
-  putTextByte(0x897524, "Move")
+//RAM 80610164 - いちをかえる
+  textRegular0("Move")
 interface_rotate:
-  putTextByte(0x897534, "Rotate")
+//RAM 80610174 - むきをかえる
+  textRegular0("Rotate")
 interface_scale:
-  putTextByte(0x897544, "Scale")
+//RAM 80610184 - おおきさをかえる
+  textRegular0("Scale")
 interface_vert:
-  putTextByte(0x897558, "Point")
+//RAM 80610198 - てん
+  textRegular0("Point")
 interface_edge:
-  putTextByte(0x897560, "Edge")
+//RAM 806101A0 - せん
+  textRegular0("Edge")
 interface_face:
-  putTextByte(0x897568, "Face")
+//RAM 806101A8 - めん
+  textRegular0("Face")
 interface_model:
-  putTextByte(0x897570, "Model")
+//RAM 806101B0 - モデル
+  textRegular0("Model")
 interface_cut:
-  putTextByte(0x897578, "Cut")
+//RAM 806101B8 - きる
+  textRegular0("Cut")
 interface_connect:
-  putTextByte(0x897580, "Connect")
+//RAM 806101C0 - つないできる
+  textRegular0("Connect")
 interface_extrude:
-  putTextByte(0x897590, "Extrude")
+//RAM 806101D0 - ひきだす
+  textRegular0("Extrude")
 interface_round:
-  putTextByte(0x89759C, "Round Off")
+//RAM 806101DC - かどをおとす
+  textRegular0("Round Off")
 interface_remove:
-  putTextByte(0x8975AC, "Remove")
+//RAM 806101EC - はずす
+  textRegular0("Remove")
 interface_delete:
-  putTextByte(0x8975B4, "Delete")
+//RAM 806101F4 - けす
+  textRegular0("Delete")
 interface_tunnel:
-  putTextByte(0x8975BC, "Create Tunnel")
+//RAM 806101FC - つなげる/トンネル
+  textRegular0("Create Tunnel")
 interface_makepanel:
-  putTextByte(0x8975D0, "Create Panel")
+//RAM 80610210 - パネルをつくる
+  textRegular0("Create Panel")
 interface_edgeextrude:
-  putTextByte(0x8975E0, "Edge Extrude")
+//RAM 80610220 - せんをおさえてひきだす
+  textRegular0("Edge Extrude")
 interface_sharpextrude:
-  putTextByte(0x8975F8, "Sharp Extrude")
+//RAM 80610238 - とがらせてひきだす
+  textRegular0("Sharp Extrude")
 interface_makeinsideface:
-  putTextByte(0x89760C, "Create Inside Faces")
+//RAM 8061024C - ちいさいめんをつくる
+  textRegular0("Create Inside Faces")
 interface_changeshading:
-  putTextByte(0x897624, "Change Shading")
+//RAM 80610264 - しつかんをかえる
+  textRegular0("Change Shading")
 interface_smoothen:
-  putTextByte(0x897638, "Smoothen")
+//RAM 80610278 - なめらかにする
+  textRegular0("Smoothen")
 interface_copy:
-  putTextByte(0x897648, "Copy")
+//RAM 80610288 - コピー
+  textRegular0("Copy")
 interface_mirrorcopy:
-  putTextByte(0x897650, "Mirror Copy")
+//RAM 80610290 - はんてんコピー
+  textRegular0("Mirror Copy")
+interface_glue:  
+//RAM 806102A0 - せっちゃく
+  textRegular0("Glue")                //Unused
+interface_reverse:
+//RAM 806102AC - はんてん
+  textRegular0("Reverse")             //Unused
+interface_inflate:
+//RAM 806102B8 - ふくらませる・しぼませる
+  textRegular0("Inflate/Deflate")     //Unused
+interface_twist:
+//RAM 806102D4 - ねじる
+  textRegular0("Twist")               //Unused
+interface_randomshape:
+//RAM 806102DC - ランダムへんけい
+  textRegular0("Random Shape")        //Unused
+interface_slimeshape:
+//RAM 806102F0 - スライムへんけい
+  textRegular0("Slime Shape")         //Unused
 interface_everyaxis:
-  putTextByte(0x8976C4, "All Axis")
+//RAM 80610304 - すべてのほうこう
+  textRegular0("All Axis")
 interface_fromtarget:
-  putTextByte(0x8976D8, "From Target")
+//RAM 80610318 - たいしょうに
+  textRegular0("From Target")
+interface_severalfaces:
+//RAM 80610328 - ふくすうのめんをまとめて
+  textRegular0("Several Faces at once")
 interface_redaxis:
-  putTextByte(0x897704, "Red Axis")
+//RAM 80610344 - アカじくのほうこう
+  textRegular0("Red Axis")
 interface_greenaxis:
-  putTextByte(0x897718, "Green Axis")
+//RAM 80610358 - ミドリじくのほうこう
+  textRegular0("Green Axis")
 interface_blueaxis:
-  putTextByte(0x897730, "Blue Axis")
+//RAM 80610370 - アオじくのほうこう
+  textRegular0("Blue Axis")
 interface_aroundredaxis:
-  putTextByte(0x897744, "Around Red Axis")
+//RAM 80610384 - アカじくをちゅうしんに
+  textRegular0("Around Red Axis")
 interface_aroundgreenaxis:
-  putTextByte(0x89775C, "Around Green Axis")
+//RAM 8061039C - ミドリじくをちゅうしんに
+  textRegular0("Around Green Axis")
 interface_aroundblueaxis:
-  putTextByte(0x897778, "Around Blue Axis")
+//RAM 806103B8 - アオじくをちゅうしんに
+  textRegular0("Around Blue Axis")
 interface_alongredaxis:
-  putTextByte(0x897790, "Scale Red Axis")
+//RAM 806103D0 - アカじくにそって
+  textRegular0("Scale Red Axis")
 interface_alonggreenaxis:
-  putTextByte(0x8977A4, "Scale Green Axis")
+//RAM 806103E4 - ミドリじくにそって
+  textRegular0("Scale Green Axis")
 interface_alongblueaxis:
-  putTextByte(0x8977B8, "Scale Blue Axis")
+//RAM 806103F8 - アオじくにそって
+  textRegular0("Scale Blue Axis")
 interface_split2:
-  putTextByte(0x8977CC, "2 parts")
+//RAM 8061040C - 2ぶんかつ
+  textRegular0("2 parts")
 interface_split3:
-  putTextByte(0x8977D8, "3 parts")
+//RAM 80610418 - 3ぶんかつ
+  textRegular0("3 parts")
 interface_split4:
-  putTextByte(0x8977E4, "4 parts")
+//RAM 80610424 - 4ぶんかつ
+  textRegular0("4 parts")
 interface_split5:
-  putTextByte(0x8977F0, "5 parts")
+//RAM 80610430 - 5ぶんかつ
+  textRegular0("5 parts")
+interface_split6:
+//RAM 8061043C - 6ぶんかつ
+  textRegular0("6 parts")             //Unused
+interface_sampleoff:
+//RAM 80610448 - サンプルひょうじOFF
+  textRegular0("Sample Display OFF")  //Unused
+interface_sampleon:
+//RAM 80610460 - サンプルひょうじON
+  textRegular0("Sample Display ON")   //Unused
 interface_mirrorred:
-  putTextByte(0x897838, "Mirror on Red Plane")
+//RAM 80610478 - アカのめんとたいしょうに
+  textRegular0("Mirror on Red Plane")
 interface_mirrorgreen:
-  putTextByte(0x897854, "Mirror on Green Plane")
+//RAM 80610494 - ミドリのめんとたいしょうに
+  textRegular0("Mirror on Green Plane")
 interface_mirrorblue:
-  putTextByte(0x897870, "Mirror on Blue Plane")
+//RAM 806104B0 - アオのめんとたいしょうに
+  textRegular0("Mirror on Blue Plane")
 interface_basicmodel:
-  putTextByte(0x89788C, "Basic")
+//RAM 806104CC - きほんモデル
+  textRegular0("Basic")
 interface_charamodel:
-  putTextByte(0x89789C, "Characters")
+//RAM 806104DC - キャラクターモデル
+  textRegular0("Characters")
 interface_animalmodel:
-  putTextByte(0x8978B0, "Animals")
+//RAM 806104F0 - どうぶつモデル
+  textRegular0("Animals")
 interface_vehiclemodel:
-  putTextByte(0x8978C0, "Vehicles")
+//RAM 80610500 - のりものモデル
+  textRegular0("Vehicles")
 interface_othermodel:
-  putTextByte(0x8978D0, "Other")
+//RAM 80610510 - そのたモデル
+  textRegular0("Other")
+
+//Pointers
+seek(0x8692C2); dh interface_vert
+seek(0x8696CA); dh interface_edge
+seek(0x869ACA); dh interface_face
+seek(0x869F22); dh interface_model
+
+seek(0x86AFFE); dh interface_basicmodel
+seek(0x86B42A); dh interface_basicmodel
+seek(0x86B842); dh interface_charamodel
+seek(0x86BC5A); dh interface_animalmodel
+seek(0x86C072); dh interface_vehiclemodel
+seek(0x86C48A); dh interface_othermodel
+
+seek(0x86F41E); dh interface_nextpage
+
+seek(0x86FC16); dh interface_everyaxis
+seek(0x8702EA); dh interface_redaxis
+seek(0x8709BE); dh interface_greenaxis
+seek(0x87109A); dh interface_blueaxis
+seek(0x871776); dh interface_fromtarget
+seek(0x871E6A); dh interface_severalfaces
+
+seek(0x87253E); dh interface_aroundredaxis
+seek(0x872C12); dh interface_aroundgreenaxis
+seek(0x8732EE); dh interface_aroundblueaxis
+seek(0x8739CA); dh interface_fromtarget
+
+seek(0x8740A2); dh interface_everyaxis
+seek(0x874776); dh interface_alongredaxis
+seek(0x874E4A); dh interface_alonggreenaxis
+seek(0x875526); dh interface_alongblueaxis
+
+seek(0x87596E); dh interface_mirrorred
+seek(0x875D72); dh interface_mirrorgreen
+seek(0x876172); dh interface_mirrorblue
+
+seek(0x8774CE); dh interface_delete
+seek(0x877A4E); dh interface_delete
+seek(0x877FC2); dh interface_move
+seek(0x87853A); dh interface_move
+seek(0x878AAE); dh interface_rotate
+seek(0x879026); dh interface_rotate
+seek(0x87959A); dh interface_scale
+seek(0x879B1A); dh interface_connect
+seek(0x87A09A); dh interface_round
+seek(0x87A636); dh interface_cut
+seek(0x87ABB6); dh interface_remove
+seek(0x87B152); dh interface_makepanel
+seek(0x87B6EE); dh interface_extrude
+seek(0x87BC8A); dh interface_sharpextrude
+seek(0x87C222); dh interface_edgeextrude
+seek(0x87C7A2); dh interface_tunnel
+seek(0x87CD22); dh interface_makeinsideface
+seek(0x87D2A2); dh interface_smoothen
+seek(0x87D83E); dh interface_copy
+seek(0x87DDDA); dh interface_mirrorcopy
+seek(0x87E35A); dh interface_changeshading
+
+seek(0x87E87E); dh interface_split2
+seek(0x87EDA2); dh interface_split3
+seek(0x87F2C6); dh interface_split4
+seek(0x87F7EA); dh interface_split5
+
