@@ -3,176 +3,283 @@
 
 print "  - Stage UFO Text\n"
 
-putTextByte(0x649D84, "Exit")
-putTextByte(0x649D8C, "Undo")
-putTextByte(0x649D98, "1/1")
+seek(0x649D84); base 0x805165EC
+ufo_exit:
+  textRegular0("Exit")     //RAM 805165EC - でる
+ufo_undo:
+  textRegular0("Undo")     //RAM 805165F4 - やりなおし
+ufo_page:   //Unused
+  textRegular0("1/1")      //RAM 80516600 - つぎのページ
 db 0,0
 
-putTextByte(0x649DAC, "None")
-putTextByte(0x649DB4, "Move")
-putTextByte(0x649DC4, "Rotate")
-putTextByte(0x649DD4, "Scale")
+ufo_none:
+  textRegular0("None")     //RAM 80516614 - なし
+ufo_move:
+  textRegular0("Move")     //RAM 8051661C - いちをかえる
+ufo_rotate:
+  textRegular0("Rotate")   //RAM 8051662C - むきをかえる
+ufo_scale:
+  textRegular0("Scale")    //RAM 8051663C - おおきさをかえる
 
-putTextByte(0x649DE8, "All Axis")
-putTextByte(0x649DFC, "Red Axis")
-putTextByte(0x649E10, "Green Axis")
-putTextByte(0x649E28, "Blue Axis")
-putTextByte(0x649E3C, "Around Red Axis")
-putTextByte(0x649E54, "Around Green Axis")
-putTextByte(0x649E70, "Around Blue Axis")
-putTextByte(0x649E88, "Scale Red Axis")
-putTextByte(0x649E9C, "Scale Green Axis")
-putTextByte(0x649EB0, "Scale Blue Axis")
+ufo_move_all:
+  textRegular0("All Axis")           //RAM 80516650 - すべてのほうこう
+ufo_move_red:
+  textRegular0("Red Axis")           //RAM 80516664 - アカじくのほうこう
+ufo_move_green:
+  textRegular0("Green Axis")         //RAM 80516678 - ミドリじくのほうこう
+ufo_move_blue:
+  textRegular0("Blue Axis")          //RAM 80516690 - アオじくのほうこう
+ufo_rotate_red:
+  textRegular0("Around Red Axis")    //RAM 805166A4 - アカじくをちゅうしんに
+ufo_rotate_green:
+  textRegular0("Around Green Axis")  //RAM 805166BC - ミドリじくをちゅうしんに
+ufo_rotate_blue:
+  textRegular0("Around Blue Axis")   //RAM 805166D8 - アオじくをちゅうしんに
+ufo_scale_red:
+  textRegular0("Scale Red Axis")     //RAM 805166F0 - アカじくにそって
+ufo_scale_green:
+  textRegular0("Scale Green Axis")   //RAM 80516704 - ミドリじくにそって
+ufo_scale_blue:
+  textRegular0("Scale Blue Axis")    //RAM 80516718 - アオじくにそって
 
-putTextByte(0x649EC4, "Stage")
-putTextByte(0x649ED0, "Background")
-putTextByte(0x649EDC, "Effect")
-putTextByte(0x649EE8, "Lighting")
-putTextByte(0x649EF8, "Load Picture as Background")   //Unused
+ufo_stage:
+  textRegular0("Stage")              //RAM 8051672C - ステージ
+ufo_bg:
+  textRegular0("Background")         //RAM 80516738 - はいけい
+ufo_effect:
+  textRegular0("Effect")             //RAM 80516744 - エフェクト
+ufo_light:
+  textRegular0("Lighting")           //RAM 80516750 - ライトこうか
+ufo_bgload:   //Unused
+  textRegular0("Load Picture as Background")   //RAM 80516760 - はいけいに[2Dさくひん]ロード
 
 //Backgrounds RAM 80516784 - NDD 0x649F1C
-seek(0x649F1C)
-base 0x80516784
+//seek(0x649F1C); base 0x80516784
 back01:
-  putTextBytenoSeek("Mountain")
+//やま
+  textRegular0("Mountain")
 back02:
-  putTextBytenoSeek("Metal")
+//メタル
+  textRegular0("Metal")
 back03:
-  putTextBytenoSeek("Water Surface")
+//すいめん
+  textRegular0("Water Surface")
 back04:
-  putTextBytenoSeek("Maple")
+//もみじ
+  textRegular0("Maple")
 back05:
-  putTextBytenoSeek("Automobile")
+//じどうしゃ
+  textRegular0("Automobile")
 back06:
-  putTextBytenoSeek("Sunset")
+//ゆうやけ
+  textRegular0("Sunset")
 
 back07:
-  putTextBytenoSeek("Starry Sky")
+//ほしぞら
+  textRegular0("Starry Sky")
 back08:
-  putTextBytenoSeek("Blue Sky")
+//あおぞら
+  textRegular0("Blue Sky")
 back09:
-  putTextBytenoSeek("Forest")
+//もり
+  textRegular0("Forest")
 back10:
-  putTextBytenoSeek("Dry Leaves")
+//かれは
+  textRegular0("Dry Leaves")
 back11:
-  putTextBytenoSeek("Bamboo Grove")
+//ちくりん
+  textRegular0("Bamboo Grove")
 back12:
-  putTextBytenoSeek("Snowy")
+//ゆきげしき
+  textRegular0("Snowy")
 back13:
-  putTextBytenoSeek("Mirror")
+//ミラー
+  textRegular0("Mirror")
 
 back14:
-  putTextBytenoSeek("Green")
+//グリーン
+  textRegular0("Green")
 back15:
-  putTextBytenoSeek("Underwater")
+//すいちゅう
+  textRegular0("Underwater")
 back16:
-  putTextBytenoSeek("Painting")
+//すいぼくが
+  textRegular0("Painting")
 back17:
-  putTextBytenoSeek("Cumulonimbus")
+//にゅうどうぐも
+  textRegular0("Cumulonimbus")
 back18:
-  putTextBytenoSeek("Clouds")
+//くもりぞら
+  textRegular0("Clouds")
 back19:
-  putTextBytenoSeek("Horizon")
+//ちへいせん
+  textRegular0("Horizon")
+back20:
+//オリジナルはいけい
+  textRegular0("Background Picture")
 
 //Stages RAM 80516868 NDD 0x64A000
 stage01:
-  putTextBytenoSeek("Wood")
+//もくめいた
+  textRegular0("Wood")
 stage02:
-  putTextBytenoSeek("Two Steps")
+//2だんおき
+  textRegular0("Two Steps")
 stage03:
-  putTextBytenoSeek("Ship Holder")
+//ふねのだい
+  textRegular0("Ship Holder")
 stage04:
-  putTextBytenoSeek("Case")
+//とうめいケース
+  textRegular0("Case")
 stage05:
-  putTextBytenoSeek("Opened Cover")
+//ふたつきはこ
+  textRegular0("Opened Cover")
 stage06:
-  putTextBytenoSeek("Exhibition Hall")
+//てんじじょう
+  textRegular0("Exhibition Hall")
 
 stage07:
-  putTextBytenoSeek("Spacecraft")
+//うちゅうせんのなか
+  textRegular0("Spacecraft")
 stage08:
-  putTextBytenoSeek("Airplace Holder")
+//ひこうきだい
+  textRegular0("Aircraft Holder")
 stage09:
-  putTextBytenoSeek("Wood Holder")
+//くしいた
+  textRegular0("Wood Holder")
 stage10:
-  putTextBytenoSeek("Flower Pot")
+//うえきばち
+  textRegular0("Flower Pot")
 stage11:
-  putTextBytenoSeek("Traditional Garden")
+//にほんていえん
+  textRegular0("Traditional Garden")
 stage12:
-  putTextBytenoSeek("Dinner Table")
+//テーブル
+  textRegular0("Dinner Table")
 stage13:
-  putTextBytenoSeek("Sci-Fi")
+//SF
+  textRegular0("Sci-Fi")
 
 stage14:
-  putTextBytenoSeek("Ranch")
+//ぼくじょう
+  textRegular0("Ranch")
 stage15:
-  putTextBytenoSeek("Water Tank")
+//すいそう
+  textRegular0("Water Tank")
 stage16:
-  putTextBytenoSeek("Moss")
+//こけ
+  textRegular0("Moss")
 stage17:
-  putTextBytenoSeek("Race")
+//レースじょう
+  textRegular0("Race")
 stage18:
-  putTextBytenoSeek("City")
+//まち
+  textRegular0("City")
 stage19:
-  putTextBytenoSeek("Desert")
+//さばく
+  textRegular0("Desert")
 
 //Effects RAM 8051695C - NDD 0x64A0F4
 effect01:
-  putTextBytenoSeek("Rain")
+//あめ
+  textRegular0("Rain")
 effect02:
-  putTextBytenoSeek("Snow")
+//ゆき
+  textRegular0("Snow")
 effect03:
-  putTextBytenoSeek("Thunder")
+//カミナリ
+  textRegular0("Thunder")
 effect04:
-  putTextBytenoSeek("Bubbles")
+//あわ
+  textRegular0("Bubbles")
 effect05:
-  putTextBytenoSeek("Space")
+//うちゅう
+  textRegular0("Space")
 effect06:
-  putTextBytenoSeek("Twinkle")
+//キラキラ
+  textRegular0("Twinkle")
 
 effect07:
-  putTextBytenoSeek("Halo")
+//ごこう
+  textRegular0("Halo")
 effect08:
-  putTextBytenoSeek("Explosions")
+//あちこちばくはつ
+  textRegular0("Explosions")
 effect09:
-  putTextBytenoSeek("Leaves")
+//おちば
+  textRegular0("Leaves")
 effect10:
-  putTextBytenoSeek("Fog")
+//きり
+  textRegular0("Fog")
 effect11:
-  putTextBytenoSeek("Sepia")
+//セピア
+  textRegular0("Sepia")
 effect12:
-  putTextBytenoSeek("Frame")
+//フレーム
+  textRegular0("Frame")
 effect13:
-  putTextBytenoSeek("Wire")
+//ワイヤー
+  textRegular0("Wire")
 
 //Lighting RAM 805169E4 - NDD 0x64A17C
 light01:
-  putTextBytenoSeek("Sunset")
+//ゆうやけ
+  textRegular0("Sunset")
 light02:
-  putTextBytenoSeek("Red & Blue")
+//あかとあお
+  textRegular0("Red & Blue")
 light03:
-  putTextBytenoSeek("Moving Light")
+//うごくライト
+  textRegular0("Moving Light")
 light04:
-  putTextBytenoSeek("Bottom Light")
+//したからライト
+  textRegular0("Bottom Light")
 light05:
-  putTextBytenoSeek("Bright Models")
+//モデルのみあかるく
+  textRegular0("Bright Models")
 light06:
-  putTextBytenoSeek("Color Switch")
+//いろへんか
+  textRegular0("Color Switch")
 
 //Pointers
-seek(0x64A574)
-dw back01, back02, back03, back04, back05, back06
+seek(0x64A570)
+dw ufo_none, back01, back02, back03, back04, back05, back06
 dw back07, back08, back09, back10, back11, back12, back13
 dw back14, 0, back15, back16, back17, back18, back19
 
-seek(0x64A76C)
-dw stage01, stage02, stage03, stage04, stage05, stage06
+seek(0x64A768)
+dw ufo_none, stage01, stage02, stage03, stage04, stage05, stage06
 dw stage07, stage08, stage09, stage10, stage11, stage12, stage13
 dw stage14, 0, stage15, stage16, stage17, stage18, stage19
 
-seek(0x64A2F0)
-dw effect01, effect02, effect03, effect04, effect05, effect06
+seek(0x64A2EC)
+dw ufo_none, effect01, effect02, effect03, effect04, effect05, effect06
 dw effect07, effect08, effect09, effect10, effect11, effect12, effect13
 
-seek(0x64A3B4)
-dw light01, light02, light03, light04, light05, light06
+seek(0x64A3B0)
+dw ufo_none, light01, light02, light03, light04, light05, light06
+
+seek(0x61E0FA); dh ufo_move_all
+seek(0x61E626); dh ufo_move_red
+seek(0x61EB56); dh ufo_move_green
+seek(0x61F08A); dh ufo_move_blue
+
+seek(0x61F5BA); dh ufo_rotate_red
+seek(0x61FAEA); dh ufo_rotate_green
+seek(0x62001E); dh ufo_rotate_blue
+
+seek(0x62053E); dh ufo_move_all
+seek(0x620A52); dh ufo_scale_red
+seek(0x620F6A); dh ufo_scale_green
+seek(0x62148A); dh ufo_scale_blue
+
+seek(0x6218C2); dh ufo_exit
+seek(0x621C8E); dh ufo_exit
+seek(0x6226D6); dh ufo_stage
+seek(0x622A9E); dh ufo_bg
+seek(0x622E66); dh ufo_effect
+seek(0x62322A); dh ufo_light
+seek(0x6235D6); dh ufo_move
+seek(0x62397A); dh ufo_rotate
+seek(0x623D1E); dh ufo_scale
+seek(0x6240F6); dh ufo_undo
