@@ -1,122 +1,120 @@
 //Mario Artist Polygon Studio
 //Error Messages? RAM 800AC4C0 NDD 0x11F980
-seek(0x11F980)
-base 0x800AC4C0
-error_loading:
-//ロード中です
-textASCII0("Loading...")                       //800AC4C0
-error_saving:
-//セーブ中です
-textASCII0("Saving...")
-error_diskerror:
-//ディスクエラー
+seek(0x11F980); base 0x800AC4C0
+error01:
+//RAM 800AC4C0 - ロード中です
+textASCII0("Loading...")
+error02:
+//RAM 800AC4D0 - セーブ中です
+textASCII0("Saving...")   //Unused
+error03:
+//RAM 800AC4E0 - ディスクエラー
 textASCII0("Disk Error")
-error_eject:
-//ディスクを取り出してください。
-textASCII0("Please eject the disk.")
-error_insert:
-//ディスクを差し込んでください。
+error04:
+//RAM 800AC4F0 - ディスクを取り出してください。
+textASCII0("Please eject the disk.")    //Unused
+error05:
+//RAM 800AC510 - ディスクを差し込んでください。
 textASCII0("Please insert the disk.")
 
-error_wrongdisk1:
-//間違ったディスクが差し込まれ
+error06:
+//RAM 800AC530 - 間違ったディスクが差し込まれ
 textASCII0("The wrong disk may")
-error_wrongdisk2:
-//ている可能性があります。
+error07:
+//RAM 800AC550 - ている可能性があります。
 textASCII0("have been inserted.")
-error_wrongdisk3:
-//正しいディスクに入れかえて
-textASCII0("Please insert")
-error_wrongdisk4:
-textASCII0("the correct disk.")
+error08:
+//RAM 800AC56C - 正しいディスクに入れかえて
+textASCII0("Please insert the correct disk.")
 
-error_removeddisk1:
-//ＮＩＮＴＥＮＤＯ６４本体の
-textASCII0("When the power switch of the")  //800AC588
-error_removeddisk2:
-//電源スイッチを入れたときの
-textASCII0("NINTENDO 64 Control Deck is switched on,")  //800AC5A4
-error_removeddisk3:
-//「ポリゴンスタジオ」の
-textASCII0("Polygon Studio")  //800AC5C0
-error_readmanual:
-//取扱説明書をお読みください。
-textASCII0("Please read the instruction manual.")  //800AC5D8
+error09:
+//RAM 800AC588 - ＮＩＮＴＥＮＤＯ６４本体の
+textASCII0("When the power switch of the")
+error10:
+//RAM 800AC5A4 - 電源スイッチを入れたときの
+textASCII0("NINTENDO 64 Control Deck is switched on,")
+error11:
+//RAM 800AC5C0 - 「ポリゴンスタジオ」の
+textASCII0("Polygon Studio")
+error12:
+//RAM 800AC5D8 - 取扱説明書をお読みください。
+textASCII0("Please read the instruction manual.")
 
-error_note1:
-//注意：アクセスランプ点滅中に
-textASCII0("Note: While the ACCESS light is blinking,")  //800AC5F8
-error_note2:
-//ディスクを抜かないでください。
-textASCII0("please do not eject the disk.")  //800AC618
+error13:
+//RAM 800AC5F8 - 注意：アクセスランプ点滅中に
+textASCII0("Note: While the ACCESS light is blinking,")
+error14:
+//RAM 800AC618 - ディスクを抜かないでください。
+textASCII0("please do not eject the disk.")
 
-error_readmanual2:
-//詳しくは、取扱説明書をお読み
-textASCII0("For more details, please read the manual.")  //800AC638
+error15:
+//RAM 800AC638 - 詳しくは、取扱説明書をお読み
+textASCII0("For more details, please read the manual.")
+error16:
+//RAM 800AC658 - ください。
+textASCII0(" ")
 
-error_please:
-//ください。
-textASCII0(" ")  //800AC658
-
-error_insertagain:
-error_removeddisk4:
-//ディスクを差し込みなおして
-textASCII0("Please insert the disk again.")  //800AC664
+error17:
+//RAM 800AC664 - ディスクを差し込みなおして
+textASCII0("Please insert the disk again.")
 
 //Change hardcoded pointers
-//Loading
-seek(0xDF416); dh error_loading
+//Initialization
+//Init up to 220 chars
+seek(0xDF416); dh error01
+seek(0xDF42A); dh error02
+seek(0xDF43E); dh error03
+seek(0xDF452); dh error04
+seek(0xDF466); dh error05
+seek(0xDF47A); dh error06
+seek(0xDF48E); dh error07
+seek(0xDF4A2); dh error08
+seek(0xDF4B6); dh error09
+seek(0xDF4CA); dh error10
+seek(0xDF4DE); dh error11
+seek(0xDF4F2); dh error12
+seek(0xDF506); dh error13
+seek(0xDF51A); dh error14
+seek(0xDF52E); dh error15
+seek(0xDF542); dh error16
+seek(0xDF556); dh error17
 
-//Saving
-seek(0xDF42A); //dh error_saving
+//Loading... Func
+seek(0xDFF02); dh error01
+seek(0xDFF1E); dh error01
 
-seek(0xDF43E); //dh error_diskerror
+//Disk Error Display Func
+seek(0xDFF7E); dh error03
 
-seek(0xDF452); //dh error_eject
+//1 - Removed disk
+seek(0xE0152); dh error09
+seek(0xE017E); dh error10
+seek(0xE01AA); dh error11
+seek(0xE01D6); dh error17
 
-seek(0xDF466); //dh error_insert
+//2 - Wrong disk
+seek(0xE020A); dh error06
+seek(0xE0236); dh error07
+seek(0xE0262); dh error08
+seek(0xE028E); dh error16
 
-seek(0xDF47A); //dh error_wrongdisk1
+//3 - Disk Error
+seek(0xE02CA); dh error12
 
-//Disk Error
-seek(0xDFF7E); dh error_diskerror
+//4 - Please insert disk
+seek(0xE0306); dh error13
+seek(0xE3332); dh error14
+seek(0xE035E); dh error15
+seek(0xE038A); dh error16
+seek(0xE03B6); dh error05
 
-//Removed disk
-seek(0xE0152); dh error_removeddisk1
-seek(0xE017E); dh error_removeddisk2
-seek(0xE01AA); dh error_removeddisk3
-seek(0xE01D6); dh error_removeddisk4
-
-//Wrong disk
-seek(0xE020A); dh error_wrongdisk1
-seek(0xE0236); dh error_wrongdisk2
-seek(0xE0262); dh error_wrongdisk3
-seek(0xE028E); dh error_wrongdisk4
-
-//Please read the instruction manual.
-seek(0xE02CA); dh error_readmanual
-
-//Note
-seek(0xE0306); dh error_note1
-seek(0xE3332); dh error_note2
-
-//Please read for more info
-seek(0xE035E); dh error_readmanual2
-seek(0xE038A); dh error_please
-
-//Insert Disk
-seek(0xE03B6); dh error_insert
-
-//Insert Disk again
-seek(0xE03F2); dh error_insertagain
-seek(0xE041E); dh error_please
-
-
+//5 - Please insert disk again
+seek(0xE03F2); dh error17
+seek(0xE041E); dh error16
 
 
 //Other Messages RAM 802FAD10 - NDD 0x1C9978
-seek(0x1C9978)
-base 0x802FAD10
+seek(0x1C9978); base 0x802FAD10
 //4 lines "Do you want to return to the main menu after the automatic save?" (???)
 other_autosavereturn1:
 //オートセーブしてから
@@ -275,8 +273,7 @@ textASCII0("Container 5")
 
 
 //Credits
-seek(0x27B868)
-base 0x807B6790
+seek(0x27B868); base 0x807B6790
 credits_title1:
 //RAM 807B6790 - Mario Artist Polygon Studio
 textASCII0("Mario Artist Polygon Studio")
