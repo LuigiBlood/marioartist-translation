@@ -53,53 +53,74 @@ addiu a0,a0,1
 lbu t4,0(a0)
 
 //RAM 8077DC10 - NDD 0x200F10
-seek(0x200F10)
-base 0x8077DC10
+seek(0x200F10); base 0x8077DC10
 save1_1:
-textRegular0("Exit")			//でる
+//RAM 8077DC10 - でる
+textRegular0("Exit")
 save1_2:
-textRegular0("Save")			//さくひんセーブ
+//RAM 8077DC18 - さくひんセーブ
+textRegular0("Save")
 save1_3:
-textRegular0("Load")			//さくひんロード
+//RAM 8077DC28 - さくひんロード
+textRegular0("Load")
 save1_4:
-textRegular0("Rename")			//なまえへんこう
+//RAM 8077DC38 - なまえへんこう
+textRegular0("Rename")
 save1_5:
-textRegular0("Delete")			//さくひんのさくじょ
+//RAM 8077DC48 - さくひんのさくじょ
+textRegular0("Delete")
 save1_6:
-textRegular0("Move/Copy")			//さくひんのいどう・コピー
+//RAM 8077DC5C - さくひんのいどう・コピー
+textRegular0("Move/Copy")
 save1_7:
-textRegular0("Create Container")		//いれものさくせい
+//RAM 8077DC78 - いれものさくせい
+textRegular0("Create Container")
 save1_8:
-textRegular0("Change Disk")		//ディスクのいれかえ
+//RAM 8077DC8C - ディスクのいれかえ
+textRegular0("Change Disk")
 
 save1_9:
-textRegular0("Hiragana")			//ひらがな
+//RAM 8077DCA0 - ひらがな
+textRegular0("Hiragana")
 save1_10:
-textRegular0("Katakana")			//カタカナ
+//RAM 8077DCAC - カタカナ
+textRegular0("Katakana")
 save1_11:
-textRegular0("AaBbCc")			//えいすう
+//RAM 8077DCB8 - えいすう
+textRegular0("AaBbCc")
 save1_12:
-textRegular0("Kanji/Symbols")		//かんじ/きごう
+//RAM 8077DCC4 - かんじ/きごう
+textRegular0("Kanji/Symbols")
 save1_13:
-textRegular0("All")			//ひらがな/カタカナ/えいすう
+//RAM 8077DCD4 - ひらがな/カタカナ/えいすう
+textRegular0("All")
 save1_14:
-textRegular0("Space")			//くうはく
+//RAM 8077DCF4 - くうはく
+textRegular0("Space")
 save1_15:
-textRegular0("Left")			//もどる
+//RAM 8077DD00 - もどる
+textRegular0("Left")
 save1_16:
-textRegular0("Right")			//すすむ
+//RAM 8077DD08 - すすむ
+textRegular0("Right")
 save1_17:
-textRegular0("Erase")			//1 もじけす
+//RAM 8077DD10 - 1 もじけす
+textRegular0("Erase")
 save1_18:
-textRegular0("Erase All")			//すべてけす
+//RAM 8077DD20 - すべてけす
+textRegular0("Erase All")
 save1_19:
-textRegular0("Undo")			//やりなおし
+//RAM 8077DD2C - やりなおし
+textRegular0("Undo")
 save1_20:
-textRegular0("Done")			//けってい
+//RAM 8077DD38 - けってい
+textRegular0("Done")
 save1_21:
-textRegular0("Back")			//もどる
+//RAM 8077DD44 - もどる
+textRegular0("Back")
 save1_22:
-textRegular0("Next")			//ページおくり
+//RAM 8077DD4C - ページおくり
+textRegular0("Next")
 
 seek(0x20105C)
 skip(16); dw (save1_1)
@@ -131,7 +152,8 @@ skip(16); dw (save1_20)
 
 //--Kanji/Symbol Page Number (Disk 0x20123C / RAM 8077DF3C)
 seek(0x20123C)
-textRegular0("1/1")			//1/1ページ
+//1/1ページ
+textRegular0("1/1")
 
 seek(0x1EBC68)
 sb t0,0(v0)
@@ -141,19 +163,21 @@ sb t2,2(v0)
 
 //--New Save
 seek(0x201428)
-textRegular0("New Save")			//あたらしくセーブする
+//あたらしくセーブする
+textRegular0("New Save")
 
 
 //--Move / Copy
 seek(0x201490)
-textRegular0("Move")			//いどう
+//いどう
+textRegular0("Move")
 seek(0x201498)
-textRegular0("Copy")			//コピー
+//コピー
+textRegular0("Copy")
 
 
 //--Kind Menuing (Disk 0x23A030 / RAM 807C2110)
-seek(0x23A030)
-base 0x807C2110
+seek(0x23A030); base 0x807C2110
 save2_1:
 //RAM 807C2110 - テスト
 textRegular0("Test")
@@ -473,8 +497,7 @@ skip(8); dw (save2_80)
 
 //--Bottom Window Text (Disk 0x23B0E0 / RAM 807C31C0)
 //Text ID RAM 8077B0EC
-seek(0x23B0E0)
-base 0x807C31C0
+seek(0x23B0E0); base 0x807C31C0
 save3_1:
 textRegular0("Please do not eject the disk.")	//ディスクを ぬかないでください
 save3_2:
@@ -907,26 +930,34 @@ sb t7,save4_1+14(at)	//2 (0x14)
 
 //--Disk Swap Text (Disk 0x23C0F0 / RAM 807C41D0)
 //Text ID RAM 80783C30 (0x10-0x12 & 0x20-0x22)
-seek(0x23C0F0)
-base 0x807C41D0
+seek(0x23C0F0); base 0x807C41D0
 save5_1:
-textRegular0("Please eject the disk.")				//RAM 807C41D0 - ディスクを とりだしてください
+//RAM 807C41D0 - ディスクを とりだしてください
+textRegular0("Please eject the disk.")
 save5_2:
-textRegular0("Please insert a disk.")				//RAM 807C41F0 - ディスクを いれてください
+//RAM 807C41F0 - ディスクを いれてください
+textRegular0("Please insert a disk.")
 save5_3:
-textRegular0("Please insert the original disk.")			//RAM 807C420C - きどうディスクをいれてください
+//RAM 807C420C - きどうディスクをいれてください
+textRegular0("Please insert the original disk.")
 save5_4:
-textRegular0("The wrong disk has been inserted.")			//RAM 807C422C - まちがったディスクがはいっています
+//RAM 807C422C - まちがったディスクがはいっています
+textRegular0("The wrong disk has been inserted.")
 save5_5:
-textRegular0("Loading content from a different disk.")		//RAM 807C4250 - べつのディスクといれかえます
+//RAM 807C4250 - べつのディスクといれかえます
+textRegular0("Loading content from a different disk.")
 save5_6:
-textRegular0("Change to the original Polygon Studio disk.")		//RAM 807C4270 - もとのディスクと いれかえます
+//RAM 807C4270 - もとのディスクと いれかえます
+textRegular0("Change to the original Polygon Studio disk.")
 save5_7:
-textRegular0("Loading content from a different disk.")		//RAM 807C4290 - べつのディスクの さくひんをよみこみます
+//RAM 807C4290 - べつのディスクの さくひんをよみこみます
+textRegular0("Loading content from a different disk.")
 save5_8:
-textRegular0("Change to the original Polygon Studio disk.")		//RAM 807C42BC - もとのディスクをよみこみます
+//RAM 807C42BC - もとのディスクをよみこみます
+textRegular0("Change to the original Polygon Studio disk.")
 save5_9:
-textRegular0("The original Polygon Studio disk\nis required to continue.")	//RAM 807C42DC - ゲームをつづけるためには\nきどうディスクがひつようです
+//RAM 807C42DC - ゲームをつづけるためには\nきどうディスクがひつようです
+textRegular0("The original Polygon Studio disk\nis required to continue.")
 
 //0x10 - Eject disk for a different disk
 seek(0x1F86C2+8)
@@ -962,8 +993,7 @@ dh (save5_3)
 
 
 //--Kanji Menu Text (Disk 0x23C240 / RAM 807C4320)
-seek(0x23C240)
-base 0x807C4320
+seek(0x23C240); base 0x807C4320
 save6_1:
 //RAM 807C4320 - ～ つかいたいかんじの さいしょのもじをえらんでください ～
 textRegular0("* Please select the beginning of the kanji *")
@@ -1011,8 +1041,7 @@ sb 0,0(v1)
 
 
 //Symbols Menu (Disk 0x23E418 / RAM 807C64F8)
-seek(0x23E418)	//Repoint because of space
-base 0x807C64F8
+seek(0x23E418); base 0x807C64F8
 //Page 1
 kanji1_1:
 textRegular0("Special")		//とくしゅもじ
@@ -1045,13 +1074,16 @@ db $FE,$81,$93,$01,$FE,$81,$8E,$05,$FE,$81,$CD,$02,$FE,$81,$DB,$01,$FE,$81,$DD,$
 
 //Page 3
 kanji3_1:
-textRegular0("Capital")//\nLetters")	//ぜんかくABC
+//ぜんかくABC
+textRegular0("Capital")//\nLetters")
 db $FE,$82,$60,$1A,$FF
 kanji3_2:
-textRegular0("Small")//\nLetters")	//ぜんかくabc
+//ぜんかくabc
+textRegular0("Small")//\nLetters")
 db $FE,$82,$81,$1A,$FF
 kanji3_3:
-textRegular0("Greek")//\nLetters")	//ギリシヤもじ
+//ギリシヤもじ
+textRegular0("Greek")//\nLetters")
 db $FE,$83,$9F,$18,$FB,$FE,$83,$BF,$18,$FF
 
 //Pointers
