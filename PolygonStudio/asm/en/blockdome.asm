@@ -2,567 +2,826 @@
 //Block Dome
 
 print "  - Block Dome Text\n"
+seek(0x7BA31C); base 0x805635CC
 block_delete:
-  putTextByte(0x7BA31C, "Delete")
+//RAM 805635CC - けす
+  textRegular0("Delete")
 block_glue:
-  putTextByte(0x7BA324, "Glue")
+//RAM 805635D4 - せっちゃく
+  textRegular0("Glue")
 block_gluereset:
-  putTextByte(0x7BA330, "Unglue")
+//RAM 805635E0 - せっちゃくリセット
+  textRegular0("Unglue")
 block_copy:
-  putTextByte(0x7BA344, "Copy")
+//RAM 805635F4 - コピー
+  textRegular0("Copy")
 block_3dwork:
-  putTextByte(0x7BA34C, "Call 3D Model")
+//RAM 805635FC - [3Dさくひん]のよびだし
+  textRegular0("Call 3D Model")
 block_mirrorcopy:
-  putTextByte(0x7BA368, "Mirror Copy")
+//RAM 80563618 - はんてんコピー
+  textRegular0("Mirror Copy")
 block_move:
-  putTextByte(0x7BA378, "Move")
+//RAM 80563628 - いちをかえる
+  textRegular0("Move")
 block_rotate:
-  putTextByte(0x7BA388, "Rotate")
+//RAM 80563638 - むきをかえる
+  textRegular0("Rotate")
 block_scale:
-  putTextByte(0x7BA398, "Scale")
+//RAM 80563648 - おおきさをかえる
+  textRegular0("Scale")
 block_everyaxis:
-  putTextByte(0x7BA3AC, "All Axis")
+//RAM 8056365C - すべてのほうこう
+  textRegular0("All Axis")
 block_redaxis:
-  putTextByte(0x7BA3C0, "Red Axis")
+//RAM 80563670 - アカじくのほうこう
+  textRegular0("Red Axis")
 block_greenaxis:
-  putTextByte(0x7BA3D4, "Green Axis")
+//RAM 80563684 - ミドリじくのほうこう
+  textRegular0("Green Axis")
 block_blueaxis:
-  putTextByte(0x7BA3EC, "Blue Axis")
+//RAM 8056369C - アオじくのほうこう
+  textRegular0("Blue Axis")
 block_aroundredaxis:
-  putTextByte(0x7BA400, "Around Red Axis")
+//RAM 805636B0 - アカじくをちゅうしんに
+  textRegular0("Around Red Axis")
 block_aroundgreenaxis:
-  putTextByte(0x7BA418, "Around Green Axis")
+//RAM 805636C8 - ミドリじくをちゅうしんに
+  textRegular0("Around Green Axis")
 block_aroundblueaxis:
-  putTextByte(0x7BA434, "Around Blue Axis")
+//RAM 805636E4 - アオじくをちゅうしんに
+  textRegular0("Around Blue Axis")
 block_scaleredaxis:
-  putTextByte(0x7BA44C, "Scale Red Axis")
+//RAM 805636FC - アカじくにそって
+  textRegular0("Scale Red Axis")
 block_scalegreenaxis:
-  putTextByte(0x7BA460, "Scale Green Axis")
+//RAM 80563710 - ミドリじくにそって
+  textRegular0("Scale Green Axis")
 block_scaleblueaxis:
-  putTextByte(0x7BA474, "Scale Blue Axis")
+//RAM 80563724 - アオじくにそって
+  textRegular0("Scale Blue Axis")
 block_mirrorred:
-  putTextByte(0x7BA488, "Mirror on Red Plane")
+//RAM 80563738 - アカのめんとたいしょうに
+  textRegular0("Mirror on Red Plane")
 block_mirrorgreen:
-  putTextByte(0x7BA4A4, "Mirror on Green Plane")
+//RAM 80563754 - ミドリのめんとたいしょうに
+  textRegular0("Mirror on Green Plane")
 block_mirrorblue:
-  putTextByte(0x7BA4C0, "Mirror on Blue Plane")
+//RAM 80563770 - アオのめんとたいしょうに
+  textRegular0("Mirror on Blue Plane")
 block_reset:
-  putTextByte(0x7BA4DC, "Reset")
+//RAM 8056378C - リセット
+  textRegular0("Reset")
 block_partblock:
-  putTextByte(0x7BA4E8, "Block Parts")
+//RAM 80563798 - パーツブロック
+  textRegular0("Block Parts")
 block_animblock:
-  putTextByte(0x7BA4F8, "Animated Blocks")
+//RAM 805637A8 - アニメーションブロック
+  textRegular0("Animated Blocks")
 block_questionblock:
-  putTextByte(0x7BA510, "? Blocks")
+//RAM 805637C0 - ?ブロック
+  textRegular0("? Blocks")
 block_powerblock:
-  putTextByte(0x7BA51C, "Power Blocks")
+//RAM 805637CC - どうりょくブロック
+  textRegular0("Power Blocks")
 block_soundblock:
-  putTextByte(0x7BA530, "Sound Blocks")
+//RAM 805637E0 - サウンドブロック
+  textRegular0("Sound Blocks")
 
 
 //Block Parts
 print "  - Block Dome Block Parts\n"
-seek(0x7BA544)
-base 0x805637F4
+//seek(0x7BA544); base 0x805637F4
 block_parts01: //RAM 80563914 - NDD 0x7BA664
-  putTextBytenoSeek("Male Body")
+//だんせいのからだ
+  textRegular0("Male Body")
 block_parts02:
-  putTextBytenoSeek("Female Body")
+//じょせいのからだ
+  textRegular0("Female Body")
 block_parts03:
-  putTextBytenoSeek("Turtle Body")
+//カメのからだ
+  textRegular0("Turtle Body")
 block_parts04:
-  putTextBytenoSeek("Dog Body")
+//イヌのからだ
+  textRegular0("Dog Body")
 block_parts05:
-  putTextBytenoSeek("Rabbit Body")
+//ウサギのからだ
+  textRegular0("Rabbit Body")
 block_parts06:
-  putTextBytenoSeek("Elephant Body")
+//ゾウのからだ
+  textRegular0("Elephant Body")
 block_parts07:
-  putTextBytenoSeek("Dino Body")
+//キョウリュウのからだ
+  textRegular0("Dino Body")
 
 block_parts08:
-  putTextBytenoSeek("Robot Body")
+//ロボットのからだ
+  textRegular0("Robot Body")
 block_parts09:
-  putTextBytenoSeek("Beetle Body")
+//カブトムシのからだ
+  textRegular0("Beetle Body")
 block_parts10:
-  putTextBytenoSeek("Ladybug Body")
+//テントウムシのからだ
+  textRegular0("Ladybug Body")
 block_parts11:
-  putTextBytenoSeek("Ant Body")
+//アリのからだ
+  textRegular0("Ant Body")
 block_parts12:
-  putTextBytenoSeek("Chicken Body")
+//ニワトリのからだ
+  textRegular0("Chicken Body")
 block_parts13:
-  putTextBytenoSeek("Owl Body")
+//フクロウのからだ
+  textRegular0("Owl Body")
 block_parts14:
-  putTextBytenoSeek("Fish Body 1")
+//サカナのからだ1
+  textRegular0("Fish Body 1")
 
 block_parts15:
-  putTextBytenoSeek("Fish Body 2")
+//サカナのからだ2
+  textRegular0("Fish Body 2")
 block_parts16:
-  putTextBytenoSeek("Robot Head")
+//ロボットのあたま
+  textRegular0("Robot Head")
 block_parts17:
-  putTextBytenoSeek("Rabbit Arm")
+//ウサギのうで
+  textRegular0("Rabbit Arm")
 block_parts18:
-  putTextBytenoSeek("Dino Arm")
+//キョウリュウのうで
+  textRegular0("Dino Arm")
 block_parts19:
-  putTextBytenoSeek("Robot Arm")
+//ロボットのうで
+  textRegular0("Robot Arm")
 block_parts20:
-  putTextBytenoSeek("Male Feet")
+//だんせいのあし
+  textRegular0("Male Leg")
 block_parts21:
-  putTextBytenoSeek("Female Feet")
+//じょせいのあし
+  textRegular0("Female Leg")
 
 block_parts22:
-  putTextBytenoSeek("Turtle Feet")
+//カメのあし
+  textRegular0("Turtle Foot")
 block_parts23:
-  putTextBytenoSeek("Dog Feet")
+//イヌのあし
+  textRegular0("Dog Foot")
 block_parts24:
-  putTextBytenoSeek("Rabbit Feet")
+//ウサギのあし
+  textRegular0("Rabbit Foot")
 block_parts25:
-  putTextBytenoSeek("Elephant Feet")
+//ゾウのあし
+  textRegular0("Elephant Foot")
 block_parts26:
-  putTextBytenoSeek("Dino Feet")
+//キョウリュウのあし
+  textRegular0("Dino Foot")
 block_parts27:
-  putTextBytenoSeek("Robot Feet")
+//ロボットのあし
+  textRegular0("Robot Leg")
 block_parts28:
-  putTextBytenoSeek("Ant Feet")
+//ムシのあし
+  textRegular0("Ant Leg")
 
 block_parts29:
-  putTextBytenoSeek("Bird Feet")
+//トリのあし
+  textRegular0("Bird Foot")
 block_parts30:
-  putTextBytenoSeek("Wing")
+//トリのハネ
+  textRegular0("Bird Wing")
 block_parts31:
-  putTextBytenoSeek("Fish Fin")
+//サカナのひれ
+  textRegular0("Fish Fin")
 block_parts32:
-  putTextBytenoSeek("Hat")
+//ぼうし
+  textRegular0("Hat")
 block_parts33:
-  putTextBytenoSeek("Helmet")
+//ヘルメット
+  textRegular0("Helmet")
 block_parts34:
-  putTextBytenoSeek("Sunglasses")
+//サングラス
+  textRegular0("Sunglasses")
 block_parts35:
-  putTextBytenoSeek("Bow Tie")
+//ちょうネクタイ
+  textRegular0("Bow Tie")
 
 block_parts36:
-  putTextBytenoSeek("Backpack")
+//リュック
+  textRegular0("Backpack")
 block_parts37:
-  putTextBytenoSeek("Bike Body")
+//バイクのボディ
+  textRegular0("Motorcycle Body")
 block_parts38:
-  putTextBytenoSeek("Bicycle Body")
+//じてんしゃのフレーム
+  textRegular0("Bicycle Body")
 block_parts39:
-  putTextBytenoSeek("Classic Car")
+//クラシックカー
+  textRegular0("Classic Car")
 block_parts40:
-  putTextBytenoSeek("Fire Engine")
+//しょうぼうしゃ
+  textRegular0("Fire Truck")
 block_parts41:
-  putTextBytenoSeek("Truck")
+//トラック
+  textRegular0("Truck")
 block_parts42:
-  putTextBytenoSeek("Tank Body")
+//せんしゃ
+  textRegular0("Tank Body")
 
 block_parts43:
-  putTextBytenoSeek("Train")
+//きかんしゃ
+  textRegular0("Train")
 block_parts44:
-  putTextBytenoSeek("Carriage")
+//きゃくしゃ
+  textRegular0("Carriage")
 block_parts45:
-  putTextBytenoSeek("Express")
+//とっきゅう
+  textRegular0("Express")
 block_parts46:
-  putTextBytenoSeek("Helicopter")
+//ヘリコプター
+  textRegular0("Helicopter")
 block_parts47:
-  putTextBytenoSeek("Fuselage")
+//ひこうきのどうたい
+  textRegular0("Fuselage")
 block_parts48:
-  putTextBytenoSeek("Missile")
+//ミサイル
+  textRegular0("Missile")
 block_parts49:
-  putTextBytenoSeek("Submarine")
+//せんすいかん
+  textRegular0("Submarine")
 
 block_parts50:
-  putTextBytenoSeek("Hoverboard")
+//ホバーボート
+  textRegular0("Hovercraft")
 block_parts51:
-  putTextBytenoSeek("Bicycle Wheel")
+//じてんしゃのタイヤ
+  textRegular0("Bicycle Wheel")
 block_parts52:
-  putTextBytenoSeek("Toy Wheel")
+//おもちゃのタイヤ
+  textRegular0("Toy Wheel")
 block_parts53:
-  putTextBytenoSeek("Wheel")
+//しゃりん
+  textRegular0("Car Wheel")
 block_parts54:
-  putTextBytenoSeek("Metal Belt")
+//メタルベルト
+  textRegular0("Metal Belt")
 block_parts55:
-  putTextBytenoSeek("Bumper")
+//バンパー
+  textRegular0("Bumper")
 block_parts56:
-  putTextBytenoSeek("Handle")
+//ハンドル
+  textRegular0("Handle")
 
 block_parts57:
-  putTextBytenoSeek("Fender 1")
+//フェンダー1
+  textRegular0("Fender 1")
 block_parts58:
-  putTextBytenoSeek("Fender 2")
+//フェンダー2
+  textRegular0("Fender 2")
 block_parts59:
-  putTextBytenoSeek("Muffler")
+//マフラー
+  textRegular0("Muffler")
 block_parts60:
-  putTextBytenoSeek("Tank")
+//タンク
+  textRegular0("Gas Tank")
 block_parts61:
-  putTextBytenoSeek("Turret")
+//ほうとう
+  textRegular0("Turret")
 block_parts62:
-  putTextBytenoSeek("Support")
+//はしら
+  textRegular0("Support")
 block_parts63:
-  putTextBytenoSeek("Propeller")
+//プロペラ
+  textRegular0("Propeller")
 
 block_parts64:
-  putTextBytenoSeek("Sled")
+//ソリ
+  textRegular0("Sled")
 block_parts65:
-  putTextBytenoSeek("Tail")
+//びよく
+  textRegular0("Tail")
 block_parts66:
-  putTextBytenoSeek("Guest Cabin")
+//きゃくしつ
+  textRegular0("Guest Cabin")
 block_parts67:
-  putTextBytenoSeek("Ship Chimney")
+//ふねのえんとつ
+  textRegular0("Ship Chimney")
 block_parts68:
-  putTextBytenoSeek("House")
+//いえ
+  textRegular0("House")
 block_parts69:
-  putTextBytenoSeek("Mansion")
+//おやしき
+  textRegular0("Mansion")
 block_parts70:
-  putTextBytenoSeek("Window")
+//まど
+  textRegular0("Window")
 
 block_parts71:
-  putTextBytenoSeek("Roof")
+//やね
+  textRegular0("Roof")
 block_parts72:
-  putTextBytenoSeek("Tower Roof")
+//とうのやね
+  textRegular0("Tower Roof")
 block_parts73:
-  putTextBytenoSeek("Tower")
+//とう
+  textRegular0("Tower")
 block_parts74:
-  putTextBytenoSeek("Fence")
+//へい
+  textRegular0("Fence")
 block_parts75:
-  putTextBytenoSeek("Chimney")
+//えんとつ
+  textRegular0("Chimney")
 block_parts76:
-  putTextBytenoSeek("Tree")
+//き
+  textRegular0("Tree")
 block_parts77:
-  putTextBytenoSeek("Flower")
+//はな
+  textRegular0("Flower")
 
 block_parts78:	//RAM 805637F4 - NDD 0x7BA544
-  putTextBytenoSeek("Cube")
+//りっぽうたい
+  textRegular0("Cube")
 block_parts79:
-  putTextBytenoSeek("Octahedron")
+//8めんたい
+  textRegular0("Octahedron")
 block_parts80:
-  putTextBytenoSeek("Slanted Cuboid")
+//ななめちょくほうたい
+  textRegular0("Slanted Cuboid")
 block_parts81:
-  putTextBytenoSeek("Cylinder")
+//えんちゅう
+  textRegular0("Cylinder")
 block_parts82:
-  putTextBytenoSeek("Half Cylinder")
+//はんえんちゅう
+  textRegular0("Half Cylinder")
 block_parts83:
-  putTextBytenoSeek("Triangle Prism")
+//さんかくちゅう
+  textRegular0("Triangle Prism")
 block_parts84:
-  putTextBytenoSeek("6 Faced Prism")
+//6かくちゅう
+  textRegular0("6 Faced Prism")
 
 block_parts85:
-  putTextBytenoSeek("Slanted Cylinder")
+//ななめえんちゅう
+  textRegular0("Slanted Cylinder")
 block_parts86:
-  putTextBytenoSeek("Cone")
+//えんすい
+  textRegular0("Cone")
 block_parts87:
-  putTextBytenoSeek("Triangular Pyramid")
+//さんかくすい
+  textRegular0("Triangular Pyramid")
 block_parts88:
-  putTextBytenoSeek("Pyramid")
+//しかくすい
+  textRegular0("Pyramid")
 block_parts89:
-  putTextBytenoSeek("Cylinder Cup")
+//えんすいだい
+  textRegular0("Cylinder Cup")
 block_parts90:
-  putTextBytenoSeek("Half Pyramid")
+//しかくすいだい
+  textRegular0("Half Pyramid")
 block_parts91:
-  putTextBytenoSeek("Half Pentagon")
+//6かくすいだい
+  textRegular0("Half Pentagon")
 
 block_parts92:
-  putTextBytenoSeek("Sphere")
+//きゅう
+  textRegular0("Sphere")
 block_parts93:
-  putTextBytenoSeek("Spheroid")
+//だえんきゅう
+  textRegular0("Spheroid")
 block_parts94:
-  putTextBytenoSeek("Half Sphere")
+//はんきゅう
+  textRegular0("Half Sphere")
 block_parts95:
-  putTextBytenoSeek("Dome")
+//ドーム
+  textRegular0("Dome")
 block_parts96:
-  putTextBytenoSeek("Barrel")
+//たる
+  textRegular0("Barrel")
 block_parts97:
-  putTextBytenoSeek("Pipe")
+//パイプ
+  textRegular0("Pipe")
 block_parts98:
-  putTextBytenoSeek("Ring")
+//リング
+  textRegular0("Ring")
 
 //Animated Blocks
 block_anim01: //RAM 80563D6C NDD 0x7BAABC
-  putTextBytenoSeek("Human Head")
+//ヒトのあたま
+  textRegular0("Human Head")
 block_anim02:
-  putTextBytenoSeek("Skeleton Head")
+//ガイコツのあたま
+  textRegular0("Skeleton Head")
 block_anim03:
-  putTextBytenoSeek("Turtle Head")
+//カメのあたま
+  textRegular0("Turtle Head")
 block_anim04:
-  putTextBytenoSeek("Dog Head")
+//イヌのあたま
+  textRegular0("Dog Head")
 block_anim05:
-  putTextBytenoSeek("Rabbit Head")
+//ウサギのあたま
+  textRegular0("Rabbit Head")
 block_anim06:
-  putTextBytenoSeek("Elephant Head")
+//ゾウのあたま
+  textRegular0("Elephant Head")
 block_anim07:
-  putTextBytenoSeek("Dino Head")
+//キョウリュウのあたま
+  textRegular0("Dino Head")
 
 block_anim08:
-  putTextBytenoSeek("Male Arms")
+//だんせいのうで
+  textRegular0("Male Arms")
 block_anim09:
-  putTextBytenoSeek("Female Arms")
+//じょせいのうで
+  textRegular0("Female Arms")
 block_anim10:
-  putTextBytenoSeek("Robot Hand 1")
+//ロボットのて1
+  textRegular0("Robot Hand 1")
 block_anim11:
-  putTextBytenoSeek("Robot Hand 2")
+//ロボットのて2
+  textRegular0("Robot Hand 2")
 block_anim12:
-  putTextBytenoSeek("Eye")
+//めパチパチ
+  textRegular0("Eye")
 block_anim13:
-  putTextBytenoSeek("Nervous Eye")
+//めキョロキョロ
+  textRegular0("Nervous Eye")
 block_anim14:
-  putTextBytenoSeek("Chewing Gum")
+//した
+  textRegular0("Tongue")
 
 block_anim15:
-  putTextBytenoSeek("Lips")
+//くちびる
+  textRegular0("Lips")
 block_anim16:
-  putTextBytenoSeek("Beak")
+//くちばし
+  textRegular0("Beak")
 block_anim17:
-  putTextBytenoSeek("Beetle Horn")
+//カブトムシのつの
+  textRegular0("Beetle Horn")
 block_anim18:
-  putTextBytenoSeek("Stag Claw")
+//クワガタのはさみ
+  textRegular0("Stag Claw")
 block_anim19:
-  putTextBytenoSeek("Feeler")
+//しょっかく
+  textRegular0("Antenna")
 block_anim20:
-  putTextBytenoSeek("Tail")
+//しっぽ
+  textRegular0("Tail")
 block_anim21:
-  putTextBytenoSeek("Pedal")
+//ペダル
+  textRegular0("Pedal")
 
 block_anim22:
-  putTextBytenoSeek("Light")
+//ライト
+  textRegular0("Light")
 block_anim23:
-  putTextBytenoSeek("Warning Light")
+//けいこくとう
+  textRegular0("Warning Light")
 block_anim24:
-  putTextBytenoSeek("Wiper")
+//ワイパー
+  textRegular0("Wiper")
 block_anim25:
-  putTextBytenoSeek("Blade")
+//ブレード
+  textRegular0("Blade")
 block_anim26:
-  putTextBytenoSeek("Excavator")
+//ショベル
+  textRegular0("Excavator")
 block_anim27:
-  putTextBytenoSeek("Roller")
+//ローラー
+  textRegular0("Roller")
 block_anim28:
-  putTextBytenoSeek("Iron Ball")
+//てっきゅう
+  textRegular0("Iron Ball")
 
 block_anim29:
-  putTextBytenoSeek("Hammer")
+//トンカチ
+  textRegular0("Hammer")
 block_anim30:
-  putTextBytenoSeek("Drill")
+//ドリル
+  textRegular0("Drill")
 block_anim31:
-  putTextBytenoSeek("Circular Saw")
+//まるノコ
+  textRegular0("Circular Saw")
 block_anim32:
-  putTextBytenoSeek("Mixer Tank")
+//ミキサータンク
+  textRegular0("Mixer Tank")
 block_anim33:
-  putTextBytenoSeek("Vulcan")
+//バルカンほう
+  textRegular0("Vulcan Gun")
 block_anim34:
-  putTextBytenoSeek("Tank Cannon")
+//せんしゃほう
+  textRegular0("Tank Cannon")
 block_anim35:
-  putTextBytenoSeek("Cockpit")
+//コックピット
+  textRegular0("Cockpit")
 
 block_anim36:
-  putTextBytenoSeek("Periscope")
+//せんぼうきょう
+  textRegular0("Periscope")
 block_anim37:
-  putTextBytenoSeek("Radar")
+//レーダー
+  textRegular0("Radar")
 block_anim38:
-  putTextBytenoSeek("UFO")
+//UFO
+  textRegular0("UFO")
 block_anim39:
-  putTextBytenoSeek("Piston")
+//ピストン
+  textRegular0("Piston")
 block_anim40:
-  putTextBytenoSeek("Gear")
+//ギア
+  textRegular0("Gear")
 block_anim41:
-  putTextBytenoSeek("Screw")
+//ネジ
+  textRegular0("Screw")
 block_anim42:
-  putTextBytenoSeek("Alarm")
+//けいほうき
+  textRegular0("Alarm")
 
 block_anim43:
-  putTextBytenoSeek("Gate")
+//しゃだんき
+  textRegular0("Gate")
 block_anim44:
-  putTextBytenoSeek("Wave")
+//おんぱ
+  textRegular0("Wave")
 block_anim45:
-  putTextBytenoSeek("Door")
+//ドア
+  textRegular0("Door")
 block_anim46:
-  putTextBytenoSeek("Pendulum")
+//ふりこ
+  textRegular0("Pendulum")
 block_anim47:
-  putTextBytenoSeek("Clock")
+//とけい
+  textRegular0("Clock")
 block_anim48:
-  putTextBytenoSeek("Balance Toy")
+//やじろべえ
+  textRegular0("Balance Toy")
 block_anim49:
-  putTextBytenoSeek("Flower")
+//はな
+  textRegular0("Flower")
 
 //? Blocks
 block_unlock01: //RAM 80563FE8 - NDD 0x7BAD38
-  putTextBytenoSeek("Bike Part 1")
+//バイクパーツ1
+  textRegular0("Bike Part 1")
 block_unlock02:
-  putTextBytenoSeek("Bike Part 2")
+//バイクパーツ2
+  textRegular0("Bike Part 2")
 block_unlock03:
-  putTextBytenoSeek("Bike Part 3")
+//バイクパーツ3
+  textRegular0("Bike Part 3")
 block_unlock04:
-  putTextBytenoSeek("Bike Part 4")
+//バイクパーツ4
+  textRegular0("Bike Part 4")
 block_unlock05:
-  putTextBytenoSeek("Bike Part 5")
+//バイクパーツ5
+  textRegular0("Bike Part 5")
 block_unlock06:
-  putTextBytenoSeek("Bike Part 6")
+//バイクパーツ6
+  textRegular0("Bike Part 6")
 block_unlock07:
-  putTextBytenoSeek("Bike Part 7")
+//バイクパーツ7
+  textRegular0("Bike Part 7")
 
 block_unlock08:
-  putTextBytenoSeek("Shuttle")
+//シャトル
+  textRegular0("Shuttle")
 block_unlock09:
-  putTextBytenoSeek("Sea Urchin")
+//ウニ
+  textRegular0("Sea Urchin")
 block_unlock10:
-  putTextBytenoSeek("Ammonite")
+//アンモナイト
+  textRegular0("Ammonite")
 block_unlock11:
-  putTextBytenoSeek("Strawberry")
+//イチゴ
+  textRegular0("Strawberry")
 block_unlock12:
-  putTextBytenoSeek("Herb")
+//ハーブ
+  textRegular0("Herb")
 block_unlock13:
-  putTextBytenoSeek("Hurray")
+//バンザーイ
+  textRegular0("Hurray")
 block_unlock14:
-  putTextBytenoSeek("Pushups")
+//うでたて
+  textRegular0("Pushups")
 
 block_unlock15:
-  putTextBytenoSeek("Crystal 1")
+//クリスタル1
+  textRegular0("Crystal 1")
 block_unlock16:
-  putTextBytenoSeek("Crystal 2")
+//クリスタル2
+  textRegular0("Crystal 2")
 block_unlock17:
-  putTextBytenoSeek("Crystal 3")
+//クリスタル3
+  textRegular0("Crystal 3")
 block_unlock18:
-  putTextBytenoSeek("Crystal 4")
+//クリスタル4
+  textRegular0("Crystal 4")
 block_unlock19:
-  putTextBytenoSeek("Crystal 5")
+//クリスタル5
+  textRegular0("Crystal 5")
 block_unlock20:
-  putTextBytenoSeek("Crystal 6")
+//クリスタル6
+  textRegular0("Crystal 6")
 block_unlock21:
-  putTextBytenoSeek("Crystal 7")
+//クリスタル7
+  textRegular0("Crystal 7")
 
 block_unlock22:
-  putTextBytenoSeek("Bubbles")
+//あわ
+  textRegular0("Bubbles")
 block_unlock23:
-  putTextBytenoSeek("Plasma")
+//プラズマ
+  textRegular0("Plasma")
 block_unlock24:
-  putTextBytenoSeek("Smoke")
+//けむり
+  textRegular0("Smoke")
 block_unlock25:
-  putTextBytenoSeek("Shining")
+//ビカビカ
+  textRegular0("Shining")
 block_unlock26:
-  putTextBytenoSeek("Twinkling")
+//チカチカ
+  textRegular0("Twinkling")
 block_unlock27:
-  putTextBytenoSeek("Flame")
+//ほのお
+  textRegular0("Flame")
 block_unlock28:
-  putTextBytenoSeek("Explosion")
+//ばくはつ
+  textRegular0("Explosion")
 
 //Power Blocks
 block_power01: //RAM 8056415C - NDD 0x7BAEAC
-  putTextBytenoSeek("Male Feet")
+//だんせいのあし
+  textRegular0("Male Legs")
 block_power02:
-  putTextBytenoSeek("Female Feet")
+//じょせいのあし
+  textRegular0("Female Legs")
 block_power03:
-  putTextBytenoSeek("Turtle Feet")
+//カメのあし
+  textRegular0("Turtle Feet")
 block_power04:
-  putTextBytenoSeek("Dog Feet")
+//イヌのあし
+  textRegular0("Dog Feet")
 block_power05:
-  putTextBytenoSeek("Elephant Feet")
+//ゾウのあし
+  textRegular0("Elephant Feet")
 block_power06:
-  putTextBytenoSeek("Dino Feet")
+//キョウリュウのあし
+  textRegular0("Dino Feet")
 block_power07:
-  putTextBytenoSeek("Robot Foot")
+//ロボットのあし
+  textRegular0("Robot Legs")
 
 block_power08:
-  putTextBytenoSeek("Ant Feet")
+//ムシのあし
+  textRegular0("Ant Legs")
 block_power09:
-  putTextBytenoSeek("Shrimp Feet")
+//エビのあし
+  textRegular0("Shrimp Feet")
 block_power10:
-  putTextBytenoSeek("Bird Feet")
+//トリのあし
+  textRegular0("Bird Feet")
 block_power11:
-  putTextBytenoSeek("Duck Feet")
+//アヒルのあし
+  textRegular0("Duck Feet")
 block_power12:
-  putTextBytenoSeek("Frog Feet")
+//カエルのあし
+  textRegular0("Frog Feet")
 
 block_power13:
-  putTextBytenoSeek("Bicycle Wheel")
+//じてんしゃのタイヤ
+  textRegular0("Bicycle Wheel")
 block_power14:
-  putTextBytenoSeek("Toy Wheel")
+//おもちゃのタイヤ
+  textRegular0("Toy Wheel")
 block_power15:
-  putTextBytenoSeek("Wheel")
+//しゃりん
+  textRegular0("Car Wheel")
 block_power16:
-  putTextBytenoSeek("Speed Wheel")
+//こうそくタイヤ
+  textRegular0("Speed Wheel")
 block_power17:
-  putTextBytenoSeek("Metal Belt")
+//メタルベルト
+  textRegular0("Metal Belt")
 block_power18:
-  putTextBytenoSeek("Water Mill")
+//すいしゃ
+  textRegular0("Water Mill")
 
 block_power19:
-  putTextBytenoSeek("Handmade Wing")
+//てづくりのハネ
+  textRegular0("Handmade Wing")
 block_power20:
-  putTextBytenoSeek("Rocket Wing")
+//ロボットのハネ
+  textRegular0("Rocket Wing")
 block_power21:
-  putTextBytenoSeek("Airplane Wing")
+//ひこうきのハネ
+  textRegular0("Airplane Wing")
 block_power22:
-  putTextBytenoSeek("Dino Wing")
+//キョウリュウのハネ
+  textRegular0("Dino Wing")
 block_power23:
-  putTextBytenoSeek("Butterfly Wing")
+//チョウのハネ
+  textRegular0("Butterfly Wing")
 block_power24:
-  putTextBytenoSeek("Dragonfly Wing")
+//トンボのハネ
+  textRegular0("Dragonfly Wing")
 block_power25:
-  putTextBytenoSeek("Bird Wing")
+//トリのハネ
+  textRegular0("Bird Wing")
 
 block_power26:
-  putTextBytenoSeek("Propeller")
+//プロペラ
+  textRegular0("Propeller")
 block_power27:
-  putTextBytenoSeek("Speed Propeller")
+//こうそくプロペラ
+  textRegular0("Speed Propeller")
 block_power28:
-  putTextBytenoSeek("Airship")
+//ひこうせん
+  textRegular0("Blimp")
 block_power29:
-  putTextBytenoSeek("Lifesaver")
+//うきわ
+  textRegular0("Lifesaver")
 block_power30:
-  putTextBytenoSeek("Ship")
+//せんたい
+  textRegular0("Ship")
 
 block_power31:
-  putTextBytenoSeek("Tadpole Tail")
+//オタマジャクシのしっぽ
+  textRegular0("Tadpole Tail")
 block_power32:
-  putTextBytenoSeek("Sea Turtle Foot")
+//ウミガメのあし
+  textRegular0("Sea Turtle Foot")
 block_power33:
-  putTextBytenoSeek("Tail Fin")
+//サカナのおびれ
+  textRegular0("Tail Fin")
 block_power34:
-  putTextBytenoSeek("Pectoral Fin")
+//サカナのむなびれ
+  textRegular0("Pectoral Fin")
 block_power35:
-  putTextBytenoSeek("Water Propeller")
+//スクリュー
+  textRegular0("Water Propeller")
 block_power36:
-  putTextBytenoSeek("Speed Water Propeller")
+//こうそくスクリュー
+  textRegular0("Speed Water Propeller")
 
 block_power37:
-  putTextBytenoSeek("Jet")
+//ジェット
+  textRegular0("Jet")
 block_power38:
-  putTextBytenoSeek("Super Jet")
+//スーパージェット
+  textRegular0("Super Jet")
 block_power39:
-  putTextBytenoSeek("Power Engine")
+//パワーエンジン
+  textRegular0("Power Engine")
 block_power40:
-  putTextBytenoSeek("Speed Engine")
+//スピードエンジン
+  textRegular0("Speed Engine")
 block_power41:
-  putTextBytenoSeek("Power Star")
+//パワースター
+  textRegular0("Power Star")
 block_power42:
-  putTextBytenoSeek("Controller")
+//せいぎょそうち
+  textRegular0("Control Unit")
 
 //Sound Blocks
 block_sound01: //NDD 0x7BB138
-  putTextBytenoSeek("Conga")
+//コンガ
+  textRegular0("Conga")
 block_sound02:
-  putTextBytenoSeek("Xylophone")
+//もっきん
+  textRegular0("Xylophone")
 block_sound03:
-  putTextBytenoSeek("Tuba")
+//チューバ
+  textRegular0("Tuba")
 block_sound04:
-  putTextBytenoSeek("Guitar")
+//ギター
+  textRegular0("Guitar")
 block_sound05:
-  putTextBytenoSeek("Pizzicato")
+//ピチカート
+  textRegular0("Pizzicato")
 block_sound06:
-  putTextBytenoSeek("Horn")
+//クラクション
+  textRegular0("Horn")
 block_sound07:
-  putTextBytenoSeek("Clarinet")
+//クラリネット
+  textRegular0("Clarinet")
 
 block_sound08:
-  putTextBytenoSeek("Heart")
+//ハート
+  textRegular0("Heart")
 block_sound09:
-  putTextBytenoSeek("Improvisation")
+//こうじょう
+  textRegular0("Improvisation")
 block_sound10:
-  putTextBytenoSeek("Frog")
+//カエル
+  textRegular0("Frog")
 block_sound11:
-  putTextBytenoSeek("Spacey")
+//スペイシー
+  textRegular0("Spacey")
 block_sound12:
-  putTextBytenoSeek("Glockenspiel")
+//てっきん
+  textRegular0("Glockenspiel")
 block_sound13:
-  putTextBytenoSeek("Voice")
+//ボウボウへんへん
+  textRegular0("Voice")
 block_sound14:
-  putTextBytenoSeek("Old Man")
+//おやじ
+  textRegular0("Old Man")
 
 
 //Pointers
@@ -611,3 +870,38 @@ dw block_power19, block_power20, block_power21, block_power22, block_power23, bl
 dw block_power26, block_power27, 0, block_power28, 0, block_power29, block_power30
 dw block_power31, block_power32, block_power33, block_power34, block_power35, block_power36, 0
 dw block_power37, block_power38, block_power39, block_power40, block_power41, 0, block_power42
+
+seek(0x74A7A2); dh block_delete
+seek(0x74AD02); dh block_delete
+seek(0x74DAF6); dh block_glue
+seek(0x74E056); dh block_gluereset
+seek(0x74E5CA); dh block_copy
+seek(0x74D3C2); dh block_3dwork
+seek(0x74EB3E); dh block_mirrorcopy
+seek(0x759206); dh block_move
+seek(0x759622); dh block_rotate
+seek(0x759A3E); dh block_scale
+seek(0x750622); dh block_everyaxis
+seek(0x753602); dh block_everyaxis
+seek(0x75515E); dh block_everyaxis
+seek(0x750CF6); dh block_redaxis
+seek(0x755832); dh block_redaxis
+seek(0x7513CA); dh block_greenaxis
+seek(0x755F06); dh block_greenaxis
+seek(0x751AA6); dh block_blueaxis
+seek(0x7565E2); dh block_blueaxis
+seek(0x75217A); dh block_aroundredaxis
+seek(0x75284E); dh block_aroundgreenaxis
+seek(0x752F2A); dh block_aroundblueaxis
+seek(0x753CD6); dh block_scaleredaxis
+seek(0x7543AA); dh block_scalegreenaxis
+seek(0x754A86); dh block_scaleblueaxis
+seek(0x75840E); dh block_mirrorred
+seek(0x758852); dh block_mirrorgreen
+seek(0x758C32); dh block_mirrorblue
+seek(0x74F086); dh block_reset
+seek(0x74B8DA); dh block_partblock
+seek(0x74BE3E); dh block_animblock
+seek(0x74C906); dh block_questionblock
+seek(0x74CE6A); dh block_powerblock
+seek(0x74C3A2); dh block_soundblock
