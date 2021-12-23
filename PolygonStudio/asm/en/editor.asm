@@ -6,61 +6,160 @@ print "- Assembling Editor Text...\n"
 //COMMON (Loaded at boot)
 print "  - Common Text\n"
 
+seek(0x1BA5BC); base 0x802EB954
 common_camera_reset:
-  putTextByte(0x1BA5BC, "Reset Camera")  //802EB954
+//RAM 802EB954 - カメラリセット
+  textRegular0("Reset Camera")
 common_camera_switch:
-  putTextByte(0x1BA5CC, "Switch Camera")
+//RAM 802EB964 - カメラきりかえ
+  textRegular0("Switch Camera")
 common_camera_center:
-  putTextByte(0x1BA5DC, "Center Camera")
+//RAM 802EB974 - カメラちゅうもく
+  textRegular0("Center Camera")
 
+seek(0x1BA60C); base 0x802EB9A4
 common_exit:
-  putTextByte(0x1BA60C, "Exit")  //802EB9A4
+//RAM 802EB9A4 - でる
+  textRegular0("Exit")
 common_undo:
-  putTextByte(0x1BA614, "Undo")  //802EB9AC
+//RAM 802EB9AC - やりなおし
+  textRegular0("Undo")
 common_nextpage:
-  putTextByte(0x1BA620, "1/1")  //802EB9B8
+//RAM 802EB9B8 - つぎのページ
+  textRegular0("1/1")
   db 0,0
+seek(0x1BA634)
 common_randomswitch:
-  putTextByte(0x1BA634, "Random")  //802EB9CC
+//RAM 802EB9CC - らくちんスイッチ
+  textRegular0("Random")    //Unused
 common_randomeverything:
-  putTextByte(0x1BA648, "Randomize")  //802EB9E0
+//RAM 802EB9E0 - らくちんチェンジ
+  textRegular0("Randomize")
 common_randomselected:
-  putTextByte(0x1BA65C, "Swap Selection")  //802EB9F4
+//RAM 802EB9F4 - らくちんカスタム
+  textRegular0("Swap Selection")
 
+
+seek(0x1C2040); base 0x802F33D8
 common_menu_backtomainmenu:
-  putTextByte(0x1C2040, "Back to Main Menu")
+//RAM 802F33D8 - セレクトがめんにもどる
+  textRegular0("Back to Main Menu")
 common_menu_exit:
-  putTextByte(0x1C2058, "Exit")
+//RAM 802F33F0 - でる
+  textRegular0("Exit")
 common_menu_stagesaveload:
-  putTextByte(0x1C2060, "Save & Load Stage")
+//RAM 802F33F8 - [ステージさくひん]のセーブ・ロード
+  textRegular0("Save & Load Stage")
 common_menu_blocksaveload:
-  putTextByte(0x1C2088, "Save & Load Block")
+//RAM 802F3420 - [ブロックさくひん]のセーブ・ロード
+  textRegular0("Save & Load Block")
 common_menu_3dsaveload:
-  putTextByte(0x1C20B0, "Save & Load 3D Model")
+//RAM 802F3448 - [3Dさくひん]のセーブ・ロード
+  textRegular0("Save & Load 3D Model")
 common_menu_shortcut:
-  putTextByte(0x1C20D4, "Shortcut")
+//RAM 802F346C - きょうはここまで
+  textRegular0("Shortcut")
+common_menu_samplemovie:
+//RAM 802F3480 - おてほんムービー
+  textRegular0("Sample Movie")  //Unused
 common_menu_observe:
-  putTextByte(0x1C20FC, "Observe")
+//RAM 802F3494 - かんしょうする
+  textRegular0("Observe")
 common_menu_photo:
-  putTextByte(0x1C210C, "Take Photos")
+//RAM 802F34A4 - しゃしんをとる
+  textRegular0("Take Photos")
 common_menu_break:
-  putTextByte(0x1C211C, "Take a break")
+//RAM 802F34B4 - ちょっときゅうけい
+  textRegular0("Take a break")
 common_menu_openworld:
-  putTextByte(0x1C2130, "Experimental World")
+//RAM 802F34C8 - じっけんワールド
+  textRegular0("Experimental World")
 common_menu_assemble:
-  putTextByte(0x1C2144, "Assemble")
+//RAM 802F34DC - くみたてる
+  textRegular0("Assemble")
 common_menu_create:
-  putTextByte(0x1C2150, "Create")
+//RAM 802F34E8 - つくる
+  textRegular0("Create")
 common_menu_paint:
-  putTextByte(0x1C2158, "Paint")
+//RAM 802F34F0 - ペイントする
+  textRegular0("Paint")
+common_menu_limit:
+//RAM 802F3500 - リミットせってい
+  textRegular0("Limit Setup")  //Unused?
+common_menu_check:
+//RAM 802F3514 - かなさりチェック
+  textRegular0("Kanasari Check")  //Unused?
 common_menu_bgm:
-  putTextByte(0x1C2190, "Switch Music")
+//RAM 802F3528 - BGMきりかえ
+  textRegular0("Switch Music")
+
 
 //Photo Mode
+seek(0x95BA9C); base 0x8054240C
 photo_return:
-  putTextByte(0x95BA9C, "Back")
+//RAM 8054240C - もどる
+  textRegular0("Back")
 photo_save:
-  putTextByte(0x95BAA4, "Save as Picture")
+//RAM 80542414 - [2Dさくひん]としてセーブ
+  textRegular0("Save as Picture")
+
+//Pointers
+seek(0x1794DA); dh common_camera_reset
+seek(0x1796F2); dh common_camera_center
+seek(0x1798EE); dh common_camera_switch
+
+seek(0x144E86); dh common_exit
+seek(0x3B594A); dh common_exit
+seek(0x3B5D8E); dh common_exit
+seek(0x73B2BE); dh common_exit  //Gallery
+seek(0x756B5E); dh common_exit  //Block Dome
+seek(0x7570DA); dh common_exit  //Block Dome
+seek(0x86F3A6); dh common_exit  //Modeler Rocket
+seek(0x906DBE); dh common_exit  //Modeler Rocket
+seek(0x959592); dh common_exit  //Modeler Rocket
+seek(0x75766A); dh common_undo  //Block Dome
+seek(0x876D92); dh common_undo  //Modeler Rocket
+seek(0x9071F2); dh common_undo  //Modeler Rocket
+seek(0xDE8B2); dh common_nextpage
+seek(0xDECB2); dh common_nextpage
+seek(0x61DB0A); dh common_nextpage  //Stage UFO
+seek(0x61DB5E); dh common_nextpage  //Stage UFO
+seek(0x61DBAA); dh common_nextpage  //Stage UFO
+seek(0x758CB2); dh common_nextpage  //Block Dome
+seek(0x758CFE); dh common_nextpage  //Block Dome
+seek(0x758D4A); dh common_nextpage  //Block Dome
+seek(0x758D96); dh common_nextpage  //Block Dome
+seek(0x758DE2); dh common_nextpage  //Block Dome
+seek(0x90725A); dh common_nextpage  //Modeler Rocket
+seek(0x9072AE); dh common_nextpage  //Modeler Rocket
+seek(0x74AE52); dh common_randomeverything  //Block Dome
+seek(0x74B112); dh common_randomeverything  //Block Dome
+seek(0x74AFC2); dh common_randomselected  //Block Dome
+seek(0x74B282); dh common_randomselected  //Block Dome
+
+seek(0x62D90A); dh common_menu_backtomainmenu   //Stage UFO
+seek(0x73AE6A); dh common_menu_backtomainmenu
+seek(0x7CF856); dh common_menu_exit
+seek(0x62DD8E); dh common_menu_stagesaveload
+seek(0x73B732); dh common_menu_blocksaveload
+seek(0x7CFCDA); dh common_menu_3dsaveload
+seek(0x62E20A); dh common_menu_shortcut
+seek(0x73BBAE); dh common_menu_shortcut
+seek(0x7D0152); dh common_menu_shortcut
+seek(0x62E68E); dh common_menu_observe
+seek(0x62EB12); dh common_menu_photo
+seek(0x73C036); dh common_menu_break
+seek(0x7D0A46); dh common_menu_break
+seek(0x73C4B6); dh common_menu_openworld
+seek(0x73C592); dh common_menu_assemble
+seek(0x7D0B22); dh common_menu_create
+seek(0x73C526); dh common_menu_paint
+seek(0x7D0AB6); dh common_menu_paint
+seek(0x73C5FA); dh common_menu_bgm
+seek(0x7D0B8A); dh common_menu_bgm
+
+seek(0x9599A2); dh photo_return
+seek(0x959DB6); dh photo_save
 
 include "blockdome.asm"
 include "modelrocket.asm"
