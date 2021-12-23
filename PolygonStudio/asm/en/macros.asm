@@ -14,6 +14,11 @@ macro textASCII0(text) {
   db 0x00
 }
 
+macro textASCIIE(text) {
+  ASCIIMap()
+  db {text}
+}
+
 macro textRegular(size, text) {
   variable skipSeek = origin()+{size}
   textRegular0({text})
@@ -32,6 +37,12 @@ macro textRegularA(char, text) {
   db {text}
   db " ", {char}
   db 0x00
+}
+
+macro textSJIS0(text) {
+  ShiftJISMap()
+  dh {text}
+  dh 0x0000
 }
 
 macro skip(size) {
