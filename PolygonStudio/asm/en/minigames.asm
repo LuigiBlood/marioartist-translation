@@ -59,21 +59,21 @@ dh 0x1100 //0x80 * 34 character limitation
 seek(0x9FECF8)
 //Stage 1
 //イッパツでうて！
-textASCII(32, "SHOOT")
+textASCII(32, "Attack!")
 //いれろ！
-textASCII(32, "BLOCK")
+textASCII(32, "Aim!")
 //イッパツでたたけ！
-textASCII(32, "FLIES")
+textASCII(32, "Swat!")
 //とびこえろ！
-textASCII(32, "JUMP")
+textASCII(32, "Dodge!")
 //よけろ！
-textASCII(32, "RACE")
+textASCII(32, "Avoid!")
 //とめろ！
-textASCII(32, "ROULETTE")
+textASCII(32, "Stop it!")
 //ゴールをめざせ！
-textASCII(32, "MAZE")
+textASCII(32, "Navigate!")
 //うちかえせ！
-textASCII(32, "BASEBALL")
+textASCII(32, "Swing!")
 
 //Stage 2
 //SHOOT
@@ -95,21 +95,21 @@ textASCII(32, "BASEBALL")
 
 //Stage 3
 //敵機襲来要撃破
-textASCII(32, "SHOOT")
+textASCII(32, "The alien invaders")
 //落下塊収納
-textASCII(32, "BLOCK")
+textASCII(32, "The falling box")
 //蝿粉砕
-textASCII(32, "FLIES")
+textASCII(32, "The bothersome flies")
 //跳躍万歳
-textASCII(32, "JUMP")
+textASCII(32, "The leap to safety")
 //直進直進又直進
-textASCII(32, "RACE")
+textASCII(32, "The highway block")
 //回転停止大儲
-textASCII(32, "ROULETTE")
+textASCII(32, "The roulette to win")
 //迷路何処出口
-textASCII(32, "MAZE")
+textASCII(32, "The exit to the maze")
 //一球入魂本塁打
-textASCII(32, "BASEBALL")
+textASCII(32, "The home-run score")
 
 seek(0x9FF010)
 //Stage 1 - いくよ？
@@ -117,15 +117,15 @@ textASCII(32, "Ready?")
 //Stage 2 - Ready?
 textASCII(32, "Ready?")
 //Stage 3 - 準備万端
-textASCII(32, "Ready?")
+textASCII(32, "Are you prepared?")
 
 seek(0x9FF088)
 //Stage 1 - クリア！
-textASCII(32, "NICE!")
+textASCII(32, "Good job!")
 //Stage 2 - GREAT!
 textASCII(32, "GREAT!")
 //Stage 3 - 我贈最大級賛辞
-textASCII(32, "CLEAR!")
+textASCII(32, "Appreciated")
 
 //Stage 1 - a
 textASCII(32, "a")
@@ -135,16 +135,16 @@ textASCII(32, "b")
 textASCII(32, "EXTRA LIFE")
 
 //Stage 1 - つぎのきょく
-textASCII(32, "TRY NEXT MUSIC")
+textASCII(32, "Try the next song!")
 //Stage 2 - TRY NEXT MUSIC
 textASCII(32, "TRY NEXT MUSIC")
 //Stage 3 - 次曲挑戦権獲得
-textASCII(32, "TRY NEXT MUSIC")
+textASCII(32, "Challenge the next song")
 
 seek(0x9FF1B8)
 //Stage 1 - おしまい
-textASCII(32, "GAME OVER")
+textASCII(32, "Game Over!")
 //Stage 2 - GAME OVER
 textASCII(32, "GAME OVER")
 //Stage 3 - 残念無念
-textASCII(32, "GAME OVER")
+textASCII(32, "No more lives")
