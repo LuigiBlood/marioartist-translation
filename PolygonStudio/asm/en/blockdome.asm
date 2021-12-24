@@ -112,7 +112,7 @@ block_parts06:
   textRegular0("Elephant Body")
 block_parts07:
 //キョウリュウのからだ
-  textRegular0("Dino Body")
+  textRegular0("Dinosaur Body")
 
 block_parts08:
 //ロボットのからだ
@@ -147,7 +147,7 @@ block_parts17:
   textRegular0("Rabbit Arm")
 block_parts18:
 //キョウリュウのうで
-  textRegular0("Dino Arm")
+  textRegular0("Dinosaur Arm")
 block_parts19:
 //ロボットのうで
   textRegular0("Robot Arm")
@@ -160,19 +160,19 @@ block_parts21:
 
 block_parts22:
 //カメのあし
-  textRegular0("Turtle Foot")
+  textRegular0("Turtle Leg")
 block_parts23:
 //イヌのあし
-  textRegular0("Dog Foot")
+  textRegular0("Dog Leg")
 block_parts24:
 //ウサギのあし
-  textRegular0("Rabbit Foot")
+  textRegular0("Rabbit Leg")
 block_parts25:
 //ゾウのあし
-  textRegular0("Elephant Foot")
+  textRegular0("Elephant Leg")
 block_parts26:
 //キョウリュウのあし
-  textRegular0("Dino Foot")
+  textRegular0("Dinosaur Leg")
 block_parts27:
 //ロボットのあし
   textRegular0("Robot Leg")
@@ -182,7 +182,7 @@ block_parts28:
 
 block_parts29:
 //トリのあし
-  textRegular0("Bird Foot")
+  textRegular0("Bird Leg")
 block_parts30:
 //トリのハネ
   textRegular0("Bird Wing")
@@ -222,17 +222,17 @@ block_parts41:
   textRegular0("Truck")
 block_parts42:
 //せんしゃ
-  textRegular0("Tank Body")
+  textRegular0("Tank Armor")
 
 block_parts43:
 //きかんしゃ
-  textRegular0("Train")
+  textRegular0("Locomotive")
 block_parts44:
 //きゃくしゃ
-  textRegular0("Carriage")
+  textRegular0("Passenger Car")
 block_parts45:
 //とっきゅう
-  textRegular0("Express")
+  textRegular0("Express Train")
 block_parts46:
 //ヘリコプター
   textRegular0("Helicopter")
@@ -295,7 +295,7 @@ block_parts64:
   textRegular0("Sled")
 block_parts65:
 //びよく
-  textRegular0("Tail")
+  textRegular0("Tail Plane")
 block_parts66:
 //きゃくしつ
   textRegular0("Guest Cabin")
@@ -421,7 +421,7 @@ block_anim06:
   textRegular0("Elephant Head")
 block_anim07:
 //キョウリュウのあたま
-  textRegular0("Dino Head")
+  textRegular0("Dinosaur Head")
 
 block_anim08:
 //だんせいのうで
@@ -653,16 +653,16 @@ block_power02:
   textRegular0("Female Legs")
 block_power03:
 //カメのあし
-  textRegular0("Turtle Feet")
+  textRegular0("Turtle Legs")
 block_power04:
 //イヌのあし
-  textRegular0("Dog Feet")
+  textRegular0("Dog Legs")
 block_power05:
 //ゾウのあし
-  textRegular0("Elephant Feet")
+  textRegular0("Elephant Legs")
 block_power06:
 //キョウリュウのあし
-  textRegular0("Dino Feet")
+  textRegular0("Dinosaur Legs")
 block_power07:
 //ロボットのあし
   textRegular0("Robot Legs")
@@ -672,16 +672,16 @@ block_power08:
   textRegular0("Ant Legs")
 block_power09:
 //エビのあし
-  textRegular0("Shrimp Feet")
+  textRegular0("Shrimp Legs")
 block_power10:
 //トリのあし
-  textRegular0("Bird Feet")
+  textRegular0("Bird Legs")
 block_power11:
 //アヒルのあし
-  textRegular0("Duck Feet")
+  textRegular0("Duck Legs")
 block_power12:
 //カエルのあし
-  textRegular0("Frog Feet")
+  textRegular0("Frog Legs")
 
 block_power13:
 //じてんしゃのタイヤ
@@ -700,7 +700,7 @@ block_power17:
   textRegular0("Metal Belt")
 block_power18:
 //すいしゃ
-  textRegular0("Water Mill")
+  textRegular0("Water Turbine")
 
 block_power19:
 //てづくりのハネ
@@ -713,7 +713,7 @@ block_power21:
   textRegular0("Airplane Wing")
 block_power22:
 //キョウリュウのハネ
-  textRegular0("Dino Wing")
+  textRegular0("Dinosaur Wing")
 block_power23:
 //チョウのハネ
   textRegular0("Butterfly Wing")
@@ -738,14 +738,14 @@ block_power29:
   textRegular0("Lifesaver")
 block_power30:
 //せんたい
-  textRegular0("Ship")
+  textRegular0("Ship Hull")
 
 block_power31:
 //オタマジャクシのしっぽ
   textRegular0("Tadpole Tail")
 block_power32:
 //ウミガメのあし
-  textRegular0("Sea Turtle Foot")
+  textRegular0("Sea Turtle Leg")
 block_power33:
 //サカナのおびれ
   textRegular0("Tail Fin")

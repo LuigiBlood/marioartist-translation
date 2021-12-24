@@ -222,7 +222,7 @@ open4_002:
   textASCII0("Lifesaver")
 open4_003:
 //せんたい
-  textASCII0("Ship")
+  textASCII0("Ship Hull")
 open4_004:
 //ひこうせん
   textASCII0("Blimp")
@@ -249,13 +249,13 @@ open4_011:
   textASCII0("Robot Legs")
 open4_012:
 //ゾウのあし
-  textASCII0("Elephant Feet")
+  textASCII0("Elephant Legs")
 open4_013:
 //イヌのあし
-  textASCII0("Dog Feet")
+  textASCII0("Dog Legs")
 open4_014:
 //カメのあし
-  textASCII0("Turtle Feet")
+  textASCII0("Turtle Legs")
 open4_015:
 //エラー２７
   textASCII0("Error 27")
@@ -273,13 +273,13 @@ open4_019:
   textASCII0("Speed Wheel")
 open4_020:
 //アヒルのあし
-  textASCII0("Duck Feet")
+  textASCII0("Duck Legs")
 open4_021:
 //カエルのあし
-  textASCII0("Frog Feet")
+  textASCII0("Frog Legs")
 open4_022:
 //すいしゃ
-  textASCII0("Water Mill")
+  textASCII0("Water Turbine")
 open4_023:
 //メタルベルト
   textASCII0("Metal Belt")
@@ -288,10 +288,10 @@ open4_024:
   textASCII0("Error 42")
 open4_025:
 //キョウリュウのあし
-  textASCII0("Dino Feet")
+  textASCII0("Dinosaur Legs")
 open4_026:
 //トリのあし
-  textASCII0("Bird Feet")
+  textASCII0("Bird Legs")
 open4_027:
 //エラー４５
   textASCII0("Error 45")
@@ -300,13 +300,13 @@ open4_028:
   textASCII0("Ant Legs")
 open4_029:
 //エビのあし
-  textASCII0("Shrimp Feet")
+  textASCII0("Shrimp Legs")
 open4_030:
 //オタマジャクシのしっぽ
   textASCII0("Tadpole Tail")
 open4_031:
 //ウミガメのあし
-  textASCII0("Sea Turtle Foot")
+  textASCII0("Sea Turtle Leg")
 open4_032:
 //サカナのおびれ
   textASCII0("Tail Fin")
@@ -333,7 +333,7 @@ open4_039:
   textASCII0("Bird Wing")
 open4_040:
 //キョウリュウのハネ
-  textASCII0("Dino Wing")
+  textASCII0("Dinosaur Wing")
 open4_041:
 //エラー６５
   textASCII0("Error 65")
