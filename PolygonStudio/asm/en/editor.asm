@@ -31,13 +31,13 @@ common_nextpage:
 seek(0x1BA634)
 common_randomswitch:
 //RAM 802EB9CC - らくちんスイッチ
-  textRegular0("Random")    //Unused
+  textRegular0("Shuffle")    //Unused
 common_randomeverything:
 //RAM 802EB9E0 - らくちんチェンジ
-  textRegular0("Randomize")
+  textRegular0("Sample Swap")
 common_randomselected:
 //RAM 802EB9F4 - らくちんカスタム
-  textRegular0("Swap Selection")
+  textRegular0("Selection Swap")
 
 
 seek(0x1C2040); base 0x802F33D8
@@ -58,7 +58,7 @@ common_menu_3dsaveload:
   textRegular0("Save & Load 3D Model")
 common_menu_shortcut:
 //RAM 802F346C - きょうはここまで
-  textRegular0("Shortcut")
+  textRegular0("Set Shortcut")
 common_menu_samplemovie:
 //RAM 802F3480 - おてほんムービー
   textRegular0("Sample Movie")  //Unused
@@ -67,7 +67,7 @@ common_menu_observe:
   textRegular0("Observe")
 common_menu_photo:
 //RAM 802F34A4 - しゃしんをとる
-  textRegular0("Take Photos")
+  textRegular0("Take Pictures")
 common_menu_break:
 //RAM 802F34B4 - ちょっときゅうけい
   textRegular0("Take a break")
