@@ -129,8 +129,8 @@ insert "../../gfx/en/conv/MODEL_POLYGON.ia8.bin"
 //0x98E028 - RAM 8050E068
 seek(0x98E030)
 base 0x8050E070
-//Go Go Pack! Logo
-insert "../../gfx/en/conv/MINIGAME_GOGOPACK.ia8.bin"
+//Go Go Park! Logo (Chicken Race name taken from Wario Ware)
+insert "../../gfx/en/conv/MINIGAME_CHICKENRACE.ia8.bin"
 
 //BOOM BEAT (Sound Bomber) Logo
 seek(0x98EA88) //RAM 8050EAC8 -
