@@ -50,7 +50,7 @@ paint_fill:
   textRegular0("Fill")
 paint_over:
 //RAM 8049BF78 - いろをかさねる
-  textRegular0("Paint Over")
+  textRegular0("Layer")
 paint_picker:
 //RAM 8049BF88 - スポイト
   textRegular0("Picker")  //Unused
@@ -87,186 +87,186 @@ paint_mask:
 //Page 1
 stamp001:
 //め・リアル1
-  textRegular0("Eye 1")
+  textRegular0("Realistic Eye 1")
 stamp002:
 //め・リアル2
-  textRegular0("Eye 2")
+  textRegular0("Realistic Eye 2")
 stamp003:
 //め・リアル3
-  textRegular0("Eye 3")
+  textRegular0("Realistic Eye 3")
 stamp004:
 //め・リアル4
-  textRegular0("Eye 4")
+  textRegular0("Realistic Eye 4")
 stamp005:
 //め・リアル5
-  textRegular0("Eye 5")
+  textRegular0("Realistic Eye 5")
 stamp006:
 //め・リアル6
-  textRegular0("Eye 6")
+  textRegular0("Realistic Eye 6")
 stamp007:
 //め・リアル7
-  textRegular0("Eye 7")
+  textRegular0("Realistic Eye 7")
 
 //Page 2
 stamp008:
 //め・まんが1
-  textRegular0("Comic Eye 1")
+  textRegular0("Cartoon Eye 1")
 stamp009:
 //め・まんが2
-  textRegular0("Comic Eye 2")
+  textRegular0("Cartoon Eye 2")
 stamp010:
 //め・まんが3
-  textRegular0("Comic Eye 3")
+  textRegular0("Cartoon Eye 3")
 stamp011:
 //め・まんが4
-  textRegular0("Comic Eye 4")
+  textRegular0("Cartoon Eye 4")
 stamp012:
 //め・まんが5
-  textRegular0("Comic Eye 5")
+  textRegular0("Cartoon Eye 5")
 stamp013:
 //め・まんが6
-  textRegular0("Comic Eye 6")
+  textRegular0("Cartoon Eye 6")
 stamp014:
 //め・まんが7
-  textRegular0("Comic Eye 7")
+  textRegular0("Cartoon Eye 7")
 
 //Page 3
 stamp015:
 //め・まんが8
-  textRegular0("Comic Eye 8")
+  textRegular0("Cartoon Eye 8")
 stamp016:
 //め・まんが9
-  textRegular0("Comic Eye 9")
+  textRegular0("Cartoon Eye 9")
 stamp017:
 //め・まんが10
-  textRegular0("Comic Eye 10")
+  textRegular0("Cartoon Eye 10")
 stamp018:
 //め・まんが11
-  textRegular0("Comic Eye 11")
+  textRegular0("Cartoon Eye 11")
 stamp019:
 //め・まんが12
-  textRegular0("Comic Eye 12")
+  textRegular0("Cartoon Eye 12")
 stamp020:
 //め・まんが13
-  textRegular0("Comic Eye 13")
+  textRegular0("Cartoon Eye 13")
 stamp021:
 //め・まんが14
-  textRegular0("Comic Eye 14")
+  textRegular0("Cartoon Eye 14")
 
 //Page 4
 stamp022:
 //め・まんが15
-  textRegular0("Comic Eye 15")
+  textRegular0("Cartoon Eye 15")
 stamp023:
 //め・まんが16
-  textRegular0("Comic Eye 16")
+  textRegular0("Cartoon Eye 16")
 stamp024:
 //め・まんが17
-  textRegular0("Comic Eye 17")
+  textRegular0("Cartoon Eye 17")
 stamp025:
 //め・まんが18
-  textRegular0("Comic Eye 18")
+  textRegular0("Cartoon Eye 18")
 stamp026:
 //め・まんが19
-  textRegular0("Comic Eye 19")
+  textRegular0("Cartoon Eye 19")
 stamp027:
 //め・まんが20
-  textRegular0("Comic Eye 20")
+  textRegular0("Cartoon Eye 20")
 stamp028:
 //め・まんが21
-  textRegular0("Comic Eye 21")
+  textRegular0("Cartoon Eye 21")
 
 //Page 5
 stamp029:
 //め・まんが22
-  textRegular0("Comic Eye 22")
+  textRegular0("Cartoon Eye 22")
 stamp030:
 //め・まんが23
-  textRegular0("Comic Eye 23")
+  textRegular0("Cartoon Eye 23")
 stamp031:
 //め・まんが24
-  textRegular0("Comic Eye 24")
+  textRegular0("Cartoon Eye 24")
 stamp032:
 //め・まんが25
-  textRegular0("Comic Eye 25")
+  textRegular0("Cartoon Eye 25")
 stamp033:
 //め・まんが26
-  textRegular0("Comic Eye 26")
+  textRegular0("Cartoon Eye 26")
 stamp034:
 //め・まんが27
-  textRegular0("Comic Eye 27")
+  textRegular0("Cartoon Eye 27")
 stamp035:
 //め・まんが28
-  textRegular0("Comic Eye 28")
+  textRegular0("Cartoon Eye 28")
 
 //Page 6
 stamp036:
 //くち・リアル1
-  textRegular0("Mouth 1")
+  textRegular0("Realistic Mouth 1")
 stamp037:
 //くち・リアル2
-  textRegular0("Mouth 2")
+  textRegular0("Realistic Mouth 2")
 stamp038:
 //くち・リアル3
-  textRegular0("Mouth 3")
+  textRegular0("Realistic Mouth 3")
 stamp039:
 //くち・リアル4
-  textRegular0("Mouth 4")
+  textRegular0("Realistic Mouth 4")
 stamp040:
 //くち・リアル5
-  textRegular0("Mouth 5")
+  textRegular0("Realistic Mouth 5")
 stamp041:
 //くち・リアル6
-  textRegular0("Mouth 6")
+  textRegular0("Realistic Mouth 6")
 stamp042:
 //くち・リアル7
-  textRegular0("Mouth 7")
+  textRegular0("Realistic Mouth 7")
 
 //Page 7
 stamp043:
 //くち・リアル8
-  textRegular0("Mouth 8")
+  textRegular0("Realistic Mouth 8")
 stamp044:
 //くち・リアル9
-  textRegular0("Mouth 9")
+  textRegular0("Realistic Mouth 9")
 stamp045:
 //くち・リアル10
-  textRegular0("Mouth 10")
+  textRegular0("Realistic Mouth 10")
 stamp046:
 //くち・リアル11
-  textRegular0("Mouth 11")
+  textRegular0("Realistic Mouth 11")
 stamp047:
 //くち・リアル12
-  textRegular0("Mouth 12")
+  textRegular0("Realistic Mouth 12")
 stamp048:
 //くち・リアル13
-  textRegular0("Mouth 13")
+  textRegular0("Realistic Mouth 13")
 stamp049:
 //くち・リアル14
-  textRegular0("Mouth 14")
+  textRegular0("Realistic Mouth 14")
 
 //Page 8
 stamp050:
 //くち・まんが1
-  textRegular0("Comic Mouth 1")
+  textRegular0("Cartoon Mouth 1")
 stamp051:
 //くち・まんが2
-  textRegular0("Comic Mouth 2")
+  textRegular0("Cartoon Mouth 2")
 stamp052:
 //くち・まんが3
-  textRegular0("Comic Mouth 3")
+  textRegular0("Cartoon Mouth 3")
 stamp053:
 //くち・まんが4
-  textRegular0("Comic Mouth 4")
+  textRegular0("Cartoon Mouth 4")
 stamp054:
 //くち・まんが5
-  textRegular0("Comic Mouth 5")
+  textRegular0("Cartoon Mouth 5")
 stamp055:
 //くち・まんが6
-  textRegular0("Comic Mouth 6")
+  textRegular0("Cartoon Mouth 6")
 stamp056:
 //くち・まんが7
-  textRegular0("Comic Mouth 7")
+  textRegular0("Cartoon Mouth 7")
 
 //Page 9
 stamp057:
@@ -566,7 +566,7 @@ stamp146:
 stamp147:
 //もよう42
   textRegular0("Pattern 42")
-stamp148:   //Unused?
+stamp148:   //Unused
 //2Dロードさくひん
   textRegular0("Picture")
 
