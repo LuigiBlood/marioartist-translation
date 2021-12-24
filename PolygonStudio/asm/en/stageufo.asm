@@ -110,7 +110,7 @@ back17:
   textRegular0("Cumulonimbus")
 back18:
 //くもりぞら
-  textRegular0("Clouds")
+  textRegular0("Cloudy")
 back19:
 //ちへいせん
   textRegular0("Horizon")
@@ -121,19 +121,19 @@ back20:
 //Stages RAM 80516868 NDD 0x64A000
 stage01:
 //もくめいた
-  textRegular0("Wood")
+  textRegular0("Woodgrain")
 stage02:
 //2だんおき
-  textRegular0("Two Steps")
+  textRegular0("Two Step")
 stage03:
 //ふねのだい
   textRegular0("Ship Holder")
 stage04:
 //とうめいケース
-  textRegular0("Case")
+  textRegular0("Clear Case")
 stage05:
 //ふたつきはこ
-  textRegular0("Opened Cover")
+  textRegular0("Opened Box")
 stage06:
 //てんじじょう
   textRegular0("Exhibition Hall")
@@ -146,13 +146,13 @@ stage08:
   textRegular0("Aircraft Holder")
 stage09:
 //くしいた
-  textRegular0("Wood Holder")
+  textRegular0("Comb Board")
 stage10:
 //うえきばち
   textRegular0("Flower Pot")
 stage11:
 //にほんていえん
-  textRegular0("Traditional Garden")
+  textRegular0("Japanese Garden")
 stage12:
 //テーブル
   textRegular0("Dinner Table")
@@ -165,13 +165,13 @@ stage14:
   textRegular0("Ranch")
 stage15:
 //すいそう
-  textRegular0("Water Tank")
+  textRegular0("Aquarium")
 stage16:
 //こけ
-  textRegular0("Moss")
+  textRegular0("Moss Tank")
 stage17:
 //レースじょう
-  textRegular0("Race")
+  textRegular0("Race Track")
 stage18:
 //まち
   textRegular0("City")
@@ -236,7 +236,7 @@ light04:
   textRegular0("Bottom Light")
 light05:
 //モデルのみあかるく
-  textRegular0("Bright Models")
+  textRegular0("Bright Model")
 light06:
 //いろへんか
   textRegular0("Color Switch")
