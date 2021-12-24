@@ -94,7 +94,7 @@ mainmenu_empty:
   fill 256
 
 //Options
-seek(0x260808)
+seek(0x260808)  //RAM 80799F40
 insert "../../gfx/en/conv/OPTION_CURSORSPEED.ia8.bin"
 seek(0x2614D0)
 insert "../../gfx/en/conv/OPTION_SOUND.ia8.bin"

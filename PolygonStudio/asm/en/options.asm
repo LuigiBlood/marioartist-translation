@@ -74,3 +74,8 @@ textRegular(20, "Show")
 textRegular(20, "Don't Show")
 //けってい(セーブ)
 textRegular(20, "Save Options")
+
+//Change Cursor Speed GFX Width on screen
+seek(0x265FB0); dw 0xE42A421C //0xE42D421C
+//Change Z Button GFX Width on screen
+seek(0x266050); dw 0xE44380EC //0xE44540EC
