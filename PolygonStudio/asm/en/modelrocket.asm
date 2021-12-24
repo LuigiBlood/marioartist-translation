@@ -7,13 +7,13 @@ print "  - Modeler Rocket Text\n"
 seek(0x7FBC80); base 0x803EBCF8
 model_tutorial:
 //RAM 803EBCF8 - つくりかたムービー
-  textRegular0("Tutorials")
+  textRegular0("How To Model")
 model_wireframe:
 //RAM 803EBD0C - ほねぐみひょうじ
   textRegular0("Wireframe")
 model_craft:
 //RAM 803EBD20 - クラフト
-  textRegular0("Craft Mode")
+  textRegular0("Papercraft Mode")
 
 //Pointers
 seek(0x7D05D2); dh model_tutorial
@@ -98,13 +98,13 @@ model_basic14:
 //Page 1
 model_chara01:
 //かおシンプル
-  textRegular0("Face")
+  textRegular0("Simple Face")
 model_chara02:
 //かおリアル
   textRegular0("Complex Face")
 model_chara03:
 //ひとシンプル
-  textRegular0("Human")
+  textRegular0("Simple Human")
 model_chara04:
 //だんせい
   textRegular0("Male")
@@ -450,13 +450,13 @@ interface_round:
   textRegular0("Round Off")
 interface_remove:
 //RAM 806101EC - はずす
-  textRegular0("Remove")
+  textRegular0("Detach")
 interface_delete:
 //RAM 806101F4 - けす
   textRegular0("Delete")
 interface_tunnel:
 //RAM 806101FC - つなげる/トンネル
-  textRegular0("Create Tunnel")
+  textRegular0("Connect/Tunnel")
 interface_makepanel:
 //RAM 80610210 - パネルをつくる
   textRegular0("Create Panel")
