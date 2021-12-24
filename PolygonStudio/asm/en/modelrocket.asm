@@ -644,3 +644,118 @@ seek(0x87EDA2); dh interface_split3
 seek(0x87F2C6); dh interface_split4
 seek(0x87F7EA); dh interface_split5
 
+//Analysis Text
+seek(0x7FF394); base 0x803EF40C
+model_a_saba:
+//RAM 803EF40C - SABA (38)
+  textASCII0("TOFU")
+model_a_tororo:
+//RAM 803EF414 - TORORO (166)
+  textASCII0("NINTENDO")
+model_a_iwashi:
+//RAM 803EF41C - IWASHI (184)
+  textASCII0("RAVIOLI")
+model_a_nattoh:
+//RAM 803EF424 - NATTOH (710)
+  textASCII0("MARIO")
+model_a_analysis:
+//RAM 803EF430 - ANALYSIS
+  textASCII0("ANALYSIS")
+model_a_vertex:
+//RAM 803EF43C - VERTEX: %d
+  textASCII0("VERTEX: %d")
+model_a_triangle:
+//RAM 803EF448 - TRIANGLE: %d
+  textASCII0("TRIANGLE: %d")
+model_a_gari:
+//RAM 803EF458 - GARI (1~99)
+  textASCII0("EGG")
+model_a_kappa:
+//RAM 803EF460 - KAPPA (100~199)
+  textASCII0("APPLE")
+model_a_ika:
+//RAM 803EF468 - IKA (200~299)
+  textASCII0("PASTA")
+model_a_tako:
+//RAM 803EF46C - TAKO (300~399)
+  textASCII0("SALAD")
+model_a_tamago:
+//RAM 803EF474 - TAMAGO (400~499)
+  textASCII0("STEAK")
+model_a_ebi:
+//RAM 803EF47C - EBI (500~599)
+  textASCII0("RICE")
+model_a_toro:
+//RAM 803EF480 - TORO (600~699)
+  textASCII0("BANANA")
+model_a_ikura:
+//RAM 803EF488 - IKURA (700~799)
+  textASCII0("WINE")
+model_a_awabi:
+//RAM 803EF490 - AWABI (800~899)
+  textASCII0("PIZZA")
+model_a_uni:
+//RAM 803EF498 - UNI (900~999)
+  textASCII0("TUNA")
+model_a_ohtoro:
+//RAM 803EF49C - OHTORO (1000)
+  textASCII0("CURRY")
+model_a_class:
+//RAM 803EF4A4 - CLASS:
+  textASCII0("CLASS:")
+model_a_jounigiri:
+//RAM 803EF4AC - JOUNIGIRI
+  textASCII0("DELUXE")
+
+//Pointers
+
+//Per 100 triangle amount, 000, 100, 200, etc...
+seek(0x7FF368)
+  dw model_a_gari, model_a_kappa, model_a_ika, model_a_tako
+  dw model_a_tamago, model_a_ebi, model_a_toro, model_a_ikura
+  dw model_a_awabi, model_a_uni, model_a_ohtoro
+
+seek(0x7EAE7A); dh 12 //38
+seek(0x7EAEA6); dh model_a_saba         //38 triangles (default)
+seek(0x7EAEB2); dh 64 //166
+seek(0x7EAEC6); dh model_a_tororo       //166 triangles (default)
+seek(0x7EAEBA); dh 222 //184
+seek(0x7EAEDA); dh model_a_iwashi       //184 triangles (default)
+seek(0x7EAEDE); dh 488 //710
+seek(0x7EAEF2); dh model_a_nattoh       //710 triangles (default)
+
+seek(0x7EAC72); dh model_a_analysis
+seek(0x7EAC96); dh model_a_vertex
+seek(0x7EACEA); dh model_a_triangle
+seek(0x7EAE86); dh model_a_class
+
+//Either when last two digits are 0 (XX00)
+//Or if the last 3 digits are the same (111, 222, 333, 444, 555, 666, 777, 888, 999, 1000)
+seek(0x7EB01E); dh model_a_jounigiri
+
+//Position of "CLASS:"
+seek(0x7EAE8A); dh 0xB8   //X Pos
+seek(0x7EAE92); dh 0x94   //Y Pos
+//Position of the class text
+seek(0x7EAF5E); dh 0xD0   //X Pos
+seek(0x7EAF62); dh 0x94   //Y Pos
+//Position of "JOUNIGIRI"
+seek(0x7EB026); dh 0xD0 //0xB8   //X Pos
+seek(0x7EB02A); dh 0x9A   //Y Pos
+
+//Localized list
+//0000 EGG
+//0012 TOFU
+//0064 NINTENDO
+//0100 APPLE
+//0200 PASTA
+//0222 RAVIOLI
+//0300 SALAD
+//0400 STEAK
+//0488 MARIO
+//0500 RICE
+//0600 BANANA
+//0700 WINE
+//0800 PIZZA
+//0900 TUNA
+//1000 CURRY
