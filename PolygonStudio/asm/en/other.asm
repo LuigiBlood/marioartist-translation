@@ -109,31 +109,31 @@ dw other_currentgone1, other_currentgone2, other_currentgone3, 0, 0, 0
 //Default Container Names
 seek(0xE3EAC)
 //ブロックさくひん (81A1)
-textASCIIE("Block Work")
+textASCIIE("Block Creations")
 dh 0x81A1
 db 0x00
 
 seek(0xE3EC0)
 //３Ｄさくひん (86A3)
-textASCIIE("3D Work")
+textASCIIE("3D Creations")
 dh 0x86A3
 db 0x00
 
 seek(0xE3ED0)
 //ステ－ジさくひん (819C)
-textASCIIE("Stage Work")
+textASCIIE("Stage Creations")
 dh 0x819C
 db 0x00
 
 seek(0xE3EE4)
 //２Ｄさくひん (86A6)
-textASCIIE("2D Work")
+textASCIIE("2D Creations")
 dh 0x86A6
 db 0x00
 
 seek(0xE3EF4)
 //どうりょくマシン (86A4)
-textASCIIE("Power Machine")
+textASCIIE("Power Machines")
 dh 0x86A4
 db 0x00
 
