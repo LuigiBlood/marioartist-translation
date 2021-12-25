@@ -1,9 +1,13 @@
 Mario Artist Polygon Studio - English Translation
 by LuigiBlood
 
-Version 2.1
+Version 3.0
 
 Changelog:
+v3.0:
+- Improve technical implementation of the translation.
+- Improve translation and translate even more.
+
 v2.1:
 - Port Source to latest version of ARM9 fork bass
 
