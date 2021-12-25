@@ -16,27 +16,32 @@ seek(0x99BFF8)
 base 0x804EAB50
 gogopack_credits1:
 //　　　元締／ヘルシー松岡
-  textASCII0("Director/Healthy Matsuoka")
+  textSJISE(" ")
+  textASCII0(" Director/Healthy Matsuoka")
 gogopack_credits2:
 //打込料理人／ハッピー西山（隊長）
   textASCII0("Programming/Happy Nishiyama (Lead)")
 gogopack_credits3:
 //　　　　　　スマイリー井田（音）
-  textASCII0("          Smiley Ida (Sound)")
+  textSJISE("  ")
+  textASCII0("      Smiley Ida (Sound)")
 gogopack_credits4:
 //　　　　　　ファンシー河本（見習）
-  textASCII0("          Fancy Kawamoto (Junior)")
+  textSJISE("  ")
+  textASCII0("      Fancy Kawamoto (Junior)")
 gogopack_credits5:
 //二次元絵師／ラブリー大西
-  textASCII0("2D Graphics/Lovely Onishi")
+  textASCII0("  2D Artist/Lovely Onishi")
 gogopack_credits6:
 //三次元美術／リー藤井
-  textASCII0("3D Graphics/Lee Fujii")
+  textASCII0("  3D Artist/Lee Fujii")
 gogopack_credits7:
 //作曲仕事人／パピー戸高
-  textASCII0("Music/Puppy Totaka")
+  textSJISE(" ")
+  textASCII0("   Music/Puppy Totaka")
 gogopack_credits8:
 //　温かい目／レフリー沢野
+  textSJISE(" ")
   textASCII0("Producer/Referee Sawano")
 gogopack_credits9:
 gogopack_credits10:
@@ -54,6 +59,21 @@ lui t1, 0x8058 //RAM 804E1FF4
 //Absolutely not sane as the checks are not changed but it works.
 seek(0x99353E)
 dh 0x1100 //0x80 * 34 character limitation
+
+//Change Credits Font Size
+seek(0x9934AC); lui at,0x3F80
+
+//Change Credits ASCII Font
+seek(0x9934CC); addiu t2,0,0xA
+seek(0x9934D8)
+  sw t9,0x28(sp)
+  sw t9,0x24(sp)
+seek(0x9934EC); sw t2,0x14(sp)
+
+//Change Credits Vertical Position
+seek(0x993496); dh 0x44
+//Change Credits Vertical Spacing
+seek(0x993536); dh 0x11
 
 //Sound Bomber
 seek(0x9FECF8)

@@ -45,6 +45,11 @@ macro textSJIS0(text) {
   dh 0x0000
 }
 
+macro textSJISE(text) {
+  ShiftJISMap()
+  dh {text}
+}
+
 macro skip(size) {
   variable skipSeek = origin()+{size}
   origin skipSeek
