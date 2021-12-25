@@ -639,7 +639,7 @@ open4pdesc_004:
   textASCII0("Reach for the stars!")
 open4pdesc_005:
 //…タレスタで見たことある…？
-  textASCII0("Haven't you seen a talent with this?")
+  textASCII0("Have you seen a talent with this?")
 open4pdesc_006:
 //空への招待券
   textASCII0("An invitation to the skies.")
@@ -800,7 +800,7 @@ open4pdesc_058:
   textASCII0("He seems happy.")
 open4pdesc_059:
 //わりとナイスな飛行機です
-  textASCII0("A rather nice airplane.")
+  textASCII0("A rather nice aircraft.")
 open4pdesc_060:
 //痛そうですね
   textASCII0("It looks painful.")
@@ -1057,7 +1057,7 @@ open4toast01_4:
   textASCII0("<FONT COLOR=#DC9F4F>I have put my mind and<BR>love into making bread.<BR>The best <FONT COLOR=#DC4F00>hints</FONT> have been written.</FONT>")
 open4toast01_5:
 //"<FONT COLOR=#DC9F4F>何しろ愛情でテツヤで最高ですので、<BR>道中お見つけになられましたら<BR>ぜひお立ちよりの上ごらん下さい</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>If you happen to see us,<BR>please come in and<BR>take a look.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>If you happen to see some,<BR>please come closer and<BR>take a look.</FONT>")
 open4toast01_6:
 //"<FONT COLOR=#DC9F4F>もちろん、当店の食パンは<BR>すべて無添加無漂白ですので<BR>奥様も大安心です</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>Of course, all of our breads are<BR>additive-free and the crumbs<BR>are soft.</FONT>")
@@ -1073,14 +1073,14 @@ open4toast02_4:
   textASCII0("<FONT COLOR=#DC9F4F>Why?<BR>I don't know. Perhaps it is just<BR>the laws of the universe.</FONT>")
 open4toast02_5:
 //"<FONT COLOR=#DC9F4F>ここだけの話、<BR><FONT COLOR=#DC4F00><FONT SIZE=4>はんてんコピー</FONT></FONT>を使えば<BR>わりと対称にしやすいらしいです</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Just between you and me, using<BR><FONT COLOR=#DC4F00><FONT SIZE=4>Mirror Copy</FONT></FONT> may be the easy<BR>way to build symmetrical models.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Just between you and me, using<BR><FONT COLOR=#DC4F00><FONT SIZE=4>Mirror Copy</FONT></FONT> may be the easier<BR>way to build symmetrical models.</FONT>")
 open4toast02_6:
 //"<FONT COLOR=#DC9F4F><FONT COLOR=#DC4F00><FONT SIZE=4>はんてんコピー</FONT></FONT>なら<BR>どうりょくきりかえもカッコよく<BR>なりますし、オススメです</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F><FONT COLOR=#DC4F00><FONT SIZE=4>Mirror Copy</FONT></FONT> would be more<BR>effective for power blocks as well.</FONT>")
 
 open4toast03_2:
 //"<FONT COLOR=#DC9F4F>なぜかモデルが速く走らない…<BR>そんななやみ、ありませんか？</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Sometimes the model is just<BR>not fast enough...<BR>That can be bothersome.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Sometimes the model is just<BR>not as fast as it should be...<BR>That can be bothersome.</FONT>")
 open4toast03_3:
 //"<FONT COLOR=#DC9F4F>なんと「じっけんワールド」では、<BR>地面近くにあるブロックが<BR><FONT COLOR=#DC4F00>こすれて遅くなる</FONT>事があるのです</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>In this world, blocks that<BR>are near the ground may<BR><FONT COLOR=#DC4F00>get rubbed and slow down</FONT>.</FONT>")
@@ -1092,7 +1092,7 @@ open4toast03_5:
   textASCII0("<FONT COLOR=#DC9F4F>Of course, you would want to<BR>get rid of that problem.</FONT>")
 open4toast03_6:
 //"<FONT COLOR=#DC9F4F>そのような事は大変かったりいので<BR><FONT COLOR=#DC4F00>どうりょくブロックを下の方につける</FONT><BR>などしていただけないでしょうか？</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Such things are heavy,<BR>could you <FONT COLOR=#DC4F00>attach a power block<BR>at the bottom of it</FONT>?</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Such things are heavy,<BR>you could perhaps <FONT COLOR=#DC4F00>attach<BR>a power block at the bottom of it</FONT>?</FONT>")
 open4toast03_7:
 //"<FONT COLOR=#DC9F4F>要は<FONT COLOR=#DC4F00>どうりょくじゃないブロックが<BR>地面から浮けばいい</FONT>んだし…</FONT>"</FONT>
   textASCII0("<FONT COLOR=#DC9F4F>The point is, anything that's<BR><FONT COLOR=#DC4F00>not a power block</FONT> should<BR>not touch the ground.</FONT>")
@@ -1102,7 +1102,7 @@ open4toast04_2:
   textASCII0("<FONT COLOR=#DC9F4F>You may have noticed that<BR>the <FONT COLOR=#CFCFCF>Z Button</FONT> performs a different<BR>function from the other modes...</FONT>")
 open4toast04_3:
 //"<FONT COLOR=#DC9F4F>なんと「じっけんワールド」では<BR><FONT COLOR=#CFCFCF>Ｚボタン</FONT>を押すと<BR><FONT COLOR=#DC4F00>カメラがモデルの後ろにまわる</FONT>んです</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Pressing the <FONT COLOR=#CFCFCF>Z Button</FONT> will cause<BR><FONT COLOR=#DC4F00>the camera to move<BR>behind the model</FONT>.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Pressing the <FONT COLOR=#CFCFCF>Z Button</FONT> will<BR><FONT COLOR=#DC4F00>move the camera behind<BR>the model</FONT>.</FONT>")
 open4toast04_4:
 //"<FONT COLOR=#DC9F4F>何でも、遠い遠い国の習慣だとか…<BR>「オプション」の設定を無視するとは<BR>なかなか強引な習慣ですね</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>It is what it is in this world.<BR>Ignoring what you have set in the<BR>Options menu could be a problem.</FONT>")
@@ -1118,7 +1118,7 @@ open4toast05_3:
   textASCII0("<FONT COLOR=#DC9F4F>I have a lot to talk about,<BR>so if you don't want to hear,<BR>press the <FONT COLOR=#2FDF2F>B Button</FONT> to stop.</FONT>")
 open4toast05_4:
 //"<FONT COLOR=#DC9F4F>さて、「じっけんワールド」では<BR>覚えきれないほど<FONT SIZE=1>かもしれないくらい</FONT><BR>いろいろなブロックが落ちています</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>In this world, <FONT SIZE=1>if I remember correctly,</FONT><BR>many blocks have fallen.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>There are so many blocks<BR>that it's hard to remember them all<BR><FONT SIZE=1>or maybe I can.</FONT></FONT>")
 open4toast05_5:
 //"<FONT COLOR=#DC9F4F>そのうちの<FONT COLOR=#DC4F00>どうりょくブロック</FONT>は<BR>「じっけんワールド」で<FONT COLOR=#DC4F00>動く</FONT>ための<BR>重要なブロックであったりもします</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>Among them are the <FONT COLOR=#DC4F00>power blocks</FONT>.<BR>To get around in this world,<BR><FONT COLOR=#DC4F00>these blocks are essential</FONT>.</FONT>")
@@ -1127,7 +1127,7 @@ open4toast05_6:
   textASCII0("<FONT COLOR=#DC9F4F>These blocks have various abilities.<BR>You can check them out by<BR>pressing the <FONT COLOR=#DC4F00>START Button</FONT>.</FONT>")
 open4toast05_7:
 //"<FONT COLOR=#DC9F4F>新しくブロックを手にいれたら<BR>「くみたてる」で組み立てて<BR>動きを見てみるのがいいでしょう</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>When you pick up a new block,<BR><FONT COLOR=#DC4F00>assemble</FONT> it on your model,<BR>and look at the results.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>When you pick up a new block,<BR><FONT COLOR=#DC4F00>assemble</FONT> it on your model,<BR>and see how it works.</FONT>")
 open4toast05_8:
 //"<FONT COLOR=#DC9F4F>組み立てる時は<BR>ブロックの向きに注意して下さい。<BR>すすむ方向にえいきょうします</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>When you are assembling,<BR>pay close attention to the<BR>orientation of the block.</FONT>")
@@ -1140,7 +1140,7 @@ open4toast05_10:
 
 open4toast06_2:
 //"<FONT COLOR=#DC9F4F>最初になやむのが、<BR>[遅くなってすすめないよ～]<BR>というところだと思います</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>You may have this problem:<BR>[I am slowing down!]</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>As you're going around,<BR>it's possible to find places<BR>where you really slow down.</FONT>")
 open4toast06_3:
 //"<FONT COLOR=#DC9F4F><FONT COLOR=#FFFFCF>砂</FONT>や<FONT COLOR=#FFFFFF>雪</FONT>以外で遅くなっちゃうときは<BR>坂に負けていてのぼれていない、<BR>という事が考えられます</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>If it isn't because of <FONT COLOR=#FFFFCF>sand</FONT> or <FONT COLOR=#FFFFFF>snow</FONT>,<BR>you may be losing momentum<BR>because of a slope.</FONT>")
@@ -1149,10 +1149,10 @@ open4toast06_4:
   textASCII0("<FONT COLOR=#DC9F4F><FONT COLOR=#DC4F00>The angle of the slope<BR>that a block can climb</FONT> is<BR>different for each.</FONT>")
 open4toast06_5:
 //"<FONT COLOR=#DC9F4F>また、<BR>[ジャンプだと届かないよ～]<BR>というところもあるかと思います</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>This problem may also occur:<BR>[My jump doesn't reach!]</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>You may also try to reach<BR>certain places but you<BR>cannot reach it with a jump.</FONT>")
 open4toast06_6:
 //"<FONT COLOR=#DC9F4F>そんな時は<BR>足のブロックを使ってみて下さい。<BR><FONT COLOR=#DC4F00>足なら高くジャンプできます</FONT></FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>In that case, use a foot block.<BR><FONT COLOR=#DC4F00>Feet makes you jump higher</FONT>.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>In that case, use Leg blocks.<BR><FONT COLOR=#DC4F00>Legs makes you jump higher</FONT>.</FONT>")
 
 open4toast07_2:
 //"<FONT COLOR=#DC9F4F>各所にそびえ立つ謎のパネル…<BR>その正体は誰にも知られる事なく<BR>訪れる人々を見守っています</FONT>"
@@ -1171,14 +1171,14 @@ open4toast07_6:
   textASCII0("<FONT COLOR=#DC9F4F>Both will speed you up<BR>once you touch them.</FONT>")
 open4toast07_7:
 //"<FONT COLOR=#DC9F4F>ぶつかる直前に<BR><FONT COLOR=#2F2FDF>Ａボタン</FONT>でジャンプすると<BR>高くとぶことができたりもします</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>If you jump with the <FONT COLOR=#2F2FDF>A Button</FONT><BR>just before hitting it,<BR>you will go even higher.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>If you jump with the <FONT COLOR=#2F2FDF>A Button</FONT><BR>just before hitting a panel,<BR>you will go even higher.</FONT>")
 
 open4toast08_2:
 //"<FONT COLOR=#DC9F4F>この先にある<BR><FONT COLOR=#DC4F00>せいぎょそうち</FONT>というブロック…</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Soon, you will find<BR>a block called <FONT COLOR=#DC4F00>Controller</FONT>.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Soon, you will find<BR>a block called the <FONT COLOR=#DC4F00>Control Unit</FONT>.</FONT>")
 open4toast08_3:
 //"<FONT COLOR=#DC9F4F>向いた方向に進む事ができ<BR>たとえ空中やつるつるの場所でも<BR>自由に曲がる事が出来るシロモノです</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>You can freely turn with it,<BR>even on slippery grounds<BR>or in the air.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>You can freely move forward,<BR>even on slippery grounds<BR>or in the air.</FONT>")
 open4toast08_4:
 //"<FONT COLOR=#DC9F4F>どんな場所でも<BR>進行方向を変える事ができるので<BR>ブロック集めにはかかせません</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>You can change directions to<BR>anywhere you want, it makes<BR>collecting blocks much easier.</FONT>")
@@ -1188,22 +1188,22 @@ open4toast08_5:
 
 open4toast09_2:
 //"<FONT COLOR=#DC9F4F>「じっけんワールド」には<BR>道行くお客様方をジャマする<BR>大小の生き物がいたりします</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>In this world, there are<BR>small and large creatures<BR>who may get in your way.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>In this world, there are<BR>small and big creatures<BR>who may get in your way.</FONT>")
 open4toast09_3:
 //"<FONT COLOR=#DC9F4F><FONT COLOR=#DC4F00>大きいソイツ</FONT>は<BR>ブロックが大好きで愛しちゃってて<BR>思わず食べてしまう事があります</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F><FONT COLOR=#DC4F00>The big ones</FONT> loves blocks<BR>so much,<BR>they are hungry for those.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F><FONT COLOR=#DC4F00>The big ones</FONT> loves blocks<BR>so much that they eat them<BR>without thinking.</FONT>")
 open4toast09_4:
 //"<FONT COLOR=#DC9F4F>しかもその時、重要なブロックから<BR>食べていくのですから<BR>なかなかグルメだと言えます</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>They are quite the gourmet,<BR>and will eat away<BR>your most important blocks.</FONT>")
 open4toast09_5:
 //"<FONT COLOR=#DC9F4F><FONT COLOR=#DC4F00>小さいソイツ</FONT>は<BR>近づくお客様方に<BR>愛の体当たりをくらわせます</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F><FONT COLOR=#DC4F00>The small ones</FONT> loves<BR>ramming into people.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F><FONT COLOR=#DC4F00>The small ones</FONT> loves happily<BR>ramming into people.</FONT>")
 open4toast09_6:
 //"<FONT COLOR=#DC9F4F>めったに誰も来ないから<BR>さびしいんでしょうね…。<BR>まあ、メイワクな話ですけど</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>We don't get a lot of visitors here,<BR>so they're quite lonely.</FONT>")
 open4toast09_7:
 //"<FONT COLOR=#DC9F4F>このあわれな生き物たちを<BR>愛と友情の「じっけんワールド」では<BR>当然ながらホゴする事になっています</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>In love of this world,<BR>those silly creatures are protected.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>In this world of friendship and love,<BR>those silly creatures are protected.</FONT>")
 open4toast09_8:
 //"<FONT COLOR=#DC9F4F>訪れるお客様方に<BR>キガイを与えたとしても、決して<BR>ハンゲキなさらないで下さい</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>When you are in danger,<BR>please don't fight them.</FONT>")
@@ -1213,26 +1213,26 @@ open4toast09_9:
 
 open4toast10_2:
 //"<FONT COLOR=#DC9F4F>人はよく[形ある物はいつかこわれる]<BR>などと言って<BR>物がこわれた時のいいわけをします</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>People often have this problem:<BR>[My blocks are broken!]<BR>Here are the possible reasons.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>You know what they say,<BR>anything that takes a form<BR>will break sooner or later.</FONT>")
 open4toast10_3:
 //"<FONT COLOR=#DC9F4F>当然ながら、それはモデルにおいても<BR>例外ではありません</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Of course, even in the model,<BR>there's no exception.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Of course, this is<BR>no exception for your model.</FONT>")
 open4toast10_4:
 //"<FONT COLOR=#DC9F4F>強いしょうげきを与えると<BR>ブロックがばくはつしてしまうことが<BR>あります</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>On strong impact,<BR>your blocks may explode.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>On strong impacts,<BR>your blocks may explode.</FONT>")
 open4toast10_5:
 //"<FONT COLOR=#DC9F4F>スピードがベラボーに速くなったら<BR>地面やカベにぶつからないように<BR>注意しましょう</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>On very high speeds,<BR>avoid hitting the ground<BR>or the walls.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>On very high speeds, be careful<BR>not hitting the ground or the walls.</FONT>")
 open4toast10_6:
 //"<FONT COLOR=#DC9F4F>でも、リトライすれば直っちゃうので<BR>わりと注意しなくていいような<BR>気もします</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>If it happens, just <FONT COLOR=#DC4F00>retry</FONT>,<BR>your blocks will be all patched up.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>But if you <FONT COLOR=#DC4F00>retry</FONT>,<BR>your blocks will be all patched up.</FONT>")
 open4toast10_7:
 //"<FONT COLOR=#DC9F4F>ちなみに、<FONT COLOR=#DC4F00>ぶつかるしゅんかんに<BR>ある事をすれば</FONT>、ブロックを<BR>こわさずにすむなんて話もあります</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>But I have heard that if <FONT COLOR=#DC4F00>you do<BR>something just right when you get<BR>hit</FONT>, nothing will break.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>By the way, I have heard that if<BR><FONT COLOR=#DC4F00>you do something just right when<BR>you get hit</FONT>, nothing will break.</FONT>")
 
 open4toast11_2:
 //"<FONT COLOR=#DC9F4F>古代の神秘、ピラミッドです</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>The ancient mystery,<BR>the pyramid.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>The ancient mystery,<BR>the Pyramid.</FONT>")
 open4toast11_3:
 //"<FONT COLOR=#DC9F4F>[空から飛んで出入りしていた]<BR>などという言い伝えが残っています</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>The legends say it was<BR>flying in the sky.</FONT>")
@@ -1248,10 +1248,10 @@ open4toast12_3:
   textASCII0("<FONT COLOR=#DC9F4F>I'm thinking there's a<BR>meaning to this.<BR>There must be a meaning.</FONT>")
 open4toast12_4:
 //"<FONT COLOR=#DC9F4F>むろん、なぜカエルであるのかとか<BR>誰がこんなモノを建てたのかとか<BR>いろいろギモンはつきませんが</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Why is it a frog?<BR>Who built such a thing?<BR>There's only so much questions.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Why is it a frog?<BR>Who built such a thing?<BR>There's so many questions to ask.</FONT>")
 open4toast12_5:
 //"<FONT COLOR=#DC9F4F>今日のところは[この塔は<BR>いろんな目印になってるんだヨ]<BR>といった事だけ覚えておいて下さい</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>For now, you just need<BR>to remember that<BR>this tower is a landmark.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>For now, all you need to remember<BR>is that this tower is a landmark.</FONT>")
 
 open4toast13_2:
 //"<FONT COLOR=#DC9F4F>これは「じっけんワールド」<BR>初心者のための<BR>初心者食パンです。</FONT>"
@@ -1273,41 +1273,41 @@ open4toast13_7:
   textASCII0("<FONT COLOR=#DC9F4F>Watch out for <FONT COLOR=#AFFFFF>ice</FONT>, <FONT COLOR=#AFAFAF>iron</FONT> and more,<BR>or you will lose control and slip.</FONT>")
 open4toast13_8:
 //"<FONT COLOR=#DC9F4F>[な～んか前にすすまないなあ？]<BR>とか思った時は<BR>ブロックと地面をチェックしましょう</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>[I cannot proceed any further.]<BR>Check the ground and<BR>the blocks you have.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>If you cannot proceed any further,<BR>check the ground and<BR>the blocks you have.</FONT>")
 open4toast13_9:
 //"<FONT COLOR=#DC9F4F>また、いろんな所にあるカベにも<BR>注意したほうがいいでしょう</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>I recommend also<BR>checking the walls.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>I recommend also<BR>to pay attention to the walls.</FONT>")
 open4toast13_10:
 //"<FONT COLOR=#DC9F4F>[な～んかカベがジャマだなあ？]<BR>とか思った時は<BR>カベを<FONT COLOR=#DC4F00>手当たりしだいさわって</FONT>下さい</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>[Something's wrong with the wall.]<BR>If you suspect something is weird,<BR>try touching the wall.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>If you suspect something<BR>is weird about a wall,<BR>try touching the wall.</FONT>")
 open4toast13_11:
 //"<FONT COLOR=#DC9F4F>さわるとなんと！こいつぁオドロキ！<BR>みたいな変化のある<BR>カベもありますヨ</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Touch it and... surprise!<BR>It's like something's changing...</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Touch it and... surprise!<BR>It's like something's moving...</FONT>")
 open4toast13_12:
 //"<FONT COLOR=#DC9F4F>それでは、良い旅を</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>With all that in mind,<BR>have a nice trip!</FONT>")
 
 open4toast14_2:
 //"<FONT COLOR=#DC9F4F>地上のブロックを取るたびに<BR>ぐんぐん伸びる<BR>不思議で巨大な柱…</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Every time you find a block,<BR>a mysterious pillar grows...</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Every time you find a block,<BR>a mysterious pillar rises...</FONT>")
 open4toast14_3:
 //"<FONT COLOR=#DC9F4F>その柱の役目は<BR>上を見ればおわかりのように<BR>地上と空とを結ぶ事なのです</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>The role of the pillar is to<BR>connect the land and the sky.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>The role of the pillar is to<BR>connect the land to the sky.</FONT>")
 open4toast14_4:
 //"<FONT COLOR=#DC9F4F>この空への柱は<BR><FONT COLOR=#DC4F00>ある数のブロックを取り終えると<BR>空に届く</FONT>ようになっています</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>Once you have enough blocks,<BR>the pillar will reach the sky.</FONT>")
 open4toast14_5:
 //"<FONT COLOR=#DC9F4F>まあ、それを使わなくても<BR>飛んで空へ行くことも<BR>できるんですけどね</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Well... Even without the pillar,<BR>you can still fly into the sky.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Well... Even without the pillar,<BR>you can still fly there.</FONT>")
 open4toast14_6:
 //"<FONT COLOR=#DC9F4F>古い設備は新しい発明によって<BR>使われなくなる…<BR>歴史の必然です</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>Old equipment will always<BR>be replaced by newer ones.<BR>It is inevitable.</FONT>")
 open4toast14_7:
 //"<FONT COLOR=#DC9F4F>しかし、あなたはその古さに<BR><FONT SIZE=6>ロマン</FONT>を感じませんか？</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Isn't this<BR><FONT SIZE=6>romantic?</FONT></FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Doesn't that sound<BR><FONT SIZE=6>poetic</FONT> to you?</FONT>")
 open4toast14_8:
 //"<FONT COLOR=#DC9F4F>感じた方はぜひのぼって行って下さい<BR>きっとあなたの望む世界が<BR>待っていますから…</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Feel free to leave when you want.<BR>Surely the world you want<BR>will be waiting for you.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>If you feel it, go to the top<BR>of the pillar. A new world<BR>will be waiting for you...</FONT>")
 
 open4toast15_2:
 //"<FONT COLOR=#DC9F4F>画面左上のレーダーに<BR>ポツリポツリとあらわれる<BR>わりとうっとうしい点…</FONT>"
@@ -1320,168 +1320,168 @@ open4toast15_4:
   textASCII0("<FONT COLOR=#DC9F4F><FONT COLOR=#8F8F8F>Black dots</FONT> are entrances and exits.<BR><FONT COLOR=#DF2F2F>Red dots</FONT> are blocks above you.<BR><FONT COLOR=#2F2FDF>Blue dots</FONT> are blocks below you.</FONT>")
 open4toast15_5:
 //"<FONT COLOR=#DC9F4F>建物の中のブロックまでは<BR>表示されないので<BR>ご注意ください</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Please note that blocks are<BR>not displayed in buildings.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Please note that blocks are<BR>not displayed indoors.</FONT>")
 open4toast15_6:
 //"<FONT COLOR=#DC9F4F>あとこれはヒミツなんですが…<BR>レーダーなどの計器は<BR><FONT COLOR=#CFCFCF>Ｌボタン</FONT>で出したり消したりできます</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>Here's a secret...<BR>You can put out the radar and<BR>other gauges with the <FONT COLOR=#CFCFCF>L Button</FONT>.</FONT>")
 
 open4toast16_2:
 //"<FONT COLOR=#DC9F4F>この世界にただ一つ、<BR>たった一つ、<BR>本当に一つだけ…</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Only one in this world,<BR>only one,<BR>really the only one.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>The only one in this world,<BR>just one,<BR>really the only one.</FONT>")
 open4toast16_3:
 //"<FONT COLOR=#DC9F4F>夜にならないと見えない、<BR>透明な通路があります</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>There is a transparent passage<BR>that can only be seen<BR>at night.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>There is a transparent passage<BR>that can only be seen at night.</FONT>")
 open4toast16_4:
 //"<FONT COLOR=#DC9F4F>なにしろ一つだけなので<BR>必見です。<BR>ぜひ探してでもごらん下さい</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Because there is only one,<BR>you must see it...<BR>By all means, please look for it.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Because there is only one,<BR>you should see it...<BR>By all means, please look for it!</FONT>")
 
 open4toast17_2:
 //"<FONT COLOR=#DC9F4F>空を飛んでいて<BR>なぜか高度が上がらなくなる…<BR>そんな覚え、ありませんか？</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Flying into the sky,<BR>until the altitude does not rise...<BR>It happened to you, isn't it?</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>As you rise into the sky, suddenly<BR>you cannot go any higher...<BR>Did that happen to you?</FONT>")
 open4toast17_3:
 //"<FONT COLOR=#DC9F4F>実は「じっけんワールド」では<BR><FONT COLOR=#DC4F00>空を飛ぶブロックごとに<BR>飛べる高さの限界がある</FONT>んです</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>In this world, for <FONT COLOR=#DC4F00>each block<BR>that can fly</FONT>, there's a limit<BR>of height that it can reach.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>In this world, for <FONT COLOR=#DC4F00>every block<BR>that can fly</FONT>, there's a limit<BR>of altitude that it can reach.</FONT>")
 open4toast17_4:
 //"<FONT COLOR=#DC9F4F>高く飛びたくてしょうがねえ方は<BR>ぜひともさらに高性能のブロックを<BR>お探しください</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>If you want to go higher,<BR>look for more powerful blocks.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>If you want to go higher,<BR>please look for<BR>more powerful blocks.</FONT>")
 open4toast17_5:
 //"<FONT COLOR=#DC9F4F>…ついでに<BR>書かせていただきますと、</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>...While I'm at it,<BR>as I take pleasure in writing this,</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>...By the way,<BR>I would also like to mention...</FONT>")
 open4toast17_6:
 //"<FONT COLOR=#DC9F4F>わたくし食パン屋の店主は<BR>この食パンを最後に<BR>修行の旅に出させていただきます</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>I am the owner of the bakery.<BR>This bread will be the last one<BR>as I'm going on a journey.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>I, the owner of the bakery,<BR>will use this last bread<BR>before leaving on a journey.</FONT>")
 open4toast17_7:
 //"<FONT COLOR=#DC9F4F>今までの当店の食パンのヒントが<BR>あなたの旅の助けになっていれば<BR>これ以上の幸せはありません</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>If my bread hints have helped you<BR>on your journey,<BR>I cannot be happier.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>If my bread hints so far have<BR>helped you on your adventure,<BR>I couldn't be happier.</FONT>")
 open4toast17_8:
 //"<FONT COLOR=#DC9F4F>本当にありがとうございました<BR>なお、行き先はヒミツです</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>I present my sincere thanks to you.<BR>My destination is a secret.</FONT>")
 
 open4toast18_2:
 //"<FONT COLOR=#DC9F4F>公園と言えばすべり台、<BR>「じっけんワールド」と言っても<BR>すべり台です</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Remember park slides?<BR>In this world, while we're<BR>talking about slides...</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>When you think of parks,<BR>you think of a slide.<BR>This world makes no exception.</FONT>")
 open4toast18_3:
 //"<FONT COLOR=#DC9F4F>人生のように<BR>すべり出したら止まりません。<BR>最初に入るときの向きが大事です</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>When you slide, you cannot stop.<BR>The direction as you enter is<BR>very important.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Just like life, when you start<BR>slipping away, you cannot stop.<BR>It's all about the direction.</FONT>")
 open4toast18_4:
 //"<FONT COLOR=#DC9F4F><FONT COLOR=#DC4F00>せいぎょそうち</FONT>を使っていれば、<BR>すべりながら曲がることが出来るので<BR>わりとラクかもしれません</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>If you use the <FONT COLOR=#DC4F00>Controller</FONT>,<BR>you can turn while sliding,<BR>it might be a little easier.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>If you use the <FONT COLOR=#DC4F00>Control Unit</FONT>,<BR>you can turn while sliding,<BR>it might be a little easier.</FONT>")
 
 open4toast19_2:
 //"<FONT COLOR=#DC9F4F>ここの食パンと言えばヒント、<BR>ここのピラミッドと言えば湿気です</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Speaking of Bread Hints here,<BR>the Pyramid here is pretty humid.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Speaking of bread hints here,<BR>the Pyramid here is pretty humid.</FONT>")
 open4toast19_3:
 //"<FONT COLOR=#DC9F4F>このピラミッドの中は湿気のため<BR>いまいち機械がまともに動きません</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Because of the humidity,<BR>gauges are going haywire.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Because of the humidity,<BR>machines don't work properly.</FONT>")
 open4toast19_4:
 //"<FONT COLOR=#DC9F4F>そのため高度の表示がこわれたり<BR>空を飛ぶブロックの性能が落ちたりと<BR>イヤーンな感じですが</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>The altitude display is broken,<BR>flying blocks drops in<BR>performance...</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>The altitude display is broken,<BR>flying blocks don't work,<BR>this is not really nice...</FONT>")
 open4toast19_5:
 //"<FONT COLOR=#DC9F4F>ブロックがこわれたりする<BR>わけではないので<BR>そんなに困る事もないかと思います</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>There's nothing to worry about,<BR>the blocks are not breaking.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>It's not like the blocks are<BR>breaking however, so it doesn't<BR>seem that problematic.</FONT>")
 
 open4toast20_2:
 //"<FONT COLOR=#EF9FBF>どーも、食パン屋です。<BR>よろしくっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>This is the bakery.<BR>Nice to meet you!</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>Hello! This is the bakery.<BR>Nice to meet you.</FONT>")
 open4toast20_3:
 //"<FONT COLOR=#EF9FBF>えっとですね、店主の兄さんが<BR>旅に出ちゃったので、わたくしが<BR>代わりをやることにしましたっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>The owner is my older brother.<BR>Since he is gone on a journey,<BR>I'm taking his place for now.</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>The owner is my older brother.<BR>Since he is gone on a journey,<BR>I'm taking his place now!</FONT>")
 open4toast20_4:
 //"<FONT COLOR=#EF9FBF>それでですね、わたくしの食パンには<BR>兄さんにソンケイのネンをこめて<BR>顔のもようを焼いてみましたっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>That's right,<BR>in reverence to my older brother,<BR>I've burned his face on the bread.</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>That's right,<BR>as a nod to my older brother,<BR>I've baked his face on the bread.</FONT>")
 open4toast20_5:
 //"<FONT COLOR=#EF9FBF>ステキですよねー。<BR>ちなみに双子だから、<BR>わたくしの顔もこんな感じですっ！</FONT>"
   textASCII0("<FONT COLOR=#EF9FBF>Isn't that nice?<BR>By the way, we're twins,<BR>so my face is like this too!</FONT>")
 open4toast20_6:
 //"<FONT COLOR=#EF9FBF>でもですね、顔のもようがあっても<BR>当店の食パンは無添加無漂白で<BR>とにかく大安心っ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>Even with this face,<BR>our bread is additive-free<BR>so this is still safe!</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>Even with this baked face,<BR>our bread is additive-free<BR>so this is still safe!</FONT>")
 
 open4toast21_2:
 //"<FONT COLOR=#EF9FBF>えっとですね、そっちにあるみたいな<BR>せまくて長いところをすすむときは、</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>It looks like you're standing<BR>to a long and thin passageway.</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>You know, when you go down<BR>a long and narrow passageway<BR>like right now...</FONT>")
 open4toast21_3:
 //"<FONT COLOR=#EF9FBF><FONT COLOR=#CFCFCF>Ｒボタン</FONT>でですね、<BR>自動車のマークにきりかえておくと<BR>いい感じみたいですっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>With the <FONT COLOR=#CFCFCF>R Button</FONT>,<BR>you can change into a car,<BR>it feels so good!</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>With the <FONT COLOR=#CFCFCF>R Button</FONT>,<BR>you can switch to the car symbol,<BR>it feels so much better!</FONT>")
 
 open4toast22_2:
 //"<FONT COLOR=#EF9FBF>えっとですね、この部屋は<BR>テッペンにある部屋だけあって<BR>いいブロックがあるそうなんですっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>This room is the<BR>only room at the top.<BR>I've heard of a nice block in there!</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>In this room,<BR>I've heard of a nice block<BR>at the top room!</FONT>")
 open4toast22_3:
 //"<FONT COLOR=#EF9FBF>でもですね、そういうブロックは<BR>イジワルな場所にかくしてあったり<BR>するそうですっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>But the block seems<BR>to be hidden in a nasty place!</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>But you know what, the block<BR>seems to be hidden in<BR>a really awkward place!</FONT>")
 open4toast22_4:
 //"<FONT COLOR=#EF9FBF>だからですね、ちがうもようの<BR>カベとかには例によって<BR>どんどんぶつかってみましょっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>There are different<BR>patterns of walls.<BR>Let's bump into those!</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>That is why you should bump<BR>into different kinds of walls!</FONT>")
 
 open4toast23_2:
 //"<FONT COLOR=#EF9FBF>えっとですね、空を飛ぶときには<BR>たぶん羽根をつけて<BR>いると思いますけども、</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>Well... If you want to fly...<BR>You may think putting on wings<BR>might be a good idea,</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>Well, when you fly around,<BR>you are probably using wings<BR>right now...</FONT>")
 open4toast23_3:
 //"<FONT COLOR=#EF9FBF>時にはですね、つけていない方が<BR>すすみやすい事があるんですっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>But, perhaps...<BR>there's something easier to use.</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>But sometimes there's<BR>an easier way without those wings.</FONT>")
 open4toast23_4:
 //"<FONT COLOR=#EF9FBF>それはですね、まっすぐ上に<BR>行きたい時とかなんですっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>Sometimes, you just want<BR>to go straight up, right?</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>You just want to go<BR>straight up, right?</FONT>")
 open4toast23_5:
 //"<FONT COLOR=#EF9FBF>これはですね、羽根をつけると<BR>落ちるのも上にすすむのも<BR>遅くなっちゃうせいなんですっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>That is, if you put wings,<BR>they can slow you down.</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>When you attach wings,<BR>they would slow down both<BR>the fall and the ascent.</FONT>")
 open4toast23_6:
 //"<FONT COLOR=#EF9FBF>だからですね、ヘリコプターのように<BR>どうりょくのすすむ向きを上にして<BR>羽根をつけないようにすれば、</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>Maybe, you could go upwards,<BR>with some kind of force,<BR>like an helicopter.</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>Maybe you could go upwards,<BR>with some kind of force,<BR>like an helicopter.</FONT>")
 open4toast23_7:
 //"<FONT COLOR=#EF9FBF>意外とですね、羽根があるモデルより<BR>すすみやすいかもしれないですっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>It's amazing,<BR>how easier it may be<BR>compared to a model with wings!</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>It might be surprising how easier<BR>it may be compared to<BR>a model with wings!</FONT>")
 
 open4toast24_2:
 //"<FONT COLOR=#EF9FBF>えっとですね、パワースターって<BR>全部のブロックが<BR>何倍にも強くなる気がしますが、</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>Well, it looks like the Power Star<BR>is making all the blocks<BR>much stronger.</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>Well, I thought the Power Star<BR>would make all the blocks<BR>a lot stronger.</FONT>")
 open4toast24_3:
 //"<FONT COLOR=#EF9FBF>そうじゃないのもあってですね、<BR>例えば最初から最強のブロックは<BR>全然変わんなかったりしますっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>But there are a few that<BR>won't change, like the strongest<BR>blocks to begin with.</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>But the strongest blocks<BR>from the beginning<BR>haven't changed at all.</FONT>")
 open4toast24_4:
 //"<FONT COLOR=#EF9FBF>これはですね、<BR>エンジンにも言えるので<BR>カンちがいしないでくださいねっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>Don't compare it to engines.<BR>They're different.</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>Same thing for the engines,<BR>don't get the wrong idea!</FONT>")
 open4toast24_5:
 //"<FONT COLOR=#EF9FBF>ついでに書くとですね、<BR>わたくしも兄さんに続いて<BR>旅に出ることにしましたっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>As I am writing this,<BR>I have decided to go on a journey,<BR>like my older brother!</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>By the way, I have decided to<BR>follow the footsteps of my brother<BR>and go on a journey too!</FONT>")
 open4toast24_6:
 //"<FONT COLOR=#EF9FBF>なのでですね、<BR>これが最後の食パンです。<BR>今までありがとうございましたっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>So, this is my last bread.<BR>Thank you very much!</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>So, this is my last loaf of bread.<BR>Thank you very much!</FONT>")
 open4toast24_7:
 //"<FONT COLOR=#EF9FBF>せっかくなのでですね、<BR>ヒント食パンらしく<BR>行き先のヒントも書いちゃいますっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>It's big news,<BR>but typical of bread hints,<BR>I'll write hints of our destinations!</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>Because it's a big deal,<BR>typical of bread hints,<BR>I'll write hints of our destinations!</FONT>")
 open4toast24_8:
 //"<FONT COLOR=#EF9FBF>えっとですね、<BR>兄さんは遠いところで<BR>わたくしは高いところですっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>Well,<BR>my older brother is very far away,<BR>while I am at a very high place!</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>Let's see,<BR>my older brother is very far away,<BR>while I am very high above!</FONT>")
 open4toast24_9:
 //"<FONT COLOR=#EF9FBF>キョウミがあったらですね、<BR>来てくださーいっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>If you are interested,<BR>please come!</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>If you are curious,<BR>please come see us!</FONT>")
 
 open4toast25_2:
 //"<FONT COLOR=#DC9F4F>どうも、食パン屋です。</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>Greetings, this is the baker.</FONT>")
 open4toast25_3:
 //"<FONT COLOR=#DC9F4F>わたくしここで修行をしているうちに<BR>いつの間にか…<BR>自分がブロックになっていました</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>I did not realize<BR>as I was training here...<BR>I became a block.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>I have been training here<BR>for a while and before I knew it...<BR>I became a block.</FONT>")
 open4toast25_4:
 //"<FONT COLOR=#DC9F4F>お客様へのご奉仕と思うと、<BR>喜ばしい限りです。<BR>どうぞお使い下さい</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>I would be glad if you think<BR>I am useful. Please go ahead<BR>and take me with you.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>I think of it as a service<BR>to my customers.<BR>Please go ahead and use it.</FONT>")
 
 open4toast26_2:
 //"<FONT COLOR=#EF9FBF>どーも、食パン屋ですっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>Hey! This is the baker.</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>Hello! This is the baker.</FONT>")
 open4toast26_3:
 //"<FONT COLOR=#EF9FBF>えっとですね、わたくしここで<BR>いっしょうけんめい<BR>修行してたら、</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>Well, I have been training<BR>hard in this place.</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>Well, you see, I have been training<BR>in this place for a while.</FONT>")
 open4toast26_4:
 //"<FONT COLOR=#EF9FBF>気がつくとですね、わたくし<BR>ブロックに変身しちゃってましたっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>And then suddenly,<BR>I noticed I was transformed<BR>into a block!</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>And then suddenly,<BR>I noticed I got turned into a block!</FONT>")
 open4toast26_5:
 //"<FONT COLOR=#EF9FBF>これほどですね、お客様のために<BR>なれる事は他にありませんっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>Until now, I haven't been<BR>doing anything for the customers!</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>There's nothing else I can do<BR>for my customers like this!</FONT>")
 open4toast26_6:
 //"<FONT COLOR=#EF9FBF>だからですね、使って下さいねっ！</FONT>"
-  textASCII0("<FONT COLOR=#EF9FBF>That's why,<BR>please take me with you!</FONT>")
+  textASCII0("<FONT COLOR=#EF9FBF>Please use it as you want!</FONT>")
 
 open4_place01:
 //虚無空間
@@ -1627,3 +1627,4 @@ dw open4_place01, open4_place02, open4_place03, open4_place04, open4_place05, op
 dw open4_place07, open4_place08, open4_place09, open4_place10, open4_place11, open4_place12
 
 //Test via Pause Menu: 805B052C = ID
+//Test via Picking Up a block: 804FBFE0 (breakpoint)
