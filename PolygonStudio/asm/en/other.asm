@@ -18,7 +18,7 @@ other_autosavereturn4:
 //3 lines "The painting will disappear. Are you sure?"
 other_paintgone1:
 //さくひんのペイントが
-  textASCII0("The paint job")
+  textASCII0("The paint")
 other_paintgone2:
 //消えますが
   textASCII0("will disappear.")
@@ -29,10 +29,10 @@ other_paintgone3:
 //3 lines "The stamp will disappear. Are you sure?"
 other_stampgone1:
 //オリジナルスタンプが
-  textASCII0("The stamp will")
+  textASCII0("The loaded stamp")
 other_stampgone2:
 //消えますが
-  textASCII0("disappear.")
+  textASCII0("will disappear.")
 other_stampgone3:
 //よろしいですか？
   textASCII0("Are you sure?")
