@@ -181,7 +181,7 @@ seek(0x684BB2); dh (open2_noblockanymore)
 seek(0x69EF50); base 0x80516510
 open3_nopowerblock:
 //RAM 80516510 -  <BR><CENTER><FONT COLOR=#DC6464>どうりょくブロックはありません</FONT></CENTER>
-  textASCII0(" <BR><CENTER><FONT COLOR=#DC6464>There is no power block.</FONT></CENTER>")
+  textASCII0(" <BR><CENTER><FONT COLOR=#DC6464>There are no power blocks.</FONT></CENTER>")
 open3_powerblock:
 //RAM 80516560 -  <BR><CENTER>★<FONT COLOR=#DC9600>どうりょくブロックのヒミツ</FONT>★</CENTER>
   textASCIIE(" <BR><CENTER>")
@@ -463,7 +463,7 @@ open4desc_003:
   textASCII0("It floats on water.")
 open4desc_004:
 //どこでも浮きます
-  textASCII0("It floats anywhere.")
+  textASCII0("It floats everywhere.")
 open4desc_005:
 //かっくうや飛行に使います
 open4desc_006:
@@ -473,7 +473,7 @@ open4desc_007:
   textASCII0("Use it for flight and gliding.")
 open4desc_008:
 //向いた方に進むようになります
-  textASCII0("You can move to any direction.")
+  textASCII0("Move forward in any direction.")
 open4desc_009:
 //速く歩けます
 open4desc_013:
@@ -518,7 +518,7 @@ open4desc_022:
   textASCII0("Travel on land and on water.")
 open4desc_023:
 //坂や悪路を走れます
-  textASCII0("Travel uphill and bad roads.")
+  textASCII0("Travel uphill and rough roads.")
 open4desc_024:
 //エラー４２
   textASCII0("Error 42")
@@ -548,7 +548,7 @@ open4desc_034:
   textASCII0("You can swim underwater.")
 open4desc_035:
 //速く水中を進みます
-  textASCII0("You can swim faster underwater.")
+  textASCII0("You can swim underwater faster.")
 open4desc_036:
 //エラー５７
   textASCII0("Error 57")
@@ -590,7 +590,7 @@ open4desc_049:
   textASCII0("You can speed up the machine.")
 open4desc_050:
 //全ての性能が最高になります
-  textASCII0("Push everything to its limits!")
+  textASCII0("Power everything to its limits!")
 
 //No descriptions for ? Blocks
 open4desc_051:
@@ -639,16 +639,16 @@ open4pdesc_004:
   textASCII0("Reach for the stars!")
 open4pdesc_005:
 //…タレスタで見たことある…？
-  textASCII0("...Have you seen a talent with this?")
+  textASCII0("Haven't you seen a talent with this?")
 open4pdesc_006:
 //空への招待券
-  textASCII0("An invitation to the sky.")
+  textASCII0("An invitation to the skies.")
 open4pdesc_007:
 //21世紀の科学の結晶
   textASCII0("The science of the 21st century.")
 open4pdesc_008:
 //すべるところでべんりです
-  textASCII0("Useful in slippery places.")
+  textASCII0("It's useful and smooth.")
 open4pdesc_009:
 //ズボンの下にはびっしりスネ毛
   textASCII0("There's hair under the pants.")
@@ -659,37 +659,37 @@ open4pdesc_011:
   textASCII0("You'd want to keep this.")
 open4pdesc_012:
 //ゾウのわりには小さいですね
-  textASCII0("It is rather small for the elephant.")
+  textASCII0("It is small for an elephant.")
 open4pdesc_013:
 //たぶん忠実です
-  textASCII0("This is probably faithful.")
+  textASCII0("It is probably loyal.")
 open4pdesc_014:
 //遅そうですけど
-  textASCII0("It is rather slow.")
+  textASCII0("It seems rather slow.")
 open4pdesc_015:
 //エラー２７
   textASCII0("Error 27")
 open4pdesc_016:
 //自転車のようなおもむき
-  textASCII0("It has a nice bicycle feel.")
+  textASCII0("It feels like a bicycle.")
 open4pdesc_017:
 //オーソドックスなスタイル
-  textASCII0("This is pretty orthodox.")
+  textASCII0("This is rather orthodox.")
 open4pdesc_018:
 //サウンドが力強いです
   textASCII0("The sound is powerful.")
 open4pdesc_019:
 //地上最速です
-  textASCII0("The fastest wheels on land.")
+  textASCII0("The fastest wheels ever.")
 open4pdesc_020:
 //TPOに合わせて使い分けましょう
-  textASCII0("Use it at the right place.")
+  textASCII0("Use it when it's time.")
 open4pdesc_021:
 //ジャンプ大好き、止まらない
   textASCII0("Can't stop jumping!")
 open4pdesc_022:
 //水陸両用、アウトドア向け
-  textASCII0("Multi-purpose for outdoor use.")
+  textASCII0("For amphibious and outdoor use.")
 open4pdesc_023:
 //鋼鉄のミリョクがつまっています
   textASCII0("This steel cannot be matched.")
@@ -701,22 +701,22 @@ open4pdesc_025:
   textASCII0("It tastes like meat.")
 open4pdesc_026:
 //カラアゲにすると美味
-  textASCII0("Deep-fried, it's delicious!")
+  textASCII0("It's delicious when it's deep-fried.")
 open4pdesc_027:
 //エラー４５
   textASCII0("Error 45")
 open4pdesc_028:
 //気持ち悪いけどおいしいらしい
-  textASCII0("...it kind of looks tasty.")
+  textASCII0("...it kinda looks tasty.")
 open4pdesc_029:
 //ちょっと固くて食べにくい
   textASCII0("It is a bit tough to eat.")
 open4pdesc_030:
 //はかない子ども時代のシンボル
-  textASCII0("The symbol of childhood.")
+  textASCII0("The symbol of fleeting childhood.")
 open4pdesc_031:
 //飛びそうで飛ばないじれったい一品
-  textASCII0("It's vexing that it cannot fly.")
+  textASCII0("It looks like it can fly, but it can't.")
 open4pdesc_032:
 //あげて食べるとカルシウムたっぷり
 open4pdesc_033:
@@ -736,10 +736,10 @@ open4pdesc_037:
   textASCII0("Fly like in a fairy tale.")
 open4pdesc_038:
 //赤く塗れば赤トンボ？
-  textASCII0("Paint it red, like a red dragonfly?")
+  textASCII0("Paint it red, like a Sympetrum?")
 open4pdesc_039:
 //空の定番アイテム
-  textASCII0("The classic of the sky.")
+  textASCII0("The staple of the skies.")
 open4pdesc_040:
 //モンスターな感じ
   textASCII0("Feels like a monster.")
@@ -763,7 +763,7 @@ open4pdesc_046:
   textASCII0("This makes the difference!")
 open4pdesc_047:
 //宇宙最速！世界の彼方を目指せ！
-  textASCII0("The fastest! Go beyond this world!")
+  textASCII0("The fastest in the universe! Go!")
 open4pdesc_048:
 //だけど生き物には効きません
 open4pdesc_049:
@@ -771,7 +771,7 @@ open4pdesc_049:
   textASCII0("It does not work for living things.")
 open4pdesc_050:
 //どんなモデルも最強最高に！
-  textASCII0("Any model are now the strongest!")
+  textASCII0("The strongest model you can get!")
 
 //? Blocks
 open4pdesc_051:
@@ -800,7 +800,7 @@ open4pdesc_058:
   textASCII0("He seems happy.")
 open4pdesc_059:
 //わりとナイスな飛行機です
-  textASCII0("A relatively good airplane.")
+  textASCII0("A rather nice airplane.")
 open4pdesc_060:
 //痛そうですね
   textASCII0("It looks painful.")
@@ -809,10 +809,10 @@ open4pdesc_061:
   textASCII0("Ancient romance.")
 open4pdesc_062:
 //よく熟してます
-  textASCII0("Craving for it.")
+  textASCII0("It's very ripe.")
 open4pdesc_063:
 //ハーブの香りが疲れをいやす…かも
-  textASCII0("The smell may cure fatigue.")
+  textASCII0("The scent may cure fatigue... is it?")
 open4pdesc_064:
 //がんばってるみたいです
   textASCII0("He is doing his best.")
@@ -821,25 +821,25 @@ open4pdesc_065:
   textASCII0("A mysterious sphere.")
 open4pdesc_066:
 //だがし屋にありそう
-  textASCII0("You can find it in a candy shop.")
+  textASCII0("It looks like it's from the bakery.")
 open4pdesc_067:
 //底のないキューブ
-  textASCII0("Cube without a bottom.")
+  textASCII0("A bottomless cube.")
 open4pdesc_068:
 //永遠のかがやき
-  textASCII0("Eternally shining.")
+  textASCII0("Eternal brillance.")
 open4pdesc_069:
 //神秘のエンスイ
   textASCII0("A mysterious cone.")
 open4pdesc_070:
 //秘密のチューブ
-  textASCII0("The secret of the tube.")
+  textASCII0("A secret tube.")
 open4pdesc_071:
 //水面のゆらめき
-  textASCII0("The surface of the water.")
+  textASCII0("A swaying water surface.")
 open4pdesc_072:
 //ぶくぶくぶくっ
-  textASCII0("It's boiling.")
+  textASCII0("It's sinking.")
 open4pdesc_073:
 //びびびびびびっ
   textASCII0("It's buzzing.")
@@ -848,7 +848,7 @@ open4pdesc_074:
   textASCII0("Ka-boom!")
 open4pdesc_075:
 //ぴかぴかぴかっ
-  textASCII0("It's shiny.")
+  textASCII0("It's sparkly.")
 open4pdesc_076:
 //もくもくもくっ
   textASCII0("It's smoky.")
@@ -1625,3 +1625,5 @@ dw open4toast26_1, open4toast26_2, open4toast26_3, open4toast26_4, open4toast26_
 //Places
 dw open4_place01, open4_place02, open4_place03, open4_place04, open4_place05, open4_place06
 dw open4_place07, open4_place08, open4_place09, open4_place10, open4_place11, open4_place12
+
+//Test via Pause Menu: 805B052C = ID
