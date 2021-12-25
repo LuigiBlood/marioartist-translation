@@ -1118,7 +1118,7 @@ open4toast05_3:
   textASCII0("<FONT COLOR=#DC9F4F>I have a lot to talk about,<BR>so if you don't want to hear,<BR>press the <FONT COLOR=#2FDF2F>B Button</FONT> to stop.</FONT>")
 open4toast05_4:
 //"<FONT COLOR=#DC9F4F>さて、「じっけんワールド」では<BR>覚えきれないほど<FONT SIZE=1>かもしれないくらい</FONT><BR>いろいろなブロックが落ちています</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>There are so many blocks<BR>that it's hard to remember them all<BR><FONT SIZE=1>or maybe I can.</FONT></FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>There are so many blocks<BR>that it's hard to remember them all<BR><FONT SIZE=1>or maybe I can...</FONT></FONT>")
 open4toast05_5:
 //"<FONT COLOR=#DC9F4F>そのうちの<FONT COLOR=#DC4F00>どうりょくブロック</FONT>は<BR>「じっけんワールド」で<FONT COLOR=#DC4F00>動く</FONT>ための<BR>重要なブロックであったりもします</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>Among them are the <FONT COLOR=#DC4F00>power blocks</FONT>.<BR>To get around in this world,<BR><FONT COLOR=#DC4F00>these blocks are essential</FONT>.</FONT>")
@@ -1149,10 +1149,10 @@ open4toast06_4:
   textASCII0("<FONT COLOR=#DC9F4F><FONT COLOR=#DC4F00>The angle of the slope<BR>that a block can climb</FONT> is<BR>different for each.</FONT>")
 open4toast06_5:
 //"<FONT COLOR=#DC9F4F>また、<BR>[ジャンプだと届かないよ～]<BR>というところもあるかと思います</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>You may also try to reach<BR>certain places but you<BR>cannot reach it with a jump.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>You may also try to get to<BR>certain places but you cannot<BR>reach them even with a jump.</FONT>")
 open4toast06_6:
 //"<FONT COLOR=#DC9F4F>そんな時は<BR>足のブロックを使ってみて下さい。<BR><FONT COLOR=#DC4F00>足なら高くジャンプできます</FONT></FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>In that case, use Leg blocks.<BR><FONT COLOR=#DC4F00>Legs makes you jump higher</FONT>.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>In that case, use Leg blocks.<BR><FONT COLOR=#DC4F00>Legs make you jump higher</FONT>.</FONT>")
 
 open4toast07_2:
 //"<FONT COLOR=#DC9F4F>各所にそびえ立つ謎のパネル…<BR>その正体は誰にも知られる事なく<BR>訪れる人々を見守っています</FONT>"
@@ -1362,7 +1362,7 @@ open4toast18_2:
   textASCII0("<FONT COLOR=#DC9F4F>When you think of parks,<BR>you think of a slide.<BR>This world makes no exception.</FONT>")
 open4toast18_3:
 //"<FONT COLOR=#DC9F4F>人生のように<BR>すべり出したら止まりません。<BR>最初に入るときの向きが大事です</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Just like life, when you start<BR>slipping away, you cannot stop.<BR>It's all about the direction.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Just like life, when you start<BR>slipping away, you cannot stop.<BR>It's all about the direction you take.</FONT>")
 open4toast18_4:
 //"<FONT COLOR=#DC9F4F><FONT COLOR=#DC4F00>せいぎょそうち</FONT>を使っていれば、<BR>すべりながら曲がることが出来るので<BR>わりとラクかもしれません</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>If you use the <FONT COLOR=#DC4F00>Control Unit</FONT>,<BR>you can turn while sliding,<BR>it might be a little easier.</FONT>")
