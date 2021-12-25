@@ -64,3 +64,40 @@ seek(0x1359F4); sb t4, 0(t5)
 seek(0x135A10); nop
 seek(0x135A2C); nop
 seek(0x135A64); nop
+
+print "  - Add lowercase repositioning\n"
+seek(0x165EE8); base 0x80297280
+  j hack_lowercase
+  nop
+hack_lowercase_jmp:
+  nop
+
+seek(0x19E698); base 0x802CFA30
+hack_lowercase:
+  slti at,t1,0x41
+  bne at,0,+
+  nop
+  slti at,t1,0x5B
+  bne at,0,hack_lowercase_change
+  nop
++;
+  ori at,0,0xC
+  beq t1,at,hack_lowercase_change
+  nop
+  ori at,0,0x1B
+  bne t1,at,hack_lowercase_normal
+  nop
+hack_lowercase_change:
+  addiu t7,t7,4
+  sw t7,0(v0)
+  or t7,t6,s6
+  addiu t7,t7,4
+  sw t7,4(v0)
+  j hack_lowercase_jmp
+  nop
+hack_lowercase_normal:
+  sw t7,0(v0)
+  or t7,t6,s6
+  sw t7,4(v0)
+  j hack_lowercase_jmp
+  nop
