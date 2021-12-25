@@ -96,7 +96,7 @@ other_currentgone3:
   textASCII0("Are you sure?")
 
 seek(0x1C9708)
-//RAM 802FAAA0
+//RAM 802FAAA0 - Pointers to each line of text
 dw other_autosavereturn1, other_autosavereturn2, other_autosavereturn3, other_autosavereturn4, 0, 0
 dw other_paintgone1, other_paintgone2, other_paintgone3, 0, 0, 0
 dw other_stampgone1, other_stampgone2, other_stampgone3, 0, 0, 0
@@ -105,6 +105,29 @@ dw other_initdisk1, other_initdisk2, other_initdisk3, other_initdisk4, other_ini
 dw other_initprogress1, other_initprogress2, 0, 0, 0, 0
 dw other_currentgone1, other_currentgone2, other_currentgone3, 0, 0, 0
 
+seek(0x1C97B0)
+//Amount of lines per dialog
+dw 4, 3, 3, 6, 5, 2, 3
+//Dialog Button
+//dw %1001, %1001, %1001, %1010, %1010, %0000, %1001
+dw %1001, %1010, %1001, %1010, %1010, %0000, %1010
+//Button Colors
+db 0x00,0x00,0xFF
+db 0x00,0x00,0xFF
+db 0x00,0xC8,0x00
+db 0xDC,0x00,0x00
+
+//802CE26C - Returns clicked button ID
+//Dialog 1 - Paint will be gone
+seek(0x7C9DDE); dh 1    //Yes (1)
+seek(0x7C9E56); dh 3    //Back (4)
+//Dialog 3&4 - Format
+seek(0x74A82); dh 1    //Yes (1)
+seek(0x74B1A); dh 3    //No (3)
+//Dialog 6 - Current creation will be gone
+seek(0x251FE2); dh 1    //Yes (1)
+seek(0x25200A); dh 3    //Back (4)
+//All other dialogs are left unused
 
 //Default Container Names
 seek(0xE3EAC)
