@@ -542,7 +542,7 @@ save4_9:
 textRegular0("Current creation")
 save4_10:
 //RAM 807C3310 - さつえいしたしゃしん
-textRegular0("Photo Taken")
+textRegular0("Photograph")
 save4_11:
 //RAM 807C3328 - ほじょヨウシに ひょうじ
 textRegular0("Current creation on")
@@ -561,7 +561,7 @@ save4_15:
 textRegular0("All contents of")
 save4_16:
 //RAM 807C337C - なかみすべて
-textRegular0("a container.")
+textRegular0("a container")
 
 save4_e1:
 //RAM 807C3390 - いれものが いっぱいです。\n
@@ -891,7 +891,7 @@ dh $0054	//X Pos
 seek(0x1EDBBE)
 dh (save4_16)
 seek(0x1EDBBE+0x8)
-//dh $005B	//X Pos
+dh $005D	//X Pos
 seek(0x1EDBBE+0x10)
 //dh $006D	//Y Pos
 seek(0x1EDBD6)
