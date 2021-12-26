@@ -483,7 +483,7 @@ open4desc_026:
   textASCII0("You can walk faster.")
 open4desc_010:
 //ラブリーに歩けます
-  textASCII0("You can walk like a lovely person.")
+  textASCII0("You can do a cutesy walk.")
 open4desc_011:
 //とても速く歩けます
 open4desc_012:
@@ -509,10 +509,10 @@ open4desc_019:
   textASCII0("You can drive at high speeds.")
 open4desc_020:
 //地上と水上を歩けます
-  textASCII0("You can walk on land & on water.")
+  textASCII0("Walk on land and on water.")
 open4desc_021:
 //歩いたり泳いだり、はねたりします
-  textASCII0("Walk, Swim, and Splash!")
+  textASCII0("You can walk, swim, and splash!")
 open4desc_022:
 //地上と水上を走れます
   textASCII0("Travel on land and on water.")
@@ -633,7 +633,7 @@ open4pdesc_002:
   textASCII0("The best friend for bathing.")
 open4pdesc_003:
 //鉄なのに浮くのは不思議ですね
-  textASCII0("A miracle that it floats.")
+  textASCII0("It's a miracle that it floats.")
 open4pdesc_004:
 //天空の果てを目指せ！
   textASCII0("Reach for the stars!")
@@ -683,7 +683,7 @@ open4pdesc_019:
   textASCII0("The fastest wheels ever.")
 open4pdesc_020:
 //TPOに合わせて使い分けましょう
-  textASCII0("Use it when it's time.")
+  textASCII0("Use it at the right time.")
 open4pdesc_021:
 //ジャンプ大好き、止まらない
   textASCII0("Can't stop jumping!")
@@ -739,10 +739,10 @@ open4pdesc_038:
   textASCII0("Paint it red, like a Sympetrum?")
 open4pdesc_039:
 //空の定番アイテム
-  textASCII0("The staple of the skies.")
+  textASCII0("A classic of the skies.")
 open4pdesc_040:
 //モンスターな感じ
-  textASCII0("Feels like a monster.")
+  textASCII0("It feels like a monster.")
 open4pdesc_041:
 //エラー６５
   textASCII0("Error 65")
@@ -1204,7 +1204,7 @@ open4toast08_5:
 
 open4toast09_2:
 //"<FONT COLOR=#DC9F4F>「じっけんワールド」には<BR>道行くお客様方をジャマする<BR>大小の生き物がいたりします</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>In this world, there are<BR>small and big creatures<BR>who may get in your way.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>In this world, there are<BR>big and small creatures<BR>who may get in your way.</FONT>")
 open4toast09_3:
 //"<FONT COLOR=#DC9F4F><FONT COLOR=#DC4F00>大きいソイツ</FONT>は<BR>ブロックが大好きで愛しちゃってて<BR>思わず食べてしまう事があります</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F><FONT COLOR=#DC4F00>The big ones</FONT> loves blocks<BR>so much that they eat them<BR>without thinking.</FONT>")
