@@ -1628,3 +1628,19 @@ dw open4_place07, open4_place08, open4_place09, open4_place10, open4_place11, op
 
 //Test via Pause Menu: 805B052C = ID
 //Test via Picking Up a block: 804FBFE0 (breakpoint)
+
+//Change Default ASCII Font for Room names
+seek(0x686968); ori a1,0,2
+
+seek(0x686C34)
+  ori t4,0,2
+  sw t4,0x18(sp)
+seek(0x686C50)
+  sw t6,0x2C(sp)
+  sw t6,0x28(sp)
+  sw t6,0x24(sp)
+seek(0x686C68)
+  nop
+
+seek(0x686D9C); ori at,0,2
+seek(0x686DC8); sw at,0x18(sp)
