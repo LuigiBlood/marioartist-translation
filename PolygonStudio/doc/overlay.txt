@@ -8,7 +8,7 @@ kids			-	366			399			804DE440
 adult			-	399			412			803B90C0
 studio			-	301			320			804DE440
 game			-	173			174			804DE440
-gallery			-	169			366			8053E8C0
+gallery			-	361			366			8053E8C0
 select			-	97			104			80780000
 block			-	113			173			803B90C0
 selica			-	72			84			8074B000	0x1CE300
