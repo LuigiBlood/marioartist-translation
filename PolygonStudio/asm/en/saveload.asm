@@ -1136,3 +1136,25 @@ sb 0,0x51(sp)		//end
 sw t0,0x10(sp)	//unchanged
 sb v1,0x4E(sp)		//:
 sb v0,0x45(sp)		//Slash
+
+//Change Default File Naming
+seek(0x1FE410); base 0x8077B110
+savedef1:
+textASCII0("Container")
+savedef1_end:
+constant savedef1_size = savedef1_end - savedef1 - 1
+
+seek(0x1FE41C)
+savedef2:
+textASCII0("Creation")
+savedef2_end:
+constant savedef2_size = savedef2_end - savedef2 - 1
+
+//Function 80750FE4
+//If Container name starts with "Container" (いれもの)
+//then name the file "Creation" then number (さくひん)
+seek(0x1D4356); dh savedef1_size
+seek(0x1D4372); dh savedef2_size
+
+//Amount of chars
+seek(0x1D435E); dh 5
