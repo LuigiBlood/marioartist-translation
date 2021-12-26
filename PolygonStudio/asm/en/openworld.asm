@@ -860,6 +860,12 @@ open4pdesc_078:
   textASCII0("It's twinkling.")
 
 //Easter Eggs - RAM 80517580
+//These are sets of five, they appear when hitting items, char per char
+//805ADF30 = Time of Day (Float Value)
+//0.4166666567325592041015625~ (0x3ED55555) (Init)
+//0.0000462962962046731263399~ (0x38422E45) (Added every frame, 805B09AC)
+//the 4th & 5th text appears between 5.0 (0x40A00000) and 22.0 (0x41B00000), at night time, roughly after 30 minutes of play
+
 open4easteregg_001:
 //痛い
 open4easteregg_002:
@@ -886,14 +892,14 @@ open4easteregg_009:
   textSJIS0("Stop it")
 open4easteregg_010:
 //さわんないでよ姉さん
-  textSJIS0("Do Not Panic")
+  textSJIS0("Do not panic")
 
 open4easteregg_011:
 //あぁん
   textSJIS0("Oh")
 open4easteregg_012:
 //いったあい
-  textSJIS0("Ouch")
+  textSJIS0("Uh")
 open4easteregg_013:
 //いやぁん
   textSJIS0("Ahh")
@@ -906,10 +912,10 @@ open4easteregg_015:
 
 open4easteregg_016:
 //ぶら｜ん
-  textSJIS0("Fruit")
+  textSJIS0("Cooking")
 open4easteregg_017:
 //しっぽく
-  textSJIS0("Cooking")
+  textSJIS0("Apple")
 open4easteregg_018:
 //オコジョ
   textSJIS0("Steak")
@@ -922,7 +928,9 @@ open4easteregg_020:
 
 open4easteregg_021:
 //うふふっ♪
-  textSJIS0("Hehehe")
+  textSJISE("Hehehe")
+  dh 0x81F4 //Music Note
+  dh 0
 open4easteregg_022:
 //あははっ！妖精さん！
   textSJIS0("Fairies!")
@@ -963,7 +971,7 @@ open4easteregg_033:
   textSJIS0("Bless")
 open4easteregg_034:
 //うしろのしょうめんだあれ
-  textSJIS0("Behind the scenes")
+  textSJIS0("Questionable")
 open4easteregg_035:
 //欲しがりませんタスマニア
   textSJIS0("Do not want")
@@ -992,13 +1000,13 @@ open4easteregg_042:
   textSJIS0("Qu'est|ce que c'est?")
 open4easteregg_043:
 //アビアント｜
-  textSJIS0("Ambiant")
+  textSJIS0("Ambiance")
 open4easteregg_044:
 //ボンソワ｜ルムッシュウ
   textSJIS0("Bonjour Monsieur")
 open4easteregg_045:
 //ジュテ｜ムモワオシ
-  textSJIS0("Je t'aime moi aussi")
+  textSJIS0("Je t'aime  Moi aussi")
 
 //Toasters RAM 80517860
 open4toast01_1:
