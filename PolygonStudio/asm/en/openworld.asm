@@ -871,126 +871,134 @@ open4easteregg_004:
 open4easteregg_005:
 //痛い
   textSJIS0("Ouch")
+
 open4easteregg_006:
 //痛いよ兄さん
-  textSJIS0("It hurts")
+  textSJIS0("Painful")
 open4easteregg_007:
 //ひどいよ兄さん
-  textSJIS0("It is awful")
+  textSJIS0("Terrible")
 open4easteregg_008:
 //何するんだよ兄さん
-  textSJIS0("What will you do?")
+  textSJIS0("What are you doing?")
 open4easteregg_009:
 //やめてよ姉さん
   textSJIS0("Stop it")
 open4easteregg_010:
 //さわんないでよ姉さん
-  textSJIS0("Do not panic")
+  textSJIS0("Do Not Panic")
+
 open4easteregg_011:
 //あぁん
   textSJIS0("Oh")
 open4easteregg_012:
 //いったあい
-  textSJIS0("Love")
+  textSJIS0("Ouch")
 open4easteregg_013:
 //いやぁん
   textSJIS0("Ahh")
 open4easteregg_014:
 //フンガ｜
-  textSJIS0("Hunger")
+  textSJIS0("Hungry")
 open4easteregg_015:
 //ゴゴゴゴ
-  textSJIS0("Whirr")
+  textSJIS0("Rumbling")
+
 open4easteregg_016:
 //ぶら｜ん
-  textSJIS0("Dang")
+  textSJIS0("Fruit")
 open4easteregg_017:
 //しっぽく
-  textSJIS0("Shoo")
+  textSJIS0("Cooking")
 open4easteregg_018:
 //オコジョ
-  textSJIS0("Ermine")
+  textSJIS0("Steak")
 open4easteregg_019:
 //目玉焼き
-  textSJIS0("Fried")
+  textSJIS0("Egg")
 open4easteregg_020:
 //チクワ
   textSJIS0("Fish")
+
 open4easteregg_021:
 //うふふっ♪
   textSJIS0("Hehehe")
 open4easteregg_022:
 //あははっ！妖精さん！
-  textSJIS0("Haha!Fairies!")
+  textSJIS0("Fairies!")
 open4easteregg_023:
 //白馬の王子様は今どこに？
-  textSJIS0("Where is the prince charming?")
+  textSJIS0("Where is the prince?")
 open4easteregg_024:
 //うふふふふふふふふふふふふふふっ
   textSJIS0("Hehehehehehehehe")
 open4easteregg_025:
 //むにゃむにゃケ｜キもう食べれない
-  textSJIS0("Eating the cake")
+  textSJIS0("Enough")
+
 open4easteregg_026:
 //痛いじゃないですか
   textSJIS0("Does it hurt?")
 open4easteregg_027:
 //やめてください
-  textSJIS0("Please stop")
+  textSJIS0("Please stop!")
 open4easteregg_028:
 //訴えますよ
-  textSJIS0("Appealing")
+  textSJIS0("I am suing you!")
 open4easteregg_029:
 //痛ぇンだよコラァ！
   textSJIS0("Hey it hurts!")
 open4easteregg_030:
 //どこ見て歩いてやがる！
-  textSJIS0("Walking around")
+  textSJIS0("Watch your step!")
+
 open4easteregg_031:
 //骨折り損のくたびれもうけ
-  textSJIS0("You are wasting your time")
+  textSJIS0("What a waste")
 open4easteregg_032:
 //泣きっ面にハチ
-  textSJIS0("Crying")
+  textSJIS0("Cursed")
 open4easteregg_033:
 //犬も歩けば棒に当たる
-  textSJIS0("You will not be so lucky")
+  textSJIS0("Bless")
 open4easteregg_034:
 //うしろのしょうめんだあれ
   textSJIS0("Behind the scenes")
 open4easteregg_035:
 //欲しがりませんタスマニア
-  textSJIS0("Do not want Tasmania")
+  textSJIS0("Do not want")
+
 open4easteregg_036:
 //よだれ
   textSJIS0("Drool")
 open4easteregg_037:
 //わきげ
-  textSJIS0("Careless")
+  textSJIS0("Hair")
 open4easteregg_038:
 //ねあせ
-  textSJIS0("Night Sweat")
+  textSJIS0("Sweat")
 open4easteregg_039:
 //くびれ
-  textSJIS0("Narrow")
+  textSJIS0("Waist")
 open4easteregg_040:
 //うなじ
-  textSJIS0("Sea Route")
+  textSJIS0("Neck")
+
 open4easteregg_041:
 //ボンジュ｜ルマドモワゼル
   textSJIS0("Bonjour Mademoiselle")
 open4easteregg_042:
 //ケスクセ？
-  textSJIS0("Erase")
+  textSJIS0("Qu'est|ce que c'est?")
 open4easteregg_043:
 //アビアント｜
-  textSJIS0("Ambient")
+  textSJIS0("Ambiant")
 open4easteregg_044:
 //ボンソワ｜ルムッシュウ
   textSJIS0("Bonjour Monsieur")
 open4easteregg_045:
 //ジュテ｜ムモワオシ
-  textSJIS0("Je t'aime moi|aussi")
+  textSJIS0("Je t'aime moi aussi")
 
 //Toasters RAM 80517860
 open4toast01_1:
@@ -1506,7 +1514,7 @@ open4_place07:
   textASCII0("THE PYRAMID")
 open4_place08:
 //ひ ろ ち ゃ ん 穴
-  textASCII0("HERO'S HOLE")
+  textASCII0("HOLE BASIS")
 open4_place09:
 //中 枢 フ ェ ノ ミ ナ ン
   textASCII0("CENTRAL PHENOMENIN")
