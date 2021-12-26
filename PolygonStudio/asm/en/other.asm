@@ -130,55 +130,72 @@ seek(0x25200A); dh 3    //Back (4)
 //All other dialogs are left unused
 
 //Default Container Names
-seek(0xE3EAC)
-//ブロックさくひん (81A1)
+seek(0xE3EAC); base 0x800709EC
+default_container1:
+//RAM 800709EC - ブロックさくひん (81A1)
 textASCIIE("Block Creations")
 dh 0x81A1
 db 0x00
 
-seek(0xE3EC0)
-//３Ｄさくひん (86A3)
-textASCIIE("3D Creations")
+default_container2:
+//RAM 80070A00 - ３Ｄさくひん (86A3)
+textASCIIE("Model Creations")
 dh 0x86A3
 db 0x00
 
-seek(0xE3ED0)
-//ステ－ジさくひん (819C)
+default_container3:
+//RAM 80070A10 - ステ－ジさくひん (819C)
 textASCIIE("Stage Creations")
 dh 0x819C
 db 0x00
 
-seek(0xE3EE4)
-//２Ｄさくひん (86A6)
-textASCIIE("2D Creations")
+default_container4:
+//RAM 80070A24 - ２Ｄさくひん (86A6)
+textASCIIE("Photo Creations")
 dh 0x86A6
 db 0x00
 
-seek(0xE3EF4)
-//どうりょくマシン (86A4)
+default_container5:
+//RAM 80070A34 - どうりょくマシン (86A4)
 textASCIIE("Power Machines")
 dh 0x86A4
 db 0x00
 
-seek(0xE3F08)
-//いれもの１
+default_container6:
+//RAM 80070A48 - いれもの１
 textASCII0("Container 1")
 
-seek(0xE3F14)
-//いれもの２
+default_container7:
+//RAM 80070A54 - いれもの２
 textASCII0("Container 2")
 
-seek(0xE3F20)
-//いれもの３
+default_container8:
+//RAM 80070A60 - いれもの３
 textASCII0("Container 3")
 
-seek(0xE3F2C)
-//いれもの４
+default_container9:
+//RAM 80070A6C - いれもの４
 textASCII0("Container 4")
 
-seek(0xE3F38)
-//いれもの５
+default_container10:
+//RAM 80070A78 - いれもの５
 textASCII0("Container 5")
+
+seek(0xE3F44)
+dw default_container1, default_container2, default_container3, default_container4, default_container5
+dw default_container6, default_container7, default_container8, default_container9, default_container10
+
+seek(0x8C40A); dh default_container1
+seek(0x8C41E); dh default_container2
+seek(0x8C432); dh default_container3
+seek(0x8C446); dh default_container4
+seek(0x8C45A); dh default_container5
+
+seek(0x8C46E); dh default_container6
+seek(0x8C482); dh default_container7
+seek(0x8C496); dh default_container8
+seek(0x8C4AA); dh default_container9
+seek(0x8C4BE); dh default_container10
 
 
 //Credits
