@@ -16,29 +16,31 @@ seek(0x99BFF8)
 base 0x804EAB50
 gogopack_credits1:
 //　　　元締／ヘルシー松岡
-  textSJISE(" ")
-  textASCII0(" Director/Healthy Matsuoka")
+  textSJISE(" "); textASCIIE(" ")
+  textASCII0("Director/Healthy Matsuoka")
 gogopack_credits2:
 //打込料理人／ハッピー西山（隊長）
   textASCII0("Programming/Happy Nishiyama (Lead)")
 gogopack_credits3:
 //　　　　　　スマイリー井田（音）
-  textSJISE("  ")
-  textASCII0("      Smiley Ida (Sound)")
+  textSJISE("  "); textASCIIE("      ")
+  textASCII0("Smiley Ida (Sound)")
 gogopack_credits4:
 //　　　　　　ファンシー河本（見習）
-  textSJISE("  ")
-  textASCII0("      Fancy Kawamoto (Junior)")
+  textSJISE("  "); textASCIIE("      ")
+  textASCII0("Fancy Kawamoto (Junior)")
 gogopack_credits5:
 //二次元絵師／ラブリー大西
-  textASCII0("  2D Artist/Lovely Onishi")
+  textASCIIE("  ")
+  textASCII0("2D Artist/Lovely Onishi")
 gogopack_credits6:
 //三次元美術／リー藤井
-  textASCII0("  3D Artist/Lee Fujii")
+  textASCIIE("  ")
+  textASCII0("3D Artist/Lee Fujii")
 gogopack_credits7:
 //作曲仕事人／パピー戸高
-  textSJISE(" ")
-  textASCII0("   Music/Puppy Totaka")
+  textSJISE(" "); textASCIIE("   ")
+  textASCII0("Music/Puppy Totaka")
 gogopack_credits8:
 //　温かい目／レフリー沢野
   textSJISE(" ")

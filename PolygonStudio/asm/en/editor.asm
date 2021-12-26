@@ -85,10 +85,10 @@ common_menu_paint:
   textRegular0("Paint")
 common_menu_limit:
 //RAM 802F3500 - リミットせってい
-  textRegular0("Limit Setup")  //Unused?
+  textRegular0("Limit Setup")  //Unused
 common_menu_check:
 //RAM 802F3514 - かなさりチェック
-  textRegular0("Kanasari Check")  //Unused?
+  textRegular0("Kanasari Check")  //Unused
 common_menu_bgm:
 //RAM 802F3528 - BGMきりかえ
   textRegular0("Switch Music")
