@@ -12,6 +12,9 @@
 architecture n64.cpu
 endian msb
 
+define IDGameCode = "DMGE"
+define IDVersion = 0
+
 if {defined CART} {
   print "Mario Artist Polygon Studio - English translation (Cart) v3.0\n"
   output "../../Mario Artist Polygon Studio.n64", create
@@ -48,3 +51,5 @@ include "other.asm"
 include "error.asm"
 include "minigames.asm"
 include "saveload.asm"
+
+include "../diskid.asm"
