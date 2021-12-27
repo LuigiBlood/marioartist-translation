@@ -17,6 +17,8 @@ common_camera_center:
 //RAM 802EB974 - カメラちゅうもく
   textRegular0("Center Camera")
 
+check(0x1BA604, "editor 1")
+
 seek(0x1BA60C); base 0x802EB9A4
 common_exit:
 //RAM 802EB9A4 - でる
@@ -28,6 +30,7 @@ common_nextpage:
 //RAM 802EB9B8 - つぎのページ
   textRegular0("1/1")
   db 0,0
+check(0x1BA634, "editor 2")
 seek(0x1BA634)
 common_randomswitch:
 //RAM 802EB9CC - らくちんスイッチ
@@ -38,6 +41,8 @@ common_randomeverything:
 common_randomselected:
 //RAM 802EB9F4 - らくちんカスタム
   textRegular0("Selection Swap")
+
+check(0x1BA670, "editor 3")
 
 
 seek(0x1C2040); base 0x802F33D8
@@ -93,6 +98,7 @@ common_menu_bgm:
 //RAM 802F3528 - BGMきりかえ
   textRegular0("Switch Music")
 
+check(0x1C21A0, "editor 4")
 
 //Photo Mode
 seek(0x95BA9C); base 0x8054240C
@@ -102,6 +108,8 @@ photo_return:
 photo_save:
 //RAM 80542414 - [2Dさくひん]としてセーブ
   textRegular0("Save as Picture")
+
+check(0x95BAC4, "editor 5")
 
 //Pointers
 seek(0x1794DA); dh common_camera_reset

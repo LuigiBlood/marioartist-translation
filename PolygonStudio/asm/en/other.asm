@@ -95,6 +95,8 @@ other_currentgone3:
 //よろしいですか？
   textASCII0("Are you sure?")
 
+check(0x1C9B80, "other 1")
+
 seek(0x1C9708)
 //RAM 802FAAA0 - Pointers to each line of text
 dw other_autosavereturn1, other_autosavereturn2, other_autosavereturn3, other_autosavereturn4, 0, 0
@@ -181,6 +183,7 @@ default_container10:
 //RAM 80070A78 - いれもの５
 textASCII0("Container 5")
 
+check(0xE3F44, "other 2")
 seek(0xE3F44)
 dw default_container1, default_container2, default_container3, default_container4, default_container5
 dw default_container6, default_container7, default_container8, default_container9, default_container10
@@ -335,6 +338,7 @@ textASCII0(" ")
 credits_name31:
 //RAM 807B69A8 - スーパーマリオクラブ
 textASCII0("Super Mario Club")
+check(0x27BAE4, "check 3")
 
 seek(0x27AFA0)  //remap
 credits_title11:

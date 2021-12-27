@@ -6,6 +6,8 @@ seek(0x11F680); base 0x800AC1C0
 //えらばれているいろ
 textRegular0("Selected Color")
 
+check(0x11F6A0, "paint 1")
+
 seek(0x953E18); base 0x8049BEE0
 //Brushes
 paint_pen:
@@ -569,6 +571,8 @@ stamp147:
 stamp148:   //Unused
 //2Dロードさくひん
   textRegular0("Picture")
+
+check(0x95474C, "paint 2")
 
 //Pointers
 seek(0x95474C)

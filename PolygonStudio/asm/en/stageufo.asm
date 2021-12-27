@@ -241,6 +241,8 @@ light06:
 //いろへんか
   textRegular0("Color Switch")
 
+check(0x64A1D4, "stageufo 1")
+
 //Pointers
 seek(0x64A570)
 dw ufo_none, back01, back02, back03, back04, back05, back06

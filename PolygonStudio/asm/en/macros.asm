@@ -2,6 +2,16 @@
 //Common Macros
 
 //VERY NEW
+inline seek(n) {
+  origin {n} - seek_diff
+}
+
+inline check(n, info) {
+  if (origin() > {n} - seek_diff) {
+    error "This has went past bounds ({info})"
+  }
+}
+
 macro textASCII(size, text) {
   variable skipSeek = origin()+{size}
   textASCII0({text})

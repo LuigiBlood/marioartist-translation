@@ -22,6 +22,8 @@ textASCII0("Caution: Please do not eject the disk")
 errorN09:
 textASCII0("while the ACCESS light is blinking.")
 
+check(0x11FB40, "error 1")
+
 //Initialization (8006BF28)
 //Init up to 210 chars (+ 10 digits)
 macro SpDisp_InitASCII(addr, ptr, type) {

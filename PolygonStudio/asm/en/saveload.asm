@@ -122,6 +122,7 @@ save1_22:
 //RAM 8077DD4C - ページおくり
 textRegular0("Next")
 
+check(0x20105C, "selica 1")
 seek(0x20105C)
 skip(16); dw (save1_1)
 skip(16); dw (save1_2)
@@ -154,6 +155,7 @@ skip(16); dw (save1_20)
 seek(0x20123C)
 //1/1ページ
 textRegular0("1/1")
+check(0x201250, "selica 2")
 
 seek(0x1EBC68)
 sb t0,0(v0)
@@ -165,16 +167,17 @@ sb t2,2(v0)
 seek(0x201428)
 //あたらしくセーブする
 textRegular0("New Save")
-
+check(0x201440, "selica 3")
 
 //--Move / Copy
 seek(0x201490)
 //いどう
 textRegular0("Move")
+check(0x201498, "selica 4")
 seek(0x201498)
 //コピー
 textRegular0("Copy")
-
+check(0x2014A0, "selica 5")
 
 //--Kind Menuing (Disk 0x23A030 / RAM 807C2110)
 seek(0x23A030); base 0x807C2110
@@ -428,6 +431,7 @@ save2_79:	//Unused
 //RAM 807C2CFC - ● いれものさくせい モード ●
 textRegularA($00B7, "Create Container")
 
+check(0x23AC40, "selica 6")
 seek(0x23AC40)
 skip(8); dw (save2_2)
 skip(8); dw (save2_69)
@@ -505,6 +509,7 @@ save3_2:
 textRegular0("Preparing to save...")		//セーブのじゅんびをしています
 save3_3:
 textRegular0("Some files cannot be used here.")	//ここであつかえないファイルがふくまれますも
+check(0x23B150, "selica 7")
 
 seek(0x23B150)
 dw (save3_1),(save3_2),(save3_3)
@@ -731,6 +736,7 @@ textRegular0("For additional details, please\nread the instruction booklet.")
 save4_e56:
 //RAM 807C3F08 - ディスクエラーです。
 textRegular0("This is a disk error.")
+check(0x23BE40, "selica 8")
 
 seek(0x23BE40)
 dw (save4_e1),(save4_e30),0
@@ -959,6 +965,7 @@ textRegular0("Change to the original Polygon Studio disk.")
 save5_9:
 //RAM 807C42DC - ゲームをつづけるためには\nきどうディスクがひつようです
 textRegular0("The original Polygon Studio disk\nis required to continue.")
+check(0x23C240, "selica 9")
 
 //0x10 - Eject disk for a different disk
 seek(0x1F86C2+8)
@@ -998,6 +1005,7 @@ seek(0x23C240); base 0x807C4320
 save6_1:
 //RAM 807C4320 - ～ つかいたいかんじの さいしょのもじをえらんでください ～
 textRegular0("* Please select the beginning of the kanji *")
+check(0x23C280, "selica 10")
 
 seek(0x1F6DF2)
 	dh (save6_1)
@@ -1087,6 +1095,7 @@ kanji3_3:
 textRegular0("Greek")//\nLetters")
 db $FE,$83,$9F,$18,$FB,$FE,$83,$BF,$18,$FF
 
+check(0x23E5A8, "selica 11")
 //Pointers
 seek(0x23E5A8)
 dw (kanji1_1),(kanji1_2),(kanji1_3),(kanji1_4),(kanji1_5),0

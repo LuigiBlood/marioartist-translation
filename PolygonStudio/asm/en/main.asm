@@ -18,27 +18,19 @@ if {defined CART} {
   origin 0x000000; insert "../../roms/NUD-DMGJ-JPN.n64" // Include Japanese Mario Artist - Polygon Studio N64 DD ROM
   origin 0x10; dw 0x8C2B46EE, 0x2AD4F33E //New checksum
 
-  inline seek(n) {
-    origin {n} - 0x727D8
-  }
+  constant seek_diff = 0x727D8
 } else if {defined D64} {
   print "Mario Artist Polygon Studio - English translation (D64) v3.0\n"
   output "../../Mario Artist Polygon Studio.d64", create
   origin 0x000000; insert "../../roms/UDMGJ0.011" // Include Japanese Mario Artist - Polygon Studio N64 DD ROM
 
-  //macros
-  inline seek(n) {
-    origin {n} - 0x736C0
-  }
+  constant seek_diff = 0x736C0
 } else {
   print "Mario Artist Polygon Studio - English translation (Disk) v3.0\n"
   output "../../Mario Artist Polygon Studio.ndd", create
   origin 0x000000; insert "../../roms/NUD-DMGJ-JPN.ndd" // Include Japanese Mario Artist - Polygon Studio N64 DD ROM
 
-  //macros
-  inline seek(n) {
-    origin {n}
-  }
+  constant seek_diff = 0
 }
 
 include "../N64.inc"

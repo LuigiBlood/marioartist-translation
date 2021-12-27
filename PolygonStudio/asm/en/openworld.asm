@@ -42,6 +42,8 @@ seek(0x69D7E0); base 0x80514DA0
 //RAM 80514DA0 - はしりやすくなったエリア
 textRegular0("Easier handling on:")
 
+check(0x69D7FC, "world 1")
+
 seek(0x69D7FC); base 0x80514DBC
 //トゲ
 textRegular(32, "Thorn") //RAM 80514DBC - GFX RAM 8058F180
@@ -80,6 +82,8 @@ dw 0xD3 //Snow
 seek(0x69AB60); base 0x80512120
 //RAM 80512120 - カメラ:
 textRegular0("Camera:")
+check(0x69AB6C, "world 2")
+
 seek(0x69AB6C)  //8051212C
 //ふつう
 textRegular(20, "Normal")
@@ -164,6 +168,8 @@ open2_noblockanymore: //80516420
 //ブロックハ モウアリマセン。</FONT>"
   textASCII0("there are no blocks<BR>to be found anymore.</FONT>")
 
+check(0x69EE84, "world 3")
+
 seek(0x684A12); dh (open2_itemfound1)
 seek(0x684A42); dh (open2_itemfound2)
 seek(0x684A7A); dh (open2_newline)
@@ -202,6 +208,8 @@ open3_desc4:
 //RAM 805165E4 - </CENTER>
   textASCII0("</CENTER>")
 
+check(0x69F050, "world 4")
+
 seek(0x68C9B2); dh (open3_nopowerblock)
 seek(0x68C9DA); dh (open3_powerblock)
 seek(0x68C9F2); dh (open3_desc1)
@@ -211,8 +219,7 @@ seek(0x68CA76); dh (open3_desc4)
 
 
 //OPEN WORLD 4 - Item List? - RAM 80516670 - NDD 0x69F0B0
-seek(0x69F0B0)
-base 0x80516670
+seek(0x69F0B0); base 0x80516670
 //Power Blocks
 open4_001:
 //エラー
@@ -1544,6 +1551,7 @@ open1_destroyed:
 //</FONT></FONT>が 破損！</CENTER>
   textASCII0("</FONT> is broken!</CENTER>")
 
+check(0x6A4670, "world 5")
   
 //Pointers
 seek(0x69D9A0)

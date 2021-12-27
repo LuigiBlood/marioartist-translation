@@ -823,6 +823,7 @@ block_sound14:
 //おやじ
   textRegular0("Old Man")
 
+check(0x7BB1E0, "block 1")
 
 //Pointers
 seek(0x7BBFB8)

@@ -15,6 +15,8 @@ model_craft:
 //RAM 803EBD20 - クラフト
   textRegular0("Papercraft Mode")
 
+check(0x7FBCB8, "model 1")
+
 //Pointers
 seek(0x7D05D2); dh model_tutorial
 seek(0x7D0F5E); dh model_craft
@@ -46,8 +48,7 @@ textRegular(20, "Biplane")              //ふくようき
 
 textRegular(12, "Exit")                 //でる
 
-seek(0x896200)
-base 0x8060EE40
+seek(0x896200); base 0x8060EE40
 //Basic Models
 //Page 1
 model_basic01:
@@ -388,6 +389,8 @@ model_other21:
 //ぎゅうにゅうパック
   textRegular0("Milk Carton")
 
+check(0x896710, "model 2")
+
 //Pointer Model Names
 seek(0x8968B4)
 dw model_basic01, model_basic02, model_basic03, model_basic04, model_basic05, model_basic06, model_basic07
@@ -581,6 +584,8 @@ interface_othermodel:
 //RAM 80610510 - そのたモデル
   textRegular0("Other")
 
+check(0x8978E0, "model 3")
+
 //Pointers
 seek(0x8692C2); dh interface_vert
 seek(0x8696CA); dh interface_edge
@@ -706,6 +711,8 @@ model_a_class:
 model_a_jounigiri:
 //RAM 803EF4AC - JOUNIGIRI
   textASCII0("DELUXE")
+
+check(0x7FF440, "model 4")
 
 //Pointers
 

@@ -12,8 +12,7 @@ dw 0x8050F3D8
 
 //Go Go Pack
 //Credits
-seek(0x99BFF8)
-base 0x804EAB50
+seek(0x99BFF8); base 0x804EAB50
 gogopack_credits1:
 //　　　元締／ヘルシー松岡
   textSJISE(" "); textASCIIE(" ")
@@ -48,6 +47,8 @@ gogopack_credits8:
 gogopack_credits9:
 gogopack_credits10:
   textASCII0(" ")
+
+check(0x99C0F0, "minigame 1")
 
 seek(0x99B9F8)
 dw gogopack_credits1, gogopack_credits2, gogopack_credits3, gogopack_credits4, gogopack_credits5
