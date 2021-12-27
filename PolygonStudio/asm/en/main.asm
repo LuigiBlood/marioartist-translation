@@ -19,7 +19,7 @@ if {defined CART} {
   print "Mario Artist Polygon Studio - English translation (Cart) v3.0\n"
   output "../../Mario Artist Polygon Studio.n64", create
   origin 0x000000; insert "../../roms/NUD-DMGJ-JPN.n64" // Include Japanese Mario Artist - Polygon Studio N64 DD ROM
-  origin 0x10; dw 0x8C2B46EE, 0x2AD4F33E //New checksum
+  origin 0x10; dw 0x8C2B46EB, 0x66EA4FC8 //New checksum
 
   constant seek_diff = 0x727D8
 } else if {defined D64} {
@@ -53,3 +53,4 @@ include "minigames.asm"
 include "saveload.asm"
 
 include "../diskid.asm"
+include "../format.asm"
