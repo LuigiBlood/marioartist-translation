@@ -20,10 +20,10 @@ Credits:
 LuigiBlood - Project Leader, Translation, Hacking, Graphic Design
 Cauterize - Logo Design
 krom - Initial Translation Work
+Zoinkity - Original Cartridge Port Hacking
 
 Special Thanks:
 Popcorn, Matti Virkkunen, and SilverShroud for translation help/proof-read
 Covarr - For design help
 
 VideoDojo - Proof-reading
-
