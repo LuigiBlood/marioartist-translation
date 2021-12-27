@@ -5,8 +5,9 @@ Version 3.0
 
 Changelog:
 v3.0:
-- Improve technical implementation of the translation.
-- Improve translation and translate even more.
+- Improve and add more technical hacks for the translation.
+- Countless improvements to the translation itself.
+- Change Game ID to DMGE.
 
 v2.1:
 - Port Source to latest version of ARM9 fork bass
@@ -23,3 +24,6 @@ krom - Initial Translation Work
 Special Thanks:
 Popcorn, Matti Virkkunen, and SilverShroud for translation help/proof-read
 Covarr - For design help
+
+VideoDojo - Proof-reading
+

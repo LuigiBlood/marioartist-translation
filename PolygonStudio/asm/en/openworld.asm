@@ -480,7 +480,7 @@ open4desc_007:
   textASCII0("Use it for flight and gliding.")
 open4desc_008:
 //向いた方に進むようになります
-  textASCII0("Move forward in any direction.")
+  textASCII0("Move to the direction you're facing.")
 open4desc_009:
 //速く歩けます
 open4desc_013:
@@ -807,7 +807,7 @@ open4pdesc_058:
   textASCII0("He seems happy.")
 open4pdesc_059:
 //わりとナイスな飛行機です
-  textASCII0("A rather nice aircraft.")
+  textASCII0("It's a pretty nice aircraft.")
 open4pdesc_060:
 //痛そうですね
   textASCII0("It looks painful.")
@@ -819,7 +819,7 @@ open4pdesc_062:
   textASCII0("It's very ripe.")
 open4pdesc_063:
 //ハーブの香りが疲れをいやす…かも
-  textASCII0("The scent may cure fatigue... is it?")
+  textASCII0("The scent may cure fatigue...<FONT SIZE=1>does it?</FONT>")
 open4pdesc_064:
 //がんばってるみたいです
   textASCII0("He is doing his best.")
@@ -1392,13 +1392,13 @@ open4toast18_4:
 
 open4toast19_2:
 //"<FONT COLOR=#DC9F4F>ここの食パンと言えばヒント、<BR>ここのピラミッドと言えば湿気です</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>Speaking of bread hints here,<BR>the Pyramid here is pretty humid.</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>Speaking of bread, here's a hint,<BR>the Pyramid here is pretty humid.</FONT>")
 open4toast19_3:
 //"<FONT COLOR=#DC9F4F>このピラミッドの中は湿気のため<BR>いまいち機械がまともに動きません</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>Because of the humidity,<BR>machines don't work properly.</FONT>")
 open4toast19_4:
 //"<FONT COLOR=#DC9F4F>そのため高度の表示がこわれたり<BR>空を飛ぶブロックの性能が落ちたりと<BR>イヤーンな感じですが</FONT>"
-  textASCII0("<FONT COLOR=#DC9F4F>The altitude display is broken,<BR>flying blocks don't work,<BR>this is not really nice...</FONT>")
+  textASCII0("<FONT COLOR=#DC9F4F>The altitude display is broken,<BR>flying blocks don't work,<BR>this is not ideal...</FONT>")
 open4toast19_5:
 //"<FONT COLOR=#DC9F4F>ブロックがこわれたりする<BR>わけではないので<BR>そんなに困る事もないかと思います</FONT>"
   textASCII0("<FONT COLOR=#DC9F4F>It's not like the blocks are<BR>breaking however, so it doesn't<BR>seem that problematic.</FONT>")
@@ -1651,7 +1651,7 @@ dw open4_place01, open4_place02, open4_place03, open4_place04, open4_place05, op
 dw open4_place07, open4_place08, open4_place09, open4_place10, open4_place11, open4_place12
 
 //Test via Pause Menu: 805B052C = ID
-//Test via Picking Up a block: 804FBFE0 (breakpoint)
+//Test via Picking Up a block: 804FBFE0 (breakpoint) or text is also here (can be edited in real time) = 805AEAC0
 
 //Change Default ASCII Font for Room names
 seek(0x686968); ori a1,0,2
