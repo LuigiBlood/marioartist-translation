@@ -4,53 +4,53 @@
 //One byte char hack
 //Render Text Function (Disk 0x1FB910 / RAM 80778610)
 seek(0x1FB9C8)
-lbu t5,0(t3)
+	lbu t5,0(t3)
 seek(0x1FB9C8 + 0x14)
-lbu t4,0(t6)
+	lbu t4,0(t6)
 seek(0x1FB9C8 + 0x3C)
-lbu t8,0(t9)
+	lbu t8,0(t9)
 seek(0x1FB9C8 + 0x58)
-lbu t2,0(t1)
+	lbu t2,0(t1)
 seek(0x1FB9C8 + 0x78)
-lbu t5,0(t3)
+	lbu t5,0(t3)
 seek(0x1FB9C8 + 0x98)
-lbu t7,0(t4)
+	lbu t7,0(t4)
 seek(0x1FB9C8 + 0xB8)
-lbu t1,0(t8)
+	lbu t1,0(t8)
 seek(0x1FB9C8 + 0xD8)
-lbu t3,0(t0)
+	lbu t3,0(t0)
 seek(0x1FB9C8 + 0xFC)
-lbu a1,0(t6)
+	lbu a1,0(t6)
 seek(0x1FB9C8 + 0x1A0)
-addiu t0,t3,1
+	addiu t0,t3,1
 seek(0x1FB9C8 + 0x1AC)
-lbu t6,0(t5)
+	lbu t6,0(t5)
 
 seek(0x1FB230 + 0x18)
-lbu t6,0(a0)
+	lbu t6,0(a0)
 seek(0x1FB230 + 0x24)
-lbu t7,0(a0)
+	lbu t7,0(a0)
 seek(0x1FB230 + 0x68)
-lbu t2,0(a0)
+	lbu t2,0(a0)
 seek(0x1FB230 + 0x80)
-lbu t3,0(a0)
+	lbu t3,0(a0)
 seek(0x1FB230 + 0x9C)
-lbu t5,0(a0)
+	lbu t5,0(a0)
 seek(0x1FB230 + 0xB8)
-lbu t7,0(a0)
+	lbu t7,0(a0)
 seek(0x1FB230 + 0xD4)
-lbu t9,0(a0)
+	lbu t9,0(a0)
 seek(0x1FB230 + 0xF0)
-lbu t1,0(a0)
+	lbu t1,0(a0)
 seek(0x1FB230 + 0x10C)
-lbu t3,0(a0)
+	lbu t3,0(a0)
 seek(0x1FB230 + 0x124)
-lbu t6,0(a0)
+	lbu t6,0(a0)
 seek(0x1FB230 + 0x164)
-lbu t6,1(a0)
+	lbu t6,1(a0)
 seek(0x1FB230 + 0x218)
-addiu a0,a0,1
-lbu t4,0(a0)
+	addiu a0,a0,1
+	lbu t4,0(a0)
 
 //RAM 8077DC10 - NDD 0x200F10
 seek(0x200F10); base 0x8077DC10
@@ -178,7 +178,7 @@ textRegular0("Copy")
 
 //--Kind Menuing (Disk 0x23A030 / RAM 807C2110)
 seek(0x23A030); base 0x807C2110
-save2_1:
+save2_1:	//Unused
 //RAM 807C2110 - テスト
 textRegular0("Test")
 save2_2:
@@ -347,52 +347,52 @@ save2_53:
 //RAM 807C29AC - コピーしています…
 textRegular0("Copying...")
 
-save2_54:
+save2_54:	//Unused
 //RAM 807C29C0 - いれものをさくせいしています…
 textRegular0("Creating new container...")
-save2_55:
+save2_55:	//Unused
 //RAM 807C29E0 - このいれものにあたらしいなまえをつけますか?
 textRegular0("Do you want to name this new container?")
-save2_56:
+save2_56:	//Unused
 //RAM 807C2A10 - どちらのならびかえをしますか?
 textRegular0("What do you want to do?")
-save2_57:
+save2_57:	//Unused
 //RAM 807C2A30 - どうならびかえますか?
 textRegular0("What do you want to sort?")
-save2_58:
+save2_58:	//Unused
 //RAM 807C2A48 - 2つのいれもののばしょをいれかえます
 textRegular0("Swap the locations of 2 containers.")
-save2_59:
+save2_59:	//Unused
 //RAM 807C2A70 - 1つめのいれものをえらんでください
 textRegular0("Please select the first container.")
-save2_60:
+save2_60:	//Unused
 //RAM 807C2A94 - 2つめのいれものをえらんでください
 textRegular0("Please select the second container.")
-save2_61:
+save2_61:	//Unused
 //RAM 807C2AB8 - 2つのいれもののばしょをいれかえていいですか?
 textRegular0("Do you want to swap the location\nof these two containers?")
-save2_62:
+save2_62:	//Unused
 //RAM 807C2AE8 - ファイルじょうほうをよみなおしています…
 textRegular0("Reading the file information again...")
 save2_63:
 //RAM 807C2B14 - ディスクの データりょういきを しょきか します\nすべてのさくひんが きえてしまいますが いいですか?
-textRegular0("The contents of this disk will be gone.\nAre you sure you want to initialize the disk?")
-save2_64:
+textRegular0("The contents of this disk will be lost.\nAre you sure you want to initialize the disk?")
+save2_64:	//Unused
 //RAM 807C2B7C - いれものを あたらしく さくせいしますか?
 textRegular0("Do you want to create a new container?")
 
-save2_65:
+save2_65:	//Unused
 //RAM 807C2BA8 - ディスクのこうかんをおこないます
 textRegular0("Please change the disk.")
-save2_66:
+save2_66:	//Unused
 //RAM 807C2BCC - ディスクをぬいてください
 textRegular0("Please eject the disk.")
-save2_67:
+save2_67:	//Unused
 //RAM 807C2BE8 - ディスクをいれてください
 textRegular0("Please insert the disk.")
-save2_68:
+save2_68:	//Unused
 //RAM 807C2C04 - ちがうディスクがはいっています
-textRegular0("A different disk is inserted.")
+textRegular0("A different disk has been inserted.")
 
 save2_69:
 //RAM 807C2C24 - ★ 64DD ★
@@ -421,10 +421,10 @@ textRegularA($00B7, "Move")
 save2_77:
 //RAM 807C2CD0 - ● コピー ●
 textRegularA($00B7, "Copy")
-save2_78:
+save2_78:	//Unused
 //RAM 807C2CE0 - ● ならべかえ モード ●
 textRegularA($00B7, "Sort")
-save2_79:
+save2_79:	//Unused
 //RAM 807C2CFC - ● いれものさくせい モード ●
 textRegularA($00B7, "Create Container")
 
@@ -788,145 +788,145 @@ dw (save4_e53),0
 
 
 seek(0x1EC32E)
-dh (save4_1)
+	dh (save4_1)
 
 //Current creation
 seek(0x1ECD7A)
-dh (save4_2)
+	dh (save4_2)
 seek(0x1ECD7A+0x8)
-//dh $0091	//X Pos
+	//dh $0091	//X Pos
 seek(0x1ECD7A+0x10)
-dh $004B	//Y Pos
+	dh $004B	//Y Pos
 seek(0x1ECD92)
-dh (save4_3)
+	dh (save4_3)
 seek(0x1ECD92+0x8)
-//dh $0091	//X Pos
+	//dh $0091	//X Pos
 seek(0x1ECD92+0x10)
-//dh $0050	//Y Pos
+	//dh $0050	//Y Pos
 
 //Creation loaded from Disk
 seek(0x1ECDB2)
-//dh (save4_4)
-dh (save4_6)
+	//dh (save4_4)
+	dh (save4_6)
 seek(0x1ECDB2+0x8)
-//dh $0091	//X Pos
+	//dh $0091	//X Pos
 seek(0x1ECDB2+0x10)
-//dh $0046	//Y Pos
+	//dh $0046	//Y Pos
 seek(0x1ECDCA)
-//dh (save4_6)
-dh (save4_4)
+	//dh (save4_6)
+	dh (save4_4)
 seek(0x1ECDCA+0x8)
-//dh $0091	//X Pos
+	//dh $0091	//X Pos
 seek(0x1ECDCA+0x10)
-//dh $0050	//Y Pos
+	//dh $0050	//Y Pos
 
 //Creation loaded from Transfer Pak
 seek(0x1ECDEA)
-//dh (save4_5)
-dh (save4_6)
+	//dh (save4_5)
+	dh (save4_6)
 seek(0x1ECDEA+0x8)
-//dh $0091	//X Pos
+	//dh $0091	//X Pos
 seek(0x1ECDEA+0x10)
-//dh $0046	//Y Pos
+	//dh $0046	//Y Pos
 seek(0x1ECE02)
-//dh (save4_6)
-dh (save4_5)
+	//dh (save4_6)
+	dh (save4_5)
 seek(0x1ECE02+0x8)
-//dh $0091	//X Pos
+	//dh $0091	//X Pos
 seek(0x1ECE02+0x10)
-//dh $0050	//Y Pos
+	//dh $0050	//Y Pos
 
 //Current creation on alternate canvas
 seek(0x1ECE22)
-dh (save4_11)
+	dh (save4_11)
 seek(0x1ECE22+0x8)
-//dh $0091	//X Pos
+	//dh $0091	//X Pos
 seek(0x1ECE22+0x10)
-//dh $0046	//Y Pos
+	//dh $0046	//Y Pos
 seek(0x1ECE3A)
-dh (save4_12)
+	dh (save4_12)
 seek(0x1ECE3A+0x8)
-//dh $0091	//X Pos
+	//dh $0091	//X Pos
 seek(0x1ECE3A+0x10)
-//dh $0050	//Y Pos
+	//dh $0050	//Y Pos
 
 seek(0x1ECE5A)
-dh (save4_9)
+	dh (save4_9)
 seek(0x1ECE5A+0x8)
-//dh $0091	//X Pos
+	//dh $0091	//X Pos
 seek(0x1ECE5A+0x10)
-//dh $004B	//Y Pos
+	//dh $004B	//Y Pos
 
 seek(0x1ECE7A)
-dh (save4_10)
+	dh (save4_10)
 seek(0x1ECE7A+0x8)
-//dh $0091	//X Pos
+	//dh $0091	//X Pos
 seek(0x1ECE7A+0x10)
-//dh $004B	//Y Pos
+	//dh $004B	//Y Pos
 
 seek(0x1ECE9A)
-dh (save4_7)
+	dh (save4_7)
 seek(0x1ECE9A+0x8)
-//dh $0091	//X Pos
+	//dh $0091	//X Pos
 seek(0x1ECE9A+0x10)
-//dh $0046	//Y Pos
+	//dh $0046	//Y Pos
 seek(0x1ECEB2)
-dh (save4_8)
+	dh (save4_8)
 seek(0x1ECEB2+0x8)
-//dh $0091	//X Pos
+	//dh $0091	//X Pos
 seek(0x1ECEB2+0x10)
-//dh $0050	//Y Pos
+	//dh $0050	//Y Pos
 
 seek(0x1EDB8E)
-dh (save4_13)
+	dh (save4_13)
 seek(0x1EDB8E+0x8)
-dh $005F	//X Pos
+	dh $005F	//X Pos
 seek(0x1EDB8E+0x10)
-//dh $0064	//Y Pos
+	//dh $0064	//Y Pos
 seek(0x1EDBAE)
-dh (save4_15)
+	dh (save4_15)
 seek(0x1EDBAE+0x8)
-//dh $0064	//Y Pos
+	//dh $0064	//Y Pos
 seek(0x1EDB86)
-dh $0054	//X Pos
+	dh $0054	//X Pos
 seek(0x1EDBBE)
-dh (save4_16)
+	dh (save4_16)
 seek(0x1EDBBE+0x8)
-dh $005D	//X Pos
+	dh $005D	//X Pos
 seek(0x1EDBBE+0x10)
-//dh $006D	//Y Pos
+	//dh $006D	//Y Pos
 seek(0x1EDBD6)
-dh (save4_14)
+	dh (save4_14)
 seek(0x1EDBD6+0x8)
-dh $00C4	//X Pos
+	dh $00C4	//X Pos
 seek(0x1EDBD6+0x10)
-//dh $0064	//Y Pos
+	//dh $0064	//Y Pos
 
 seek(0x1EE252)
-dh (save4_e56)
+	dh (save4_e56)
 seek(0x1EE292)
-dh (save4_e56)
+	dh (save4_e56)
 seek(0x1EE2CA)
-dh (save4_e54)
+	dh (save4_e54)
 seek(0x1EE2F6)
-dh (save4_e55)
+	dh (save4_e55)
 seek(0x1EE34E)
-dh (save4_e55)
+	dh (save4_e55)
 
 //Move Used Space number 1.2 / Function RAM 80289958
 seek(0x1D2BEC)
-sb t7,save4_1+13(at)	//. (0x12)
+	sb t7,save4_1+13(at)	//. (0x12)
 seek(0x1D2C24)
-sb t9,save4_1+12(at)	//1 (0x10)
+	sb t9,save4_1+12(at)	//1 (0x10)
 seek(0x1D2C74)
-sb t2,save4_1+14(at)	//2 (0x14)
+	sb t2,save4_1+14(at)	//2 (0x14)
 
 seek(0x1D2C90)
-sb t3,save4_1+12(at)	//space (0x10)
+	sb t3,save4_1+12(at)	//space (0x10)
 seek(0x1D2CE8)
-sb t5,save4_1+13(at)	//1 (0x12)
+	sb t5,save4_1+13(at)	//1 (0x12)
 seek(0x1D2CF8)
-sb t7,save4_1+14(at)	//2 (0x14)
+	sb t7,save4_1+14(at)	//2 (0x14)
 
 
 //--Disk Swap Text (Disk 0x23C0F0 / RAM 807C41D0)
@@ -962,35 +962,35 @@ textRegular0("The original Polygon Studio disk\nis required to continue.")
 
 //0x10 - Eject disk for a different disk
 seek(0x1F86C2+8)
-dh (save5_5)
+	dh (save5_5)
 seek(0x1F86C2)
-dh (save5_1)
+	dh (save5_1)
 //0x11 - Eject disk because it is the wrong disk
 seek(0x1F86E6+4)
-dh (save5_4)
+	dh (save5_4)
 seek(0x1F86E6)
-dh (save5_1)
+	dh (save5_1)
 //0x12 - Eject disk for the original disk
 seek(0x1F8706+4)
-dh (save5_6)
+	dh (save5_6)
 seek(0x1F8706)
-dh (save5_1)
+	dh (save5_1)
 //0x20 - Insert different disk
 seek(0x1F8726+4)
-dh (save5_7)
+	dh (save5_7)
 seek(0x1F8726)
-dh (save5_2)
+	dh (save5_2)
 //0x21 - Insert original disk (after wrong disk)
 seek(0x1F8746+4)
-dh (save5_9)
+	dh (save5_9)
 seek(0x1F8746)
-dh (save5_3)
+	dh (save5_3)
 //0x22 - Insert original disk
 seek(0x1F8766+4)
-dh (save5_8)
+	dh (save5_8)
 seek(0x1F8766)
-//dh (save5_2)
-dh (save5_3)
+	//dh (save5_2)
+	dh (save5_3)
 
 
 //--Kanji Menu Text (Disk 0x23C240 / RAM 807C4320)
@@ -1000,45 +1000,45 @@ save6_1:
 textRegular0("* Please select the beginning of the kanji *")
 
 seek(0x1F6DF2)
-dh (save6_1)
+	dh (save6_1)
 seek(0x1F6DF2+0x8)
-dh 0x003E	//X Pos
+	dh 0x003E	//X Pos
 
 
 //Function Text + Kanji Font Rendering (Disk 0x1F7060 / RAM 80773D60)
 //Test these: き せ み and last (symbols)
 
 seek(0x1F7060+0xC4)
-addiu a1,0,7		//Amount of Chars per line
-addiu v1,sp,0x90	//unchanged (for rendering)
-addiu a3,0,0x0D		//Hyphen Char (Original 0x011E)
+	addiu a1,0,7		//Amount of Chars per line
+	addiu v1,sp,0x90	//unchanged (for rendering)
+	addiu a3,0,0x0D		//Hyphen Char (Original 0x011E)
 
 seek(0x1F7060+0xF4)		//New Line
-sb a0,0(v1)
-addiu v1,v1,1
+	sb a0,0(v1)
+	addiu v1,v1,1
 
 seek(0x1F7060+0x110)	//Char
-sb t1,0(v1)
-addiu s2,s2,1
-addiu v1,v1,1
+	sb t1,0(v1)
+	addiu s2,s2,1
+	addiu v1,v1,1
 
 seek(0x1F7060+0x12C)	//Hyphen
-sb a3,0(v1)
-addiu s2,s2,1
-addiu v1,v1,1
+	sb a3,0(v1)
+	addiu s2,s2,1
+	addiu v1,v1,1
 
 seek(0x1F7060+0x148)	//New Line
-sb a0,0(v1)
-or s2,0,0
-addiu s0,s0,1
-addiu v1,v1,1
+	sb a0,0(v1)
+	or s2,0,0
+	addiu s0,s0,1
+	addiu v1,v1,1
 
 seek(0x1F7060+0x160)	//Char
-sb v0,0(v1)
-addiu v1,v1,1
+	sb v0,0(v1)
+	addiu v1,v1,1
 
 seek(0x1F7060+0x174)	//End
-sb 0,0(v1)
+	sb 0,0(v1)
 
 
 //Symbols Menu (Disk 0x23E418 / RAM 807C64F8)
@@ -1095,17 +1095,17 @@ dw (kanji3_1),(kanji3_2),(kanji3_3),0
 
 //Change Symbols Kanji
 seek(0x23E8AC)
-//dh 0xFFFF
-dh 0x8197
+	//dh 0xFFFF
+	dh 0x8197
 
 
 //--Disk Usage Percentage Function (Disk 0x1FCA4C / RAM 8077974C)
 seek(0x1FCA4C+0x88)
-sb t7,0(t8)
+	sb t7,0(t8)
 seek(0x1FCA4C+0xE8)
-addiu t9,t8,-1
+	addiu t9,t8,-1
 seek(0x1FCA4C+0x120)
-sb t4,0(t5)
+	sb t4,0(t5)
 
 seek(0x2036EC)
 db $40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$00,$00,$00
@@ -1115,28 +1115,28 @@ db $40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$40,$00,$00,$
 //--Date & Time Text Generation - RAM 800B31C0
 //Function (Disk 0x1F2AF0 / RAM 8076F7F0)
 seek(0x1F2AF0+0xA0)
-addiu v1,sp,0x41	//Next char
+	addiu v1,sp,0x41	//Next char
 
 seek(0x1F2AF0+0xAC)
-sb t0,0x40(sp)		//First char
+	sb t0,0x40(sp)		//First char
 
 seek(0x1F2AF0+0xD8)
-sb t8,3(v1)
-sb t6,2(v1)
-sb t4,1(v1)
-sb t2,0(v1)
+	sb t8,3(v1)
+	sb t6,2(v1)
+	sb t4,1(v1)
+	sb t2,0(v1)
 
 seek(0x1F2AF0+0xEC)
-addiu v1,v1,4
+	addiu v1,v1,4
 
 seek(0x1F2AF0+0x100)
-sb v0,0x42(sp)		//Slash
-sb t9,0x48(sp)		//Space
-sb v1,0x4B(sp)		//:
-sb 0,0x51(sp)		//end
-sw t0,0x10(sp)	//unchanged
-sb v1,0x4E(sp)		//:
-sb v0,0x45(sp)		//Slash
+	sb v0,0x42(sp)		//Slash
+	sb t9,0x48(sp)		//Space
+	sb v1,0x4B(sp)		//:
+	sb 0,0x51(sp)		//end
+	sw t0,0x10(sp)	//unchanged
+	sb v1,0x4E(sp)		//:
+	sb v0,0x45(sp)		//Slash
 
 //Change Default File Naming
 seek(0x1FE410); base 0x8077B110
