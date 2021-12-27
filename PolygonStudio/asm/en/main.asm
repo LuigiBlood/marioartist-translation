@@ -16,7 +16,7 @@ if {defined CART} {
   print "Mario Artist Polygon Studio - English translation (Cart) v3.0\n"
   output "../../Mario Artist - Polygon Studio.n64", create
   origin 0x000000; insert "../../roms/NUD-DMGJ-JPN.n64" // Include Japanese Mario Artist - Polygon Studio N64 DD ROM
-  origin 0x10; dw 0xAE5B129D, 0xE680E59B //New checksum
+  origin 0x10; dw 0x8C2B46EE, 0x2AD4F33E //New checksum
 
   inline seek(n) {
     origin {n} - 0x727D8
