@@ -14,7 +14,7 @@ endian msb
 
 if {defined CART} {
   print "Mario Artist Polygon Studio - English translation (Cart) v3.0\n"
-  output "../../Mario Artist - Polygon Studio.n64", create
+  output "../../Mario Artist Polygon Studio.n64", create
   origin 0x000000; insert "../../roms/NUD-DMGJ-JPN.n64" // Include Japanese Mario Artist - Polygon Studio N64 DD ROM
   origin 0x10; dw 0x8C2B46EE, 0x2AD4F33E //New checksum
 
@@ -23,7 +23,7 @@ if {defined CART} {
   }
 } else if {defined D64} {
   print "Mario Artist Polygon Studio - English translation (D64) v3.0\n"
-  output "../../Mario Artist - Polygon Studio.d64", create
+  output "../../Mario Artist Polygon Studio.d64", create
   origin 0x000000; insert "../../roms/UDMGJ0.011" // Include Japanese Mario Artist - Polygon Studio N64 DD ROM
 
   //macros
@@ -32,7 +32,7 @@ if {defined CART} {
   }
 } else {
   print "Mario Artist Polygon Studio - English translation (Disk) v3.0\n"
-  output "../../Mario Artist - Polygon Studio.ndd", create
+  output "../../Mario Artist Polygon Studio.ndd", create
   origin 0x000000; insert "../../roms/NUD-DMGJ-JPN.ndd" // Include Japanese Mario Artist - Polygon Studio N64 DD ROM
 
   //macros
