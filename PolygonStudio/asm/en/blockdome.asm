@@ -707,7 +707,7 @@ block_power19:
   textRegular0("Handmade Wing")
 block_power20:
 //ロボットのハネ
-  textRegular0("Rocket Wing")
+  textRegular0("Robot Wing")
 block_power21:
 //ひこうきのハネ
   textRegular0("Airplane Wing")
