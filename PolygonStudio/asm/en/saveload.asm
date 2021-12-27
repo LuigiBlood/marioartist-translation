@@ -246,10 +246,11 @@ textRegular0("The current creation will be lost.\nAre you sure?")
 save2_22:
 //RAM 807C2444 - ロードしています…
 textRegular0("Loading...")
-
 save2_80:
 //RAM 807C2458 - げんざいの 3Dさくひんとブロックさくひんは\nセーブされていませんが いいですか?
-textRegular0("There are no saved 3D Models or Block creations\nin containers currently, is that okay?")
+//Appears when a 3D Model is used in the Block creation when you attempt to load a new block
+textRegular0("The current 3D Model and Block creations\nwill be lost. Are you sure?")
+
 save2_23:
 //RAM 807C24AC - どちらを さくじょ しますか?
 textRegular0("What do you want to delete?")
