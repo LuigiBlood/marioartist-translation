@@ -813,7 +813,7 @@ textEntryH0("Camera")			//カメラ
 movie11_35:
 textEntryH0("Game Boy")			//ゲームボーイ
 
-check(0x10BF3B4)
+check(0x10BF3B4, "test")
 seek(0x10BF3B4)
 dw (movie11_1),(movie11_2),(movie11_3),(movie11_4),(movie11_5),(movie11_6),(movie11_7)
 dw (movie11_8),(movie11_9),(movie11_10),(movie11_11),(movie11_12),(movie11_13),(movie11_14)
@@ -1108,7 +1108,7 @@ textEntryH0("Bounce")			//バウンドする
 movie12_135:
 textEntryH0("It moves???")		//あるく???
 
-check(0xF46D94)
+check(0xF46D94, "test")
 seek(0xF46D94)
 
 //Motion
@@ -1157,7 +1157,7 @@ textEntryH0("This disk has corrupted data.")
 movie13_2:
 //ただしいディスクにいれかえてください。 - RAM 80357DF0
 textEntryH0("Please replace with the correct disk.")
-check(0xF4862C)
+check(0xF4862C, "test")
 
 seek(0xF0A2EA); dh (movie13_1)
 seek(0xF0A302); dh (movie13_2)
@@ -2440,7 +2440,7 @@ textEntryH0("Unfill")			//80293FD8 - おなじいろをけす
 movie16_34:
 textEntryH0("Color Pattern 1")	//80293FEC - カラーパターン1
 
-check(0x11DD7A0)
+check(0x11DD7A0, "test")
 
 seek(0x11D0AC2); dh (movie16_7)
 seek(0x11D0EC6); dh (movie16_8)
@@ -2547,7 +2547,7 @@ textEntryH0("Rise Up")				//802946E8 - おきあがる
 movie17_30:
 textEntryH0("Crawl")				//802946F4 - おくへスクロール
 
-check(0x11DDEA8)
+check(0x11DDEA8, "test")
 
 seek(0x11D9072); dh (movie17_1)
 seek(0x11D957A); dh (movie17_2)

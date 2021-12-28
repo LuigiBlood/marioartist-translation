@@ -8,9 +8,9 @@ macro seekFile(n) {
   origin {n}
 }
 
-macro check(n) {
+macro check(n, info) {
   if (origin() > {n} - seek_diff) {
-    error "Too much space taken."
+    error "Too much space taken ({info})"
   }
 }
 
