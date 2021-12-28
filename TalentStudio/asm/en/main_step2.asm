@@ -7,21 +7,21 @@ print "- Insert Compressed Overlays...\n"
 architecture n64.cpu
 endian msb
 if {defined CART} {
-  output "../../Mario Artist - Talent Studio.n64"
+  output "../../Mario Artist Talent Studio.n64"
 
   //Unique Macros
   inline seek(n) {
     origin {n} - 0x727D8
   }
 } else if {defined D64} {
-  output "../../Mario Artist - Talent Studio.d64"
+  output "../../Mario Artist Talent Studio.d64"
 
   //Unique Macros
   inline seek(n) {
     origin {n} - 0x736C0
   }
 } else {
-  output "../../Mario Artist - Talent Studio.ndd"
+  output "../../Mario Artist Talent Studio.ndd"
 
   //Unique Macros
   inline seek(n) {
