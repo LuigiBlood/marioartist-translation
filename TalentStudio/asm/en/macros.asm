@@ -14,9 +14,9 @@ macro check(n, info) {
   }
 }
 
-macro checkFile(n) {
+macro checkFile(n, info) {
   if origin() > {n} {
-    error "Too much space taken."
+    error "Too much space taken ({info})"
   }
 }
 
