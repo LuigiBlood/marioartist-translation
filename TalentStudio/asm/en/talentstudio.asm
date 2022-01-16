@@ -151,16 +151,16 @@ textRegular0("Pattern Album")
 //Move
 talent4_18:
 //RAM 803BA570 - すべてのほうこう
-textRegular0("On Every Axis")
+textRegular0("All Axis")
 talent4_19:
 //RAM 803BA584 - アカじくのほうこう
-textRegular0("On Red Axis")
+textRegular0("Red Axis")
 talent4_20:
 //RAM 803BA598 - ミドリじくのほうこう
-textRegular0("On Green Axis")
+textRegular0("Green Axis")
 talent4_21:
 //RAM 803BA5B0 - アオじくのほうこう
-textRegular0("On Blue Axis")
+textRegular0("Blue Axis")
 //Rotate
 talent4_22:
 //RAM 803BA5C4 - アカじくをちゅうしんに
@@ -174,16 +174,16 @@ textRegular0("Around Blue Axis")
 //Resize
 talent4_25:
 //RAM 803BA610 - すべてのほうこう
-textRegular0("On Every Axis")
+textRegular0("Scale All Axis")
 talent4_26:
 //RAM 803BA624 - アカじくにそって
-textRegular0("On Red Axis")
+textRegular0("Scale Red Axis")
 talent4_27:
 //RAM 803BA638 - ミドリじくにそって
-textRegular0("On Green Axis")
+textRegular0("Scale Green Axis")
 talent4_28:
 //RAM 803BA64C - アオじくにそって
-textRegular0("On Blue Axis")
+textRegular0("Scale Blue Axis")
 talent4_29:
 //RAM 803BA660 - リセット
 textRegular0("Reset")
@@ -308,7 +308,7 @@ textRegular0("Cartoon")
 talent6_29:
 //RAM 803BA854 - グラマー
 textRegular0("Glamor")
-talent6_30:
+talent6_30:		//Unused
 //RAM 803BA860 - ペラ
 textRegular0("Fluent")
 
@@ -2411,7 +2411,8 @@ seek(0x195756); dh (talent14_9)
 
 seek(0x21528C)
 talent43_2:
-textASCII0("This talent hasn't been saved.||")
+textASCII0("This talent hasn't been saved.|")
+skip(-1); dh $819A; textASCII0("|")
 skip(-1)
 talent43_1:
 //RAM 803C3A5C - このタレントを|「タレントをつくる」に|のこしておきますか？
@@ -2444,6 +2445,9 @@ seek(0x19AA1E); dh (talent43_4)
 seek(0x19AA42); dh 0x3E
 seek(0x19AA4A); dh 0xC4
 
+//Replace Back with No Button
+seek(0x21525C); dh 0x47, 0xAD, 0x00, 0x28, 0x14, 0x00; dw 0x02007680
+
 
 seek(0x215944)	//Filename
 //RAM 803C4114 - タレント
@@ -2455,7 +2459,13 @@ textRegular0("Too many polygons")
 
 seek(0x215CBC)
 //RAM 803C448C - 現在のタレントのかおが|変更できなくなりますが|よろしいですか？|“いいえ”の場合は|けしょうが消えます。
-textASCII0("The current talent's face|cannot be edited.|Do you want to keep it?|Selecting No will undo|the makeup.")
+textASCII0("Are you sure you want to|change the current face?||Selecting No will remove the face.")
+
+seek(0x1A1442); dh 0x018	//X
+seek(0x1A1446); dh 0x03E	//Y
+seek(0x1A144A); dh 0x10D	//Width
+seek(0x1A1422); dh 0x074	//Height
+seek(0x1A13EA); dh 0x094	//Button Y Pos
 
 
 //--Color Album
@@ -2535,19 +2545,19 @@ seek(0xA24B7A); dh (talent45_3)
 
 //Page Number Text (Pattern) 0xA2B44C
 seek(0xA2B44C + 0x14)
-sb 0,0(a0)
+	sb 0,0(a0)
 seek(0xA2B44C + 0x3C)
-nop
-nop
-nop
-nop
+	nop
+	nop
+	nop
+	nop
 
 seek(0xA2B2EC + 0xC)
-lbu a0,0(v0)
-sb v1,0(v0)
-addiu v0,v0,1
+	lbu a0,0(v0)
+	sb v1,0(v0)
+	addiu v0,v0,1
 seek(0xA2B2EC + 0x24)
-sb 0,0(v0)
+	sb 0,0(v0)
 
 
 //--Face Overlay
@@ -2764,8 +2774,7 @@ seek(0x93A190)
 
 
 //--Talent Type Selection (Disk 0xDCECE0 / RAM 80280000)
-seek(0xDCECE0)
-base 0x80280000
+seek(0xDCECE0); base 0x80280000
 
 seek(0xDE4320)
 //RAM 80295640 - おてほんタレント1
